@@ -22,13 +22,13 @@
  *
  */
 
-namespace PagSeguro\Parsers\PreApproval\Search\Code;
+namespace GrandChef\Parsers\PreApproval\Search\Code;
 
 /**
  * Class Response
  * @package PagSeguro\Parsers\PreApproval\Search\Code
  */
-class Response extends \PagSeguro\Parsers\PreApproval\Search\Response
+class Response extends \GrandChef\Parsers\PreApproval\Search\Response
 {
     /**
      * @var

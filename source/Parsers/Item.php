@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers;
+namespace GrandChef\Parsers;
 
-use PagSeguro\Domains\Requests\Requests;
+use GrandChef\Domains\Requests\Requests;
 
 /**
  * Trait Item
@@ -56,14 +56,14 @@ trait Item
                     $data[sprintf($properties::ITEM_QUANTITY, $count)] = $items[$key]->getQuantity();
                 }
                 if ($items[$key]->getAmount() != null) {
-                    $amount = \PagSeguro\Helpers\Currency::toDecimal($items[$key]->getAmount());
+                    $amount = \GrandChef\Helpers\Currency::toDecimal($items[$key]->getAmount());
                     $data[sprintf($properties::ITEM_AMOUNT, $count)] = $amount;
                 }
                 if ($items[$key]->getWeight() != null) {
                     $data[sprintf($properties::ITEM_WEIGHT, $count)] = $items[$key]->getWeight();
                 }
                 if ($items[$key]->getShippingCost() != null) {
-                    $data[sprintf($properties::ITEM_SHIPPING_COST, $count)] = \PagSeguro\Helpers\Currency::toDecimal(
+                    $data[sprintf($properties::ITEM_SHIPPING_COST, $count)] = \GrandChef\Helpers\Currency::toDecimal(
                         $items[$key]->getShippingCost()
                     );
                 }

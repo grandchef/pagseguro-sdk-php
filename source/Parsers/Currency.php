@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Parsers;
+namespace GrandChef\Parsers;
 
-use PagSeguro\Domains\Requests\Requests;
-use PagSeguro\Helpers;
+use GrandChef\Domains\Requests\Requests;
+use GrandChef\Helpers;
 
 /**
  * Trait Currency

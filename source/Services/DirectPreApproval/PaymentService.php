@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Services\DirectPreApproval;
+namespace GrandChef\Services\DirectPreApproval;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Domains\Requests\DirectPreApproval\Payment;
-use PagSeguro\Parsers\DirectPreApproval\PaymentParser;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Domains\Requests\DirectPreApproval\Payment;
+use GrandChef\Parsers\DirectPreApproval\PaymentParser;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class PaymentService
@@ -64,7 +64,7 @@ class PaymentService
                 self::request($connection),
                 PaymentParser::getData($payment),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
             $response = Responsibility::http(
                 $http,

@@ -22,19 +22,19 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard;
+namespace GrandChef\Domains\Requests\DirectPayment\CreditCard;
 
-use PagSeguro\Domains\Requests\Currency;
-use PagSeguro\Domains\Requests\DirectPayment\Mode;
-use PagSeguro\Domains\Requests\DirectPayment\Sender;
-use PagSeguro\Domains\Requests\Item;
-use PagSeguro\Domains\Requests\Notification;
-use PagSeguro\Domains\Requests\Parameter;
-use PagSeguro\Domains\Requests\ReceiverEmail;
-use PagSeguro\Domains\Requests\Redirect;
-use PagSeguro\Domains\Requests\Reference;
-use PagSeguro\Domains\Requests\Requests;
-use PagSeguro\Domains\Requests\Shipping;
+use GrandChef\Domains\Requests\Currency;
+use GrandChef\Domains\Requests\DirectPayment\Mode;
+use GrandChef\Domains\Requests\DirectPayment\Sender;
+use GrandChef\Domains\Requests\Item;
+use GrandChef\Domains\Requests\Notification;
+use GrandChef\Domains\Requests\Parameter;
+use GrandChef\Domains\Requests\ReceiverEmail;
+use GrandChef\Domains\Requests\Redirect;
+use GrandChef\Domains\Requests\Reference;
+use GrandChef\Domains\Requests\Requests;
+use GrandChef\Domains\Requests\Shipping;
 
 /**
  * Class Request

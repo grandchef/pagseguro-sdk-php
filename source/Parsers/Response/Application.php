@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Response;
+namespace GrandChef\Parsers\Response;
 
 /**
  * Trait Application
@@ -50,7 +50,7 @@ trait Application
     public function setApplication($applications)
     {
         if (!is_null($applications->application)) {
-            $application = new \PagSeguro\Domains\Responses\Applications\Application();
+            $application = new \GrandChef\Domains\Responses\Applications\Application();
             $application->setId(current($applications->application->id))
                 ->setName(current($applications->application->name))
                 ->setRole(current($applications->application->role));

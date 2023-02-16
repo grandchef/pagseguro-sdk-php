@@ -22,14 +22,14 @@
  *
  */
 
-namespace PagSeguro\Configuration;
+namespace GrandChef\Configuration;
 
-use PagSeguro\Domains\AccountCredentials;
-use PagSeguro\Domains\ApplicationCredentials;
-use PagSeguro\Domains\Charset;
-use PagSeguro\Domains\Environment;
-use PagSeguro\Domains\Log;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\AccountCredentials;
+use GrandChef\Domains\ApplicationCredentials;
+use GrandChef\Domains\Charset;
+use GrandChef\Domains\Environment;
+use GrandChef\Domains\Log;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class Configure

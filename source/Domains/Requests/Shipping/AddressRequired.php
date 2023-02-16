@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Shipping;
+namespace GrandChef\Domains\Requests\Shipping;
 
 trait AddressRequired
 {
@@ -35,7 +35,7 @@ trait AddressRequired
 
     public function setAddressRequired()
     {
-        $this->addressRequired = new \PagSeguro\Resources\Factory\Shipping\AddressRequired($this->shipping);
+        $this->addressRequired = new \GrandChef\Resources\Factory\Shipping\AddressRequired($this->shipping);
         return $this->addressRequired;
     }
 }

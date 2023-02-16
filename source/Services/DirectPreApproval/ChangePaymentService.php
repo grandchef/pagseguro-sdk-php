@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Services\DirectPreApproval;
+namespace GrandChef\Services\DirectPreApproval;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Domains\Requests\DirectPreApproval\ChangePayment;
-use PagSeguro\Parsers\DirectPreApproval\ChangePaymentParser;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Domains\Requests\DirectPreApproval\ChangePayment;
+use GrandChef\Parsers\DirectPreApproval\ChangePaymentParser;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class ChangePaymentService
@@ -66,7 +66,7 @@ class ChangePaymentService
                 self::request($connection, ChangePaymentParser::getPreApprovalCode($changePayment)),
                 ChangePaymentParser::getData($changePayment),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
             $response = Responsibility::http(
                 $http,

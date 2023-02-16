@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Session;
+namespace GrandChef\Parsers\Session;
 
 /**
  * Class Response

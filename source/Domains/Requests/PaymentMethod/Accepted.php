@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\PaymentMethod;
+namespace GrandChef\Domains\Requests\PaymentMethod;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 trait Accepted
 {
@@ -32,23 +32,23 @@ trait Accepted
     private $exclude;
 
     /**
-     * @return \PagSeguro\Resources\Factory\Request\Accepted
+     * @return \GrandChef\Resources\Factory\Request\Accepted
      */
     public function accept()
     {
         if (is_null($this->accept)) {
-            $this->accept = new \PagSeguro\Resources\Factory\Request\Accepted();
+            $this->accept = new \GrandChef\Resources\Factory\Request\Accepted();
         }
         return $this->accept;
     }
 
     /**
-     * @return \PagSeguro\Resources\Factory\Request\Accepted
+     * @return \GrandChef\Resources\Factory\Request\Accepted
      */
     public function exclude()
     {
         if (is_null($this->exclude)) {
-            $this->exclude = new \PagSeguro\Resources\Factory\Request\Accepted();
+            $this->exclude = new \GrandChef\Resources\Factory\Request\Accepted();
         }
         return $this->exclude;
     }

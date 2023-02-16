@@ -22,12 +22,12 @@
  *
  */
 
-namespace PagSeguro;
+namespace GrandChef;
 
-use PagSeguro\Helpers\Validate;
-use PagSeguro\Resources\Framework\ContentManagementSystems;
-use PagSeguro\Resources\Framework\Language;
-use PagSeguro\Resources\Framework\Module;
+use GrandChef\Helpers\Validate;
+use GrandChef\Resources\Framework\ContentManagementSystems;
+use GrandChef\Resources\Framework\Language;
+use GrandChef\Resources\Framework\Module;
 
 /**
  * Class Library

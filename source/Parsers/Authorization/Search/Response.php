@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Parsers\Authorization\Search;
+namespace GrandChef\Parsers\Authorization\Search;
 
-use PagSeguro\Domains\Account;
-use PagSeguro\Domains\Permission;
+use GrandChef\Domains\Account;
+use GrandChef\Domains\Permission;
 
 /**
  * Class Response

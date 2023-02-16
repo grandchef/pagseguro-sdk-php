@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Shipping;
+namespace GrandChef\Domains\Requests\Shipping;
 
 trait Type
 {
@@ -35,7 +35,7 @@ trait Type
 
     public function setType()
     {
-        $this->type = new \PagSeguro\Resources\Factory\Shipping\Type($this->shipping);
+        $this->type = new \GrandChef\Resources\Factory\Shipping\Type($this->shipping);
         return $this->type;
     }
 }

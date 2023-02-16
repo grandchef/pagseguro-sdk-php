@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers;
+namespace GrandChef\Parsers;
 
-use PagSeguro\Domains\Requests\Requests;
+use GrandChef\Domains\Requests\Requests;
 
 /**
  * Trait PaymentMethod
@@ -54,7 +54,7 @@ trait PaymentMethod
                 }
                 if (!is_null($paymentMethod[$key]->getValue())) {
                     $data[sprintf($properties::PAYMENT_METHOD_CONFIG_VALUE, $count, 1)] =
-                        \PagSeguro\Helpers\Currency::toDecimal($paymentMethod[$key]->getValue());
+                        \GrandChef\Helpers\Currency::toDecimal($paymentMethod[$key]->getValue());
                 }
             }
         }

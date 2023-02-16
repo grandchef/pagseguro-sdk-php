@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Helpers;
+namespace GrandChef\Helpers;
 
 /**
  * Class NotificationObject
@@ -35,7 +35,7 @@ class NotificationObject
      */
     public static function initialize()
     {
-        $notification = new \PagSeguro\Domains\Notification();
+        $notification = new \GrandChef\Domains\Notification();
         $notification->setCode(Xhr::getInputCode())
             ->setType(Xhr::getInputType());
         return $notification;

@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Configuration;
+namespace GrandChef\Configuration;
 
 class Wrapper
 {

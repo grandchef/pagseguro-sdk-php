@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Responsibility\Configuration;
+namespace GrandChef\Resources\Responsibility\Configuration;
 
-use PagSeguro\Resources\Responsibility\Handler;
+use GrandChef\Resources\Responsibility\Handler;
 
 class Wrapper implements Handler
 {
@@ -41,10 +41,10 @@ class Wrapper implements Handler
         if (class_exists('ConfigWrapper')) {
             $configWrapper = new \ConfigWrapper;
             return array_merge(
-                \PagSeguro\Helpers\Wrapper::environment($configWrapper),
-                \PagSeguro\Helpers\Wrapper::credentials($configWrapper),
-                \PagSeguro\Helpers\Wrapper::charset($configWrapper),
-                \PagSeguro\Helpers\Wrapper::log($configWrapper)
+                \GrandChef\Helpers\Wrapper::environment($configWrapper),
+                \GrandChef\Helpers\Wrapper::credentials($configWrapper),
+                \GrandChef\Helpers\Wrapper::charset($configWrapper),
+                \GrandChef\Helpers\Wrapper::log($configWrapper)
             );
         }
         return $this->successor->handler($action, $class);

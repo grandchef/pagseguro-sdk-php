@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Cancel;
+namespace GrandChef\Parsers\Cancel;
 
 /**
  * Class Response

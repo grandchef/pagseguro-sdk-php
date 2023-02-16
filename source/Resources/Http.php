@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources;
+namespace GrandChef\Resources;
 
-use PagSeguro\Library;
+use GrandChef\Library;
 
 /**
  * Class Http

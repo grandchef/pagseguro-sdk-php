@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Resources\Responsibility\Notifications;
+namespace GrandChef\Resources\Responsibility\Notifications;
 
-use PagSeguro\Helpers\Xhr;
+use GrandChef\Helpers\Xhr;
 
 /**
  * Class PreApproval
  * @package PagSeguro\Resources\Responsibility\Notifications
  */
-class PreApproval implements \PagSeguro\Resources\Responsibility\Notifications\Handler
+class PreApproval implements \GrandChef\Resources\Responsibility\Notifications\Handler
 {
 
     /**
@@ -55,8 +55,8 @@ class PreApproval implements \PagSeguro\Resources\Responsibility\Notifications\H
     {
         if (!is_null(Xhr::getInputCode()) and
             !is_null(Xhr::getInputType()) and
-            Xhr::getInputType() == \PagSeguro\Enum\Notification::PRE_APPROVAL) {
-            $notification = \PagSeguro\Helpers\NotificationObject::initialize();
+            Xhr::getInputType() == \GrandChef\Enum\Notification::PRE_APPROVAL) {
+            $notification = \GrandChef\Helpers\NotificationObject::initialize();
             return $notification->getCode();
         }
         return $this->successor->handler();

@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Services\Authorization;
+namespace GrandChef\Services\Authorization;
 
-use PagSeguro\Domains\Authorization;
-use PagSeguro\Domains\Authorization\Company;
+use GrandChef\Domains\Authorization;
+use GrandChef\Domains\Authorization\Company;
 
 /**
  * Class CompanySeller

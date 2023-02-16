@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers;
+namespace GrandChef\Parsers;
 
-use PagSeguro\Resources\Http;
+use GrandChef\Resources\Http;
 
 /**
  * Class Error
@@ -34,11 +34,11 @@ class Error
 {
     /**
      * @param Http $http
-     * @return \PagSeguro\Domains\Error
+     * @return \GrandChef\Domains\Error
      */
     protected static function error(Http $http)
     {
-        $error = new \PagSeguro\Domains\Error;
+        $error = new \GrandChef\Domains\Error;
         $error->setCode($http->getStatus())
             ->setMessage($http->getResponse());
         return $error;

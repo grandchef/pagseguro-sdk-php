@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPreApproval;
+namespace GrandChef\Domains\Requests\DirectPreApproval;
 
-use PagSeguro\Domains\DirectPreApproval\PaymentMethod;
-use PagSeguro\Domains\DirectPreApproval\Sender;
-use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
+use GrandChef\Domains\DirectPreApproval\PaymentMethod;
+use GrandChef\Domains\DirectPreApproval\Sender;
+use GrandChef\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /**
  * Class AccessionRequest

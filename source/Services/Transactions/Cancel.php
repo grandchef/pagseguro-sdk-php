@@ -22,16 +22,16 @@
  *
  */
 
-namespace PagSeguro\Services\Transactions;
+namespace GrandChef\Services\Transactions;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Helpers\Crypto;
-use PagSeguro\Parsers\Cancel\Request;
-use PagSeguro\Parsers\Cancel\Response;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Helpers\Crypto;
+use GrandChef\Parsers\Cancel\Request;
+use GrandChef\Parsers\Cancel\Response;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class Payment
@@ -64,7 +64,7 @@ class Cancel
                 self::request($connection),
                 Request::getData($code),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
 
             $response = Responsibility::http(

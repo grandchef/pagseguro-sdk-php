@@ -22,16 +22,16 @@
  *
  */
 
-namespace PagSeguro\Services\DirectPayment;
+namespace GrandChef\Services\DirectPayment;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Helpers\Crypto;
-use PagSeguro\Helpers\Mask;
-use PagSeguro\Parsers\DirectPayment\OnlineDebit\Request;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Helpers\Crypto;
+use GrandChef\Helpers\Mask;
+use GrandChef\Parsers\DirectPayment\OnlineDebit\Request;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class Payment
@@ -40,14 +40,14 @@ use PagSeguro\Resources\Responsibility;
 class OnlineDebit
 {
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
-     * @param \PagSeguro\Domains\Requests\DirectPayment\OnlineDebit $payment
+     * @param \GrandChef\Domains\Account\Credentials $credentials
+     * @param \GrandChef\Domains\Requests\DirectPayment\OnlineDebit $payment
      * @return string
      * @throws \Exception
      */
     public static function checkout(
         Credentials $credentials,
-        \PagSeguro\Domains\Requests\DirectPayment\OnlineDebit $payment
+        \GrandChef\Domains\Requests\DirectPayment\OnlineDebit $payment
     )
     {
         Logger::info("Begin", ['service' => 'DirectPayment.OnlineDebit']);
@@ -69,7 +69,7 @@ class OnlineDebit
                 self::request($connection),
                 Request::getData($payment),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
 
             $response = Responsibility::http(

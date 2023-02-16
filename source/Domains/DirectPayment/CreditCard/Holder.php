@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\DirectPayment\CreditCard;
+namespace GrandChef\Domains\DirectPayment\CreditCard;
 
 /**
  * Class Holder

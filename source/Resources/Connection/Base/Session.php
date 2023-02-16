@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Connection\Base;
+namespace GrandChef\Resources\Connection\Base;
 
-use PagSeguro\Resources\Builder;
+use GrandChef\Resources\Builder;
 
 /**
  * Class Session

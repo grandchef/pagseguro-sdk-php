@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Domains\Authorization;
+namespace GrandChef\Domains\Authorization;
 
-use PagSeguro\Domains\Document;
-use PagSeguro\Domains\Phone;
+use GrandChef\Domains\Document;
+use GrandChef\Domains\Phone;
 
 /**
  * Class Partner

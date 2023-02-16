@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Services\DirectPreApproval;
+namespace GrandChef\Services\DirectPreApproval;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Domains\Requests\DirectPreApproval\QueryPaymentOrder;
-use PagSeguro\Parsers\DirectPreApproval\QueryPaymentOrderParsers;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Domains\Requests\DirectPreApproval\QueryPaymentOrder;
+use GrandChef\Parsers\DirectPreApproval\QueryPaymentOrderParsers;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class QueryPaymentOrderService
@@ -63,7 +63,7 @@ class QueryPaymentOrderService
             $http->get(
                 self::request($connection, QueryPaymentOrderParsers::getPreApprovalCode($queryPaymentOrder), QueryPaymentOrderParsers::getData($queryPaymentOrder)),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
             $response = Responsibility::http(
                 $http,

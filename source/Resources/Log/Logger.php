@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Resources\Log;
+namespace GrandChef\Resources\Log;
 
-use PagSeguro\Configuration\Configure;
-use PagSeguro\Enum\Log\Level;
+use GrandChef\Configuration\Configure;
+use GrandChef\Enum\Log\Level;
 
 /**
  * It simply delegates all log-level-specific methods to the `log` method to

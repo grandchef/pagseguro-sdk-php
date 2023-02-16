@@ -22,13 +22,13 @@
  *
  */
 
-namespace PagSeguro\Domains\PreApproval;
+namespace GrandChef\Domains\PreApproval;
 
 /**
  * Class Sender
  * @package PagSeguro\Domains
  */
-class Sender extends \PagSeguro\Domains\Sender
+class Sender extends \GrandChef\Domains\Sender
 {
 
     /**

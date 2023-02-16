@@ -24,7 +24,7 @@
 
 require_once "../../../vendor/autoload.php";
 
-\PagSeguro\Library::initialize();
+\GrandChef\Library::initialize();
 
 $options = [
     'initial_date' => '2015-09-09T00:00',
@@ -36,8 +36,8 @@ $options = [
 $reference = "REF123";
 
 try {
-    $response = \PagSeguro\Services\Application\Search\Reference::search(
-        \PagSeguro\Configuration\Configure::getApplicationCredentials(),
+    $response = \GrandChef\Services\Application\Search\Reference::search(
+        \GrandChef\Configuration\Configure::getApplicationCredentials(),
         $reference,
         $options
     );

@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Sender;
+namespace GrandChef\Resources\Factory\Sender;
 
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class Shipping
@@ -34,7 +34,7 @@ class Address
 {
 
     /**
-     * @var \PagSeguro\Domains\Shipping
+     * @var \GrandChef\Domains\Shipping
      */
     private $sender;
 
@@ -48,8 +48,8 @@ class Address
     }
 
     /**
-     * @param \PagSeguro\Domains\Address $address
-     * @return \PagSeguro\Domains\Shipping
+     * @param \GrandChef\Domains\Address $address
+     * @return \GrandChef\Domains\Shipping
      */
     public function instance(\PagSeguro\Domains\Address $address)
     {
@@ -59,12 +59,12 @@ class Address
 
     /**
      * @param $array
-     * @return \PagSeguro\Domains\Shipping
+     * @return \GrandChef\Domains\Shipping
      */
     public function withArray($array)
     {
         $properties = new Current;
-        $address = new \PagSeguro\Domains\Address();
+        $address = new \GrandChef\Domains\Address();
         $address->setPostalCode($array[$properties::SHIPPING_ADDRESS_POSTAL_CODE])
             ->setStreet($array[$properties::SHIPPING_ADDRESS_STREET])
             ->setNumber($array[$properties::SHIPPING_ADDRESS_NUMBER])
@@ -86,7 +86,7 @@ class Address
      * @param $city
      * @param $state
      * @param $country
-     * @return \PagSeguro\Domains\Shipping
+     * @return \GrandChef\Domains\Shipping
      */
     public function withParameters(
         $street,
@@ -98,7 +98,7 @@ class Address
         $country,
         $complement = null
     ) {
-        $address = new \PagSeguro\Domains\Address();
+        $address = new \GrandChef\Domains\Address();
         $address->setPostalCode($postalCode)
             ->setStreet($street)
             ->setNumber($number)

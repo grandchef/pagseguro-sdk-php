@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory;
+namespace GrandChef\Resources\Factory;
 
-use PagSeguro\Domains\Document;
-use PagSeguro\Domains\Phone;
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Domains\Document;
+use GrandChef\Domains\Phone;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class Shipping
@@ -36,7 +36,7 @@ class Sender
 {
 
     /**
-     * @var \PagSeguro\Domains\Sender
+     * @var \GrandChef\Domains\Sender
      */
     private $sender;
 
@@ -45,12 +45,12 @@ class Sender
      */
     public function __construct()
     {
-        $this->sender = new \PagSeguro\Domains\Sender();
+        $this->sender = new \GrandChef\Domains\Sender();
     }
 
     /**
-     * @param \PagSeguro\Domains\Sender $sender
-     * @return \PagSeguro\Domains\Sender
+     * @param \GrandChef\Domains\Sender $sender
+     * @return \GrandChef\Domains\Sender
      */
     public function instance(\PagSeguro\Domains\Sender $sender)
     {
@@ -59,7 +59,7 @@ class Sender
 
     /**
      * @param $array
-     * @return \PagSeguro\Domains\Sender
+     * @return \GrandChef\Domains\Sender
      */
     public function withArray($array)
     {
@@ -75,7 +75,7 @@ class Sender
      * @param $email
      * @param Phone $phone
      * @param Document $document
-     * @return \PagSeguro\Domains\Sender
+     * @return \GrandChef\Domains\Sender
      */
     public function withParameters(
         $name,

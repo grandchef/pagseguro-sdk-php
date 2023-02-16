@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Http;
+namespace GrandChef\Domains\Http;
 
 /**
  * Class Status
@@ -37,7 +37,7 @@ class Status
      */
     public function getStatus($status)
     {
-        return \PagSeguro\Enum\Http\Status::getValue($status);
+        return \GrandChef\Enum\Http\Status::getValue($status);
     }
 
     /**
@@ -46,6 +46,6 @@ class Status
      */
     public function getType($type)
     {
-        return \PagSeguro\Enum\Http\Status::getValue($type);
+        return \GrandChef\Enum\Http\Status::getValue($type);
     }
 }

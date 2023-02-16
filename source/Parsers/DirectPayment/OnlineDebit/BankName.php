@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers\DirectPayment\OnlineDebit;
+namespace GrandChef\Parsers\DirectPayment\OnlineDebit;
 
-use PagSeguro\Domains\Requests\Requests;
+use GrandChef\Domains\Requests\Requests;
 
 /**
  * Trait BankName

@@ -22,12 +22,12 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard;
+namespace GrandChef\Domains\Requests\DirectPayment\CreditCard;
 
 /**
  * Description of Installment
  *
- * @package \PagSeguro\Domains\Requests\DirectPayment\CreditCard
+ * @package \GrandChef\Domains\Requests\DirectPayment\CreditCard
  */
 trait Installment
 {
@@ -40,7 +40,7 @@ trait Installment
 
     public function setInstallment()
     {
-        $this->installment = new \PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard\Installment();
+        $this->installment = new \GrandChef\Resources\Factory\Request\DirectPayment\CreditCard\Installment();
         return $this->installment;
     }
 }

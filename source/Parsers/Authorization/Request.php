@@ -22,17 +22,17 @@
  *
  */
 
-namespace PagSeguro\Parsers\Authorization;
+namespace GrandChef\Parsers\Authorization;
 
-use PagSeguro\Domains\Authorization;
-use PagSeguro\Parsers\Basic;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Resources\Http;
-use PagSeguro\Services\Authorization\CompanyService;
-use PagSeguro\Services\Authorization\DefaultAuthorizationService;
-use PagSeguro\Services\Authorization\PersonalService;
-use PagSeguro\Services\Authorization\SellerService;
+use GrandChef\Domains\Authorization;
+use GrandChef\Parsers\Basic;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Parser;
+use GrandChef\Resources\Http;
+use GrandChef\Services\Authorization\CompanyService;
+use GrandChef\Services\Authorization\DefaultAuthorizationService;
+use GrandChef\Services\Authorization\PersonalService;
+use GrandChef\Services\Authorization\SellerService;
 
 /**
  * Class Request
@@ -43,7 +43,7 @@ class Request extends Error implements Parser
     use Basic;
 
     /**
-     * @param \PagSeguro\Domains\Requests\Authorization $authorization
+     * @param \GrandChef\Domains\Requests\Authorization $authorization
      * @return string
      */
     public static function getData(\PagSeguro\Domains\Requests\Authorization $authorization)

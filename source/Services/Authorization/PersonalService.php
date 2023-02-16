@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Services\Authorization;
+namespace GrandChef\Services\Authorization;
 
-use PagSeguro\Domains\Authorization;
-use PagSeguro\Domains\Document;
-use PagSeguro\Domains\Phone;
+use GrandChef\Domains\Authorization;
+use GrandChef\Domains\Document;
+use GrandChef\Domains\Phone;
 
 /**
  * Class PersonSeller

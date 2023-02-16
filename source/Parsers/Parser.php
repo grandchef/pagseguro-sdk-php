@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers;
+namespace GrandChef\Parsers;
 
-use PagSeguro\Resources\Http;
+use GrandChef\Resources\Http;
 
 /**
  * Interface Parser

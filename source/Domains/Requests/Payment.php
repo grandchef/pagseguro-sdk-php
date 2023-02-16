@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
-use PagSeguro\Domains\Requests\Checkout\Payment\Request;
+use GrandChef\Domains\Requests\Checkout\Payment\Request;
 
 /**
  * Class Payment
@@ -40,6 +40,6 @@ class Payment extends Request
      */
     public function register($credentials, $onlyCode = false)
     {
-        return \PagSeguro\Services\Checkout\Payment::checkout($credentials, $this, $onlyCode);
+        return \GrandChef\Services\Checkout\Payment::checkout($credentials, $this, $onlyCode);
     }
 }

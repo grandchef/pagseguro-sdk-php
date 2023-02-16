@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\DirectPayment\Boleto;
+namespace GrandChef\Parsers\DirectPayment\Boleto;
 
 /**
  * Trait Method
@@ -36,7 +36,7 @@ trait Method
      */
     public static function getData($properties)
     {
-        $data[$properties::DIRECT_PAYMENT_METHOD] = \PagSeguro\Enum\DirectPayment\Method::BOLETO;
+        $data[$properties::DIRECT_PAYMENT_METHOD] = \GrandChef\Enum\DirectPayment\Method::BOLETO;
         return $data;
     }
 }

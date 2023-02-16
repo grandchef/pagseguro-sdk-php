@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\PreApproval\Search;
+namespace GrandChef\Parsers\PreApproval\Search;
 
 /**
  * Class Result

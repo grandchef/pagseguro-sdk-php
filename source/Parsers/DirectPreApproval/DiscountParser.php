@@ -22,12 +22,12 @@
  *
  */
 
-namespace PagSeguro\Parsers\DirectPreApproval;
+namespace GrandChef\Parsers\DirectPreApproval;
 
-use PagSeguro\Domains\Requests\DirectPreApproval\Discount;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Resources\Http;
+use GrandChef\Domains\Requests\DirectPreApproval\Discount;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Parser;
+use GrandChef\Resources\Http;
 
 /**
  * Class DiscountParser

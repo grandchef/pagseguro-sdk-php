@@ -22,16 +22,16 @@
  *
  */
 
-namespace PagSeguro\Parsers\PreApproval\Charge;
+namespace GrandChef\Parsers\PreApproval\Charge;
 
-use PagSeguro\Domains\Requests\Requests;
-use PagSeguro\Enum\Properties\Current;
-use PagSeguro\Parsers\Basic;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Item;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Parsers\PreApproval\Response;
-use PagSeguro\Resources\Http;
+use GrandChef\Domains\Requests\Requests;
+use GrandChef\Enum\Properties\Current;
+use GrandChef\Parsers\Basic;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Item;
+use GrandChef\Parsers\Parser;
+use GrandChef\Parsers\PreApproval\Response;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request
@@ -62,7 +62,7 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
+     * @param \GrandChef\Resources\Http $http
      * @return Response
      */
     public static function success(Http $http)
@@ -73,8 +73,8 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
-     * @return \PagSeguro\Domains\Error
+     * @param \GrandChef\Resources\Http $http
+     * @return \GrandChef\Domains\Error
      */
     public static function error(Http $http)
     {

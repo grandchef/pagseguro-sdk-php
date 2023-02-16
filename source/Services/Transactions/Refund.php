@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Services\Transactions;
+namespace GrandChef\Services\Transactions;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Helpers\Crypto;
-use PagSeguro\Parsers\Transaction\Refund\Request;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Helpers\Crypto;
+use GrandChef\Parsers\Transaction\Refund\Request;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class Payment
@@ -40,8 +40,8 @@ class Refund
 {
 
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
-     * @param \PagSeguro\Domains\Requests\Payment $payment
+     * @param \GrandChef\Domains\Account\Credentials $credentials
+     * @param \GrandChef\Domains\Requests\Payment $payment
      * @param bool $onlyCode
      * @return string
      * @throws \Exception
@@ -64,7 +64,7 @@ class Refund
                 self::request($connection),
                 Request::getData($code, $value),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
 
             $response = Responsibility::http(

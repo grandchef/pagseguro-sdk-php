@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Authorization;
+namespace GrandChef\Parsers\Authorization;
 
 /**
  * Class Response

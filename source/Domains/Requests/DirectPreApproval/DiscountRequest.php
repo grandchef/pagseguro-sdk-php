@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPreApproval;
+namespace GrandChef\Domains\Requests\DirectPreApproval;
 
-use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
+use GrandChef\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /**
  * Class DiscountRequest

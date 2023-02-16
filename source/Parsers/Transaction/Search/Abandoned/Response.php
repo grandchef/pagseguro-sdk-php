@@ -6,7 +6,7 @@
  * Time: 11:18
  */
 
-namespace PagSeguro\Parsers\Transaction\Search\Abandoned;
+namespace GrandChef\Parsers\Transaction\Search\Abandoned;
 
 /**
  * Class Response

@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Authorization;
+namespace GrandChef\Domains\Authorization;
 
 /**
  * Class Account

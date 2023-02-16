@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Resources\Responsibility\Factory\Request;
+namespace GrandChef\Resources\Responsibility\Factory\Request;
 
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Responsibility\Handler;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Responsibility\Handler;
 
 /**
  * Class Generic

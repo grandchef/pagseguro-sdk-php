@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Parsers\Authorization\Search\Date;
+namespace GrandChef\Parsers\Authorization\Search\Date;
 
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Resources\Http;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Parser;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request

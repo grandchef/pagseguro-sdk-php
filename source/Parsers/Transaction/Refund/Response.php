@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Transaction\Refund;
+namespace GrandChef\Parsers\Transaction\Refund;
 
 /**
  * Class Response

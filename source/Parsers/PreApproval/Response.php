@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\PreApproval;
+namespace GrandChef\Parsers\PreApproval;
 
 /**
  * Class Response

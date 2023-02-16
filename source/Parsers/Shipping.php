@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers;
+namespace GrandChef\Parsers;
 
-use PagSeguro\Domains\Requests\Requests;
+use GrandChef\Domains\Requests\Requests;
 
 /**
  * Trait Shipping
@@ -70,7 +70,7 @@ trait Shipping
     private static function cost($request, $properties)
     {
         $data = [];
-        $data[$properties::SHIPPING_COST] = \PagSeguro\Helpers\Currency::toDecimal(
+        $data[$properties::SHIPPING_COST] = \GrandChef\Helpers\Currency::toDecimal(
             $request->getShipping()->getCost()->getCost()
         );
         return $data;

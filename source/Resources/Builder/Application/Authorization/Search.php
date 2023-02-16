@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Builder\Application\Authorization;
+namespace GrandChef\Resources\Builder\Application\Authorization;
 
-use PagSeguro\Resources\Builder;
+use GrandChef\Resources\Builder;
 
 /**
  * Class Payment

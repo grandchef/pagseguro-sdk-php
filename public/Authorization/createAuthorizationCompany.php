@@ -25,14 +25,14 @@
 require_once "../../vendor/autoload.php";
 
 try {
-    \PagSeguro\Library::initialize();
+    \GrandChef\Library::initialize();
 } catch (Exception $e) {
     die($e);
 }
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
 
-$authorization = new \PagSeguro\Domains\Requests\Authorization();
+$authorization = new \GrandChef\Domains\Requests\Authorization();
 
 $authorization->setReference("AUTH_LIB_PHP_0001");
 $authorization->setRedirectUrl("http://www.lojamodelo.com.br");
@@ -44,19 +44,19 @@ $authorization->addPermission(\PagSeguro\Enum\Authorization\Permissions::RECEIVE
 $authorization->addPermission(\PagSeguro\Enum\Authorization\Permissions::MANAGE_PAYMENT_PRE_APPROVALS);
 $authorization->addPermission(\PagSeguro\Enum\Authorization\Permissions::DIRECT_PAYMENT);
 
-$partner = new \PagSeguro\Domains\Authorization\Partner(
+$partner = new \GrandChef\Domains\Authorization\Partner(
     'John Doe',
     new DateTime(),
-    new \PagSeguro\Domains\Document('CPF', '00000000000'),
-    new \PagSeguro\Domains\Phone('00', '000000000', \PagSeguro\Enum\Authorization\PhoneEnum::HOME)
+    new \GrandChef\Domains\Document('CPF', '00000000000'),
+    new \GrandChef\Domains\Phone('00', '000000000', \GrandChef\Enum\Authorization\PhoneEnum::HOME)
 );
 
-$person = new \PagSeguro\Domains\Authorization\Company(
+$person = new \GrandChef\Domains\Authorization\Company(
     'John Doe',
     'http://www.example.com',
-    new \PagSeguro\Domains\Document('CPF', '00000000000'),
-    new \PagSeguro\Domains\Phone('00', '000000000', \PagSeguro\Enum\Authorization\PhoneEnum::BUSINESS),
-    new \PagSeguro\Domains\Address('Rua Um',
+    new \GrandChef\Domains\Document('CPF', '00000000000'),
+    new \GrandChef\Domains\Phone('00', '000000000', \GrandChef\Enum\Authorization\PhoneEnum::BUSINESS),
+    new \GrandChef\Domains\Address('Rua Um',
         '1',
         'Sem complemento',
         'Bairro',
@@ -71,16 +71,16 @@ $person = new \PagSeguro\Domains\Authorization\Company(
  *
  * Os tipos de telefone permitidos são HOME, MOBILE e BUSINESS.
  */
-$person->addPhones(new \PagSeguro\Domains\Phone('00', '000000000', \PagSeguro\Enum\Authorization\PhoneEnum::HOME));
-$person->addPhones(new \PagSeguro\Domains\Phone('00', '000000000', \PagSeguro\Enum\Authorization\PhoneEnum::BUSINESS));
+$person->addPhones(new \GrandChef\Domains\Phone('00', '000000000', \GrandChef\Enum\Authorization\PhoneEnum::HOME));
+$person->addPhones(new \GrandChef\Domains\Phone('00', '000000000', \GrandChef\Enum\Authorization\PhoneEnum::BUSINESS));
 
-$account = new \PagSeguro\Domains\Authorization\Account('john@doe.com', $person);
+$account = new \GrandChef\Domains\Authorization\Account('john@doe.com', $person);
 
 $authorization->setAccount($account);
 
 try {
     $response = $authorization->register(
-        \PagSeguro\Configuration\Configure::getApplicationCredentials()
+        \GrandChef\Configuration\Configure::getApplicationCredentials()
     );
     echo "<h2>Criando requisi&ccedil;&atilde;o de authorização</h2>"
         . "<p>URL do pagamento: <strong>$response</strong></p>"

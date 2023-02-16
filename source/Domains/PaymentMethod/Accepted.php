@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\PaymentMethod;
+namespace GrandChef\Domains\PaymentMethod;
 
 /**
  * Class Accepted

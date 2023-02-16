@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Framework;
+namespace GrandChef\Resources\Framework;
 
-use PagSeguro\Resources\Framework\Platform\Factory;
+use GrandChef\Resources\Framework\Platform\Factory;
 
 /**
  * Class ContentManagementSystems

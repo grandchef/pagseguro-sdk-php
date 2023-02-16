@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard;
+namespace GrandChef\Domains\Requests\DirectPayment\CreditCard;
 
 /**
  * Domain request class of Token

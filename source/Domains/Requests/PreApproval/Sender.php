@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\PreApproval;
+namespace GrandChef\Domains\Requests\PreApproval;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 /**
  * Class Sender
@@ -39,16 +39,16 @@ trait Sender
     private $sender;
 
     /**
-     * @return \PagSeguro\Domains\Requests\Adapter\Sender
+     * @return \GrandChef\Domains\Requests\Adapter\Sender
      */
     public function setSender()
     {
         $this->sender = InitializeObject::initialize($this->sender, '\PagSeguro\Domains\PreApproval\Sender');
-        return new \PagSeguro\Domains\Requests\Adapter\PreApproval\Sender($this->sender);
+        return new \GrandChef\Domains\Requests\Adapter\PreApproval\Sender($this->sender);
     }
 
     /**
-     * @return \PagSeguro\Domains\PreApproval\Sender
+     * @return \GrandChef\Domains\PreApproval\Sender
      */
     public function getSender()
     {

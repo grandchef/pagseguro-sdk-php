@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment;
+namespace GrandChef\Domains\Requests\DirectPayment;
 
 /**
  * Direct Payment Method

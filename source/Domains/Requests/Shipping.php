@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
 trait Shipping
 {
@@ -30,12 +30,12 @@ trait Shipping
 
     public function __construct()
     {
-        $this->shipping = new \PagSeguro\Domains\Shipping();
+        $this->shipping = new \GrandChef\Domains\Shipping();
     }
 
     public function setShipping()
     {
-        return new \PagSeguro\Domains\Requests\Adapter\Shipping($this->shipping);
+        return new \GrandChef\Domains\Requests\Adapter\Shipping($this->shipping);
     }
 
     public function getShipping()

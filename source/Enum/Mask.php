@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Enum;
+namespace GrandChef\Enum;
 
 /**
  * Class Mask

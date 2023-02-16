@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Adapter;
+namespace GrandChef\Domains\Requests\Adapter;
 
-use PagSeguro\Domains\Requests\Sender\Customer;
-use PagSeguro\Domains\Requests\Sender\Document;
-use PagSeguro\Domains\Requests\Sender\Phone;
+use GrandChef\Domains\Requests\Sender\Customer;
+use GrandChef\Domains\Requests\Sender\Document;
+use GrandChef\Domains\Requests\Sender\Phone;
 
 class Sender
 {

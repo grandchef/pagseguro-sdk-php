@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Services\DirectPreApproval;
+namespace GrandChef\Services\DirectPreApproval;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Domains\Requests\DirectPreApproval\Accession;
-use PagSeguro\Parsers\DirectPreApproval\AccessionParser;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Domains\Requests\DirectPreApproval\Accession;
+use GrandChef\Parsers\DirectPreApproval\AccessionParser;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class AccessionService
@@ -64,7 +64,7 @@ class AccessionService
                 self::request($connection),
                 AccessionParser::getData($directPreApproval),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
             $response = Responsibility::http(
                 $http,

@@ -23,11 +23,11 @@
  *
  */
 
-namespace PagSeguro\Parsers;
+namespace GrandChef\Parsers;
 
-use PagSeguro\Domains\Requests\Requests;
-use PagSeguro\Enum\Metadata\Description;
-use PagSeguro\Helpers\StringFormat;
+use GrandChef\Domains\Requests\Requests;
+use GrandChef\Enum\Metadata\Description;
+use GrandChef\Helpers\StringFormat;
 
 /**
  * Trait Metadata

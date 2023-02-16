@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Request;
+namespace GrandChef\Resources\Factory\Request;
 
 /**
  * Description of Parameter
@@ -44,7 +44,7 @@ class Parameter
 
     public function withArray($array)
     {
-        $parameter = new \PagSeguro\Domains\Parameter();
+        $parameter = new \GrandChef\Domains\Parameter();
         $parameter->setKey($array[0])
             ->setValue($array[1]);
 
@@ -59,7 +59,7 @@ class Parameter
 
     public function withParameters($key, $value)
     {
-        $parameter = new \PagSeguro\Domains\Parameter();
+        $parameter = new \GrandChef\Domains\Parameter();
         $parameter->setKey($key)
             ->setValue($value);
         array_push($this->parameter, $parameter);

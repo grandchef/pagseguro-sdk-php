@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Request;
+namespace GrandChef\Resources\Factory\Request;
 
-use PagSeguro\Domains\PaymentMethod\Groups;
-use PagSeguro\Domains\PaymentMethod\Names;
+use GrandChef\Domains\PaymentMethod\Groups;
+use GrandChef\Domains\PaymentMethod\Names;
 
 /**
  * Class Metadata
@@ -42,13 +42,13 @@ class Accepted
     public function __construct()
     {
         if (is_null($this->accepted)) {
-            $this->accepted = new \PagSeguro\Domains\PaymentMethod\Accepted();
+            $this->accepted = new \GrandChef\Domains\PaymentMethod\Accepted();
         }
     }
 
     /**
      * @param $group
-     * @return \PagSeguro\Domains\PaymentMethod\Accepted
+     * @return \GrandChef\Domains\PaymentMethod\Accepted
      */
     public function group($group)
     {
@@ -57,7 +57,7 @@ class Accepted
     }
 
     /**
-     * @return \PagSeguro\Domains\PaymentMethod\Accepted
+     * @return \GrandChef\Domains\PaymentMethod\Accepted
      */
     public function groups()
     {
@@ -69,7 +69,7 @@ class Accepted
 
     /**
      * @param $name
-     * @return \PagSeguro\Domains\PaymentMethod\Accepted
+     * @return \GrandChef\Domains\PaymentMethod\Accepted
      */
     public function name($name)
     {
@@ -78,7 +78,7 @@ class Accepted
     }
 
     /**
-     * @return \PagSeguro\Domains\PaymentMethod\Accepted
+     * @return \GrandChef\Domains\PaymentMethod\Accepted
      */
     public function names()
     {

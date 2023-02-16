@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Responsibility\Http\Methods;
+namespace GrandChef\Resources\Responsibility\Http\Methods;
 
-use PagSeguro\Resources\Responsibility\Handler;
+use GrandChef\Resources\Responsibility\Handler;
 
 /**
  * Class Generic

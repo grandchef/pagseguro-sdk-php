@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Adapter\DirectPayment;
+namespace GrandChef\Domains\Requests\Adapter\DirectPayment;
 
-use PagSeguro\Domains\Requests\DirectPayment\CreditCard\Billing\Address;
+use GrandChef\Domains\Requests\DirectPayment\CreditCard\Billing\Address;
 
 class Billing
 {

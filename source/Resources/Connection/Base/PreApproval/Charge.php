@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Connection\Base\PreApproval;
+namespace GrandChef\Resources\Connection\Base\PreApproval;
 
-use PagSeguro\Resources\Builder;
+use GrandChef\Resources\Builder;
 
 /**
  * Class Payment

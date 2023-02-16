@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Sender;
+namespace GrandChef\Domains\Requests\Sender;
 
 trait Phone
 {
@@ -36,7 +36,7 @@ trait Phone
 
     public function setPhone()
     {
-        $this->phone = new \PagSeguro\Resources\Factory\Sender\Phone($this->sender);
+        $this->phone = new \GrandChef\Resources\Factory\Sender\Phone($this->sender);
         return $this->phone;
     }
 }

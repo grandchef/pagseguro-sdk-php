@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Connection;
+namespace GrandChef\Resources\Connection;
 
-use PagSeguro\Domains\Account\Credentials;
+use GrandChef\Domains\Account\Credentials;
 
 /**
  * Class Data

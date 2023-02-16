@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Response;
+namespace GrandChef\Parsers\Response;
 
 /**
  * Trait GatewaySystem
@@ -33,7 +33,7 @@ trait GatewaySystem
     private $gatewaySystem;
 
     /**
-     * @return \PagSeguro\Domains\Responses\GatewaySystem
+     * @return \GrandChef\Domains\Responses\GatewaySystem
      */
     public function getGatewaySystem()
     {
@@ -42,12 +42,12 @@ trait GatewaySystem
 
     /**
      * @param xmlObject $gatewaySystem
-     * @return \Pagseguro\Parsers\Response\GatewaySystem
+     * @return \GrandChef\Parsers\Response\GatewaySystem
      */
     public function setGatewaySystem($gatewaySystem)
     {
         if ($gatewaySystem) {
-            $this->gatewaySystem = new \PagSeguro\Domains\Responses\GatewaySystem();
+            $this->gatewaySystem = new \GrandChef\Domains\Responses\GatewaySystem();
             $this->gatewaySystem->setAuthorizationCode(current($gatewaySystem->authorizationCode))
                 ->setEstablishmentCode(current($gatewaySystem->establishmentCode))
                 ->setNormalizedCode(current($gatewaySystem->normalizedCode))

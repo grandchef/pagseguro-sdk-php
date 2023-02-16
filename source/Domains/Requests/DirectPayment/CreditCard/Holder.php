@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard;
+namespace GrandChef\Domains\Requests\DirectPayment\CreditCard;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 /**
  * Class Sender
@@ -38,7 +38,7 @@ trait Holder
     private $holder;
 
     /**
-     * @return \PagSeguro\Domains\Requests\Adapter\DirectPayment\Holder
+     * @return \GrandChef\Domains\Requests\Adapter\DirectPayment\Holder
      */
     public function setHolder()
     {
@@ -46,11 +46,11 @@ trait Holder
             $this->holder,
             '\PagSeguro\Domains\DirectPayment\CreditCard\Holder'
         );
-        return new \PagSeguro\Domains\Requests\Adapter\DirectPayment\Holder($this->holder);
+        return new \GrandChef\Domains\Requests\Adapter\DirectPayment\Holder($this->holder);
     }
 
     /**
-     * @return \PagSeguro\Domains\DirectPayment\CreditCard\Holder
+     * @return \GrandChef\Domains\DirectPayment\CreditCard\Holder
      */
     public function getHolder()
     {

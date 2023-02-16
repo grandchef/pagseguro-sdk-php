@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\DirectPreApproval\Traits;
+namespace GrandChef\Domains\DirectPreApproval\Traits;
 
 /**
  * Trait ParserTrait

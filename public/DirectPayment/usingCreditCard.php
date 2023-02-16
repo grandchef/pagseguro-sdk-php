@@ -24,12 +24,12 @@
 
 require_once "../../vendor/autoload.php";
 
-\PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::initialize();
+\GrandChef\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
 
 //Instantiate a new direct payment request, using Credit Card
-$creditCard = new \PagSeguro\Domains\Requests\DirectPayment\CreditCard();
+$creditCard = new \GrandChef\Domains\Requests\DirectPayment\CreditCard();
 
 /**
  * @todo Change the receiver Email
@@ -132,7 +132,7 @@ $creditCard->setMode('DEFAULT');
 try {
     //Get the crendentials and register the credit card payment
     $result = $creditCard->register(
-        \PagSeguro\Configuration\Configure::getAccountCredentials()
+        \GrandChef\Configuration\Configure::getAccountCredentials()
     );
     echo "<pre>";
     print_r($result);

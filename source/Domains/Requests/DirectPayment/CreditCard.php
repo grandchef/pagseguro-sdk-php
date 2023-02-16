@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment;
+namespace GrandChef\Domains\Requests\DirectPayment;
 
-use PagSeguro\Domains\Requests\DirectPayment\CreditCard\Request;
+use GrandChef\Domains\Requests\DirectPayment\CreditCard\Request;
 
 /**
  * Class Payment
@@ -39,6 +39,6 @@ class CreditCard extends Request
      */
     public function register($credentials)
     {
-        return \PagSeguro\Services\DirectPayment\CreditCard::checkout($credentials, $this);
+        return \GrandChef\Services\DirectPayment\CreditCard::checkout($credentials, $this);
     }
 }

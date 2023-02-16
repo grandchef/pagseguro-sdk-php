@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Resources\Responsibility\Configuration;
+namespace GrandChef\Resources\Responsibility\Configuration;
 
-use PagSeguro\Configuration\Wrapper;
-use PagSeguro\Resources\Responsibility\Handler;
+use GrandChef\Configuration\Wrapper;
+use GrandChef\Resources\Responsibility\Handler;
 
 class File implements Handler
 {
@@ -42,10 +42,10 @@ class File implements Handler
         if (file_exists(PS_CONFIG_PATH . "Wrapper.php")) {
             $wrapper = new Wrapper;
             return array_merge(
-                \PagSeguro\Helpers\Wrapper::environment($wrapper),
-                \PagSeguro\Helpers\Wrapper::credentials($wrapper),
-                \PagSeguro\Helpers\Wrapper::charset($wrapper),
-                \PagSeguro\Helpers\Wrapper::log($wrapper)
+                \GrandChef\Helpers\Wrapper::environment($wrapper),
+                \GrandChef\Helpers\Wrapper::credentials($wrapper),
+                \GrandChef\Helpers\Wrapper::charset($wrapper),
+                \GrandChef\Helpers\Wrapper::log($wrapper)
             );
         }
         return $this->successor->handler($action, $class);

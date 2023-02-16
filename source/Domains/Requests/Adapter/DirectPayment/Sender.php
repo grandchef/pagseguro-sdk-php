@@ -22,13 +22,13 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Adapter\DirectPayment;
+namespace GrandChef\Domains\Requests\Adapter\DirectPayment;
 
-use PagSeguro\Domains\Requests\Sender\Customer;
-use PagSeguro\Domains\Requests\Sender\Document;
-use PagSeguro\Domains\Requests\Sender\Hash;
-use PagSeguro\Domains\Requests\Sender\Ip;
-use PagSeguro\Domains\Requests\Sender\Phone;
+use GrandChef\Domains\Requests\Sender\Customer;
+use GrandChef\Domains\Requests\Sender\Document;
+use GrandChef\Domains\Requests\Sender\Hash;
+use GrandChef\Domains\Requests\Sender\Ip;
+use GrandChef\Domains\Requests\Sender\Phone;
 
 class Sender
 {

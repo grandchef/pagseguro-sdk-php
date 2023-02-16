@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Parsers\Transaction\Search\Code;
+namespace GrandChef\Parsers\Transaction\Search\Code;
 
-use PagSeguro\Parsers\Response\PaymentLink;
+use GrandChef\Parsers\Response\PaymentLink;
 
 /**
  * Class Response
  * @package PagSeguro\Parsers\Transaction\Search\Code
  */
-class Response extends \PagSeguro\Parsers\Transaction\Response
+class Response extends \GrandChef\Parsers\Transaction\Response
 {
     use PaymentLink;
 }

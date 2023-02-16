@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Resources\Log;
+namespace GrandChef\Resources\Log;
 
 /**
  * Describes a logger instance.

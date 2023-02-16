@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Parsers\Response;
+namespace GrandChef\Parsers\Response;
 
-use PagSeguro\Resources\Factory\Shipping\Address;
-use PagSeguro\Resources\Factory\Shipping\Cost;
-use PagSeguro\Resources\Factory\Shipping\Type;
+use GrandChef\Resources\Factory\Shipping\Address;
+use GrandChef\Resources\Factory\Shipping\Cost;
+use GrandChef\Resources\Factory\Shipping\Type;
 
 /**
  * Trait Shipping
@@ -54,7 +54,7 @@ trait Shipping
     public function setShipping($shipping)
     {
         if (current($shipping) !== false) {
-            $shippingClass = new \PagSeguro\Domains\Shipping();
+            $shippingClass = new \GrandChef\Domains\Shipping();
 
             $shippingAddress = new Address($shippingClass);
 

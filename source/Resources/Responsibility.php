@@ -22,19 +22,19 @@
  *
  */
 
-namespace PagSeguro\Resources;
+namespace GrandChef\Resources;
 
-use PagSeguro\Resources\Responsibility\Configuration\Environment;
-use PagSeguro\Resources\Responsibility\Configuration\Extensible;
-use PagSeguro\Resources\Responsibility\Configuration\File;
-use PagSeguro\Resources\Responsibility\Configuration\Wrapper;
-use PagSeguro\Resources\Responsibility\Http\Methods\Generic;
-use PagSeguro\Resources\Responsibility\Http\Methods\Request;
-use PagSeguro\Resources\Responsibility\Http\Methods\Success;
-use PagSeguro\Resources\Responsibility\Http\Methods\Unauthorized;
-use PagSeguro\Resources\Responsibility\Notifications\Application;
-use PagSeguro\Resources\Responsibility\Notifications\PreApproval;
-use PagSeguro\Resources\Responsibility\Notifications\Transaction;
+use GrandChef\Resources\Responsibility\Configuration\Environment;
+use GrandChef\Resources\Responsibility\Configuration\Extensible;
+use GrandChef\Resources\Responsibility\Configuration\File;
+use GrandChef\Resources\Responsibility\Configuration\Wrapper;
+use GrandChef\Resources\Responsibility\Http\Methods\Generic;
+use GrandChef\Resources\Responsibility\Http\Methods\Request;
+use GrandChef\Resources\Responsibility\Http\Methods\Success;
+use GrandChef\Resources\Responsibility\Http\Methods\Unauthorized;
+use GrandChef\Resources\Responsibility\Notifications\Application;
+use GrandChef\Resources\Responsibility\Notifications\PreApproval;
+use GrandChef\Resources\Responsibility\Notifications\Transaction;
 
 /**
  * class Handler

@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPreApproval;
+namespace GrandChef\Domains\Requests\DirectPreApproval;
 
-use PagSeguro\Services\DirectPreApproval\StatusService;
+use GrandChef\Services\DirectPreApproval\StatusService;
 
 /**
  * Class Status

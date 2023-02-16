@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment;
+namespace GrandChef\Domains\Requests\DirectPayment;
 
-use PagSeguro\Domains\Requests\DirectPayment\OnlineDebit\Request;
+use GrandChef\Domains\Requests\DirectPayment\OnlineDebit\Request;
 
 /**
  * Class Payment
@@ -62,6 +62,6 @@ class OnlineDebit extends Request
      */
     public function register($credentials)
     {
-        return \PagSeguro\Services\DirectPayment\OnlineDebit::checkout($credentials, $this);
+        return \GrandChef\Services\DirectPayment\OnlineDebit::checkout($credentials, $this);
     }
 }

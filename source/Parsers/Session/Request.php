@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Parsers\Session;
+namespace GrandChef\Parsers\Session;
 
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Resources\Http;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Parser;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request
@@ -35,20 +35,20 @@ use PagSeguro\Resources\Http;
 class Request extends Error implements Parser
 {
     /**
-     * @param \PagSeguro\Resources\Http $http
+     * @param \GrandChef\Resources\Http $http
      * @return Response
      */
     public static function success(Http $http)
     {
         $xml = simplexml_load_string($http->getResponse());
-        $result = new \PagSeguro\Parsers\Session\Response();
+        $result = new \GrandChef\Parsers\Session\Response();
         $result->setResult(current($xml));
         return $result;
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
-     * @return \PagSeguro\Domains\Error
+     * @param \GrandChef\Resources\Http $http
+     * @return \GrandChef\Domains\Error
      */
     public static function error(Http $http)
     {

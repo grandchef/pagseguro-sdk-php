@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
-use PagSeguro\Domains\Requests\Application\Authorization\Request;
+use GrandChef\Domains\Requests\Application\Authorization\Request;
 
 /**
  * Class Payment
@@ -41,6 +41,6 @@ class Authorization extends Request
      */
     public function register($credentials)
     {
-        return \PagSeguro\Services\Application\Authorization::create($credentials, $this);
+        return \GrandChef\Services\Application\Authorization::create($credentials, $this);
     }
 }

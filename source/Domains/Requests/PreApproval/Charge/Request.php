@@ -22,18 +22,18 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\PreApproval\Charge;
+namespace GrandChef\Domains\Requests\PreApproval\Charge;
 
-use PagSeguro\Domains\Requests\Currency;
-use PagSeguro\Domains\Requests\Item;
-use PagSeguro\Domains\Requests\Metadata;
-use PagSeguro\Domains\Requests\Notification;
-use PagSeguro\Domains\Requests\Parameter;
-use PagSeguro\Domains\Requests\PaymentMethod;
-use PagSeguro\Domains\Requests\Requests;
-use PagSeguro\Domains\Requests\Shipping;
-use PagSeguro\Domains\Requests\Reference;
-use PagSeguro\Domains\Requests\Redirect;
+use GrandChef\Domains\Requests\Currency;
+use GrandChef\Domains\Requests\Item;
+use GrandChef\Domains\Requests\Metadata;
+use GrandChef\Domains\Requests\Notification;
+use GrandChef\Domains\Requests\Parameter;
+use GrandChef\Domains\Requests\PaymentMethod;
+use GrandChef\Domains\Requests\Requests;
+use GrandChef\Domains\Requests\Shipping;
+use GrandChef\Domains\Requests\Reference;
+use GrandChef\Domains\Requests\Redirect;
 
 /**
  * Class Request

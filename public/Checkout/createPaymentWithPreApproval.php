@@ -24,11 +24,11 @@
 
 require_once "../../vendor/autoload.php";
 
-\PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::initialize();
+\GrandChef\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
 
-$payment = new \PagSeguro\Domains\Requests\Payment();
+$payment = new \GrandChef\Domains\Requests\Payment();
 
 $payment->addItems()->withParameters(
     '0001',
@@ -113,11 +113,11 @@ try {
 
     /**
      * @todo For checkout with application use:
-     * \PagSeguro\Configuration\Configure::getApplicationCredentials()
+     * \GrandChef\Configuration\Configure::getApplicationCredentials()
      *  ->setAuthorizationCode("FD3AF1B214EC40F0B0A6745D041BF50D")
      */
     $result = $payment->register(
-        \PagSeguro\Configuration\Configure::getAccountCredentials()
+        \GrandChef\Configuration\Configure::getAccountCredentials()
     );
 
     echo "<h2>Criando requisi&ccedil;&atilde;o de pagamento</h2>"

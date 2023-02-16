@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Helpers;
+namespace GrandChef\Helpers;
 
 /**
  * Class Mask
@@ -121,7 +121,7 @@ class Mask
     private static function isValidType($type)
     {
         if (\PagSeguro\Enum\Mask::isValidName(
-            \PagSeguro\Enum\Mask::getType($type)
+            \GrandChef\Enum\Mask::getType($type)
         )) {
             return true;
         }

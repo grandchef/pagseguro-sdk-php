@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory;
+namespace GrandChef\Resources\Factory;
 
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class Document
@@ -34,7 +34,7 @@ class Document
 {
 
     /**
-     * @var \PagSeguro\Domains\Document
+     * @var \GrandChef\Domains\Document
      */
     private $document;
 
@@ -43,12 +43,12 @@ class Document
      */
     public function __construct()
     {
-        $this->document = new \PagSeguro\Domains\Document();
+        $this->document = new \GrandChef\Domains\Document();
     }
 
     /**
-     * @param \PagSeguro\Domains\Document $document
-     * @return \PagSeguro\Domains\Document
+     * @param \GrandChef\Domains\Document $document
+     * @return \GrandChef\Domains\Document
      */
     public function instance(\PagSeguro\Domains\Document $document)
     {
@@ -57,7 +57,7 @@ class Document
 
     /**
      * @param $array
-     * @return \PagSeguro\Domains\Document|Document
+     * @return \GrandChef\Domains\Document|Document
      */
     public function withArray($array)
     {
@@ -70,7 +70,7 @@ class Document
     /**
      * @param $type
      * @param $identifier
-     * @return \PagSeguro\Domains\Document
+     * @return \GrandChef\Domains\Document
      */
     public function withParameters($type, $identifier)
     {

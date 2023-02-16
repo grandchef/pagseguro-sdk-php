@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Request;
+namespace GrandChef\Resources\Factory\Request;
 
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class Metadata
@@ -48,7 +48,7 @@ class Metadata
     {
         $properties = new Current;
 
-        $metadata = new \PagSeguro\Domains\Metadata();
+        $metadata = new \GrandChef\Domains\Metadata();
         $metadata->setKey($array[$properties::METADATA_ITEM_KEY])
             ->setValue($array[$properties::METADATA_ITEM_VALUE])
             ->setGroup($array[$properties::METADATA_ITEM_GROUP]);
@@ -62,7 +62,7 @@ class Metadata
         $value,
         $group = null
     ) {
-        $metadata = new \PagSeguro\Domains\Metadata();
+        $metadata = new \GrandChef\Domains\Metadata();
         $metadata->setKey($key)
             ->setValue($value)
             ->setGroup($group);

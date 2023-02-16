@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard\Holder;
+namespace GrandChef\Domains\Requests\DirectPayment\CreditCard\Holder;
 
 trait Phone
 {
@@ -36,7 +36,7 @@ trait Phone
 
     public function setPhone()
     {
-        $this->phone = new \PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard\Holder\Phone($this->holder);
+        $this->phone = new \GrandChef\Resources\Factory\Request\DirectPayment\CreditCard\Holder\Phone($this->holder);
         return $this->phone;
     }
 }

@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Enum\Subscription;
+namespace GrandChef\Enum\Subscription;
 
 class Period
 {

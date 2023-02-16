@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Sender;
+namespace GrandChef\Domains\Requests\Sender;
 
 trait Hash
 {

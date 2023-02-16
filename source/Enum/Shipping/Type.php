@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Enum\Shipping;
+namespace GrandChef\Enum\Shipping;
 
 class Type
 {

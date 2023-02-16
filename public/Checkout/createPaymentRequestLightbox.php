@@ -24,9 +24,9 @@
 
 require_once "../../vendor/autoload.php";
 
-\PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::initialize();
+\GrandChef\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
 
 ?>
     <!DOCTYPE html>
@@ -50,7 +50,7 @@ require_once "../../vendor/autoload.php";
 
 <?php
 
-$payment = new \PagSeguro\Domains\Requests\Payment();
+$payment = new \GrandChef\Domains\Requests\Payment();
 
 $payment->addItems()->withParameters(
     '0001',
@@ -117,7 +117,7 @@ $payment->setNotificationUrl("http://www.lojamodelo.com.br/nofitication");
 try {
     $onlyCheckoutCode = true;
     $result = $payment->register(
-        \PagSeguro\Configuration\Configure::getAccountCredentials(),
+        \GrandChef\Configuration\Configure::getAccountCredentials(),
         $onlyCheckoutCode
     );
 

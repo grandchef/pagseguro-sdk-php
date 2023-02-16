@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 /**
  * Class Sender
@@ -44,11 +44,11 @@ trait Sender
     public function setSender()
     {
         $this->sender = InitializeObject::initialize($this->sender, '\PagSeguro\Domains\Sender');
-        return new \PagSeguro\Domains\Requests\Adapter\Sender($this->sender);
+        return new \GrandChef\Domains\Requests\Adapter\Sender($this->sender);
     }
 
     /**
-     * @return \PagSeguro\Domains\Sender
+     * @return \GrandChef\Domains\Sender
      */
     public function getSender()
     {

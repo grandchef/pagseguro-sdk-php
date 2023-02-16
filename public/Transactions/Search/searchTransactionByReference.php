@@ -24,7 +24,7 @@
 
 require_once "../../../vendor/autoload.php";
 
-\PagSeguro\Library::initialize();
+\GrandChef\Library::initialize();
 
 $options = [
     'initial_date' => '2016-04-01T14:55',
@@ -36,8 +36,8 @@ $options = [
 $reference = "LIBPHP000001";
 
 try {
-    $response = \PagSeguro\Services\Transactions\Search\Reference::search(
-        \PagSeguro\Configuration\Configure::getAccountCredentials(),
+    $response = \GrandChef\Services\Transactions\Search\Reference::search(
+        \GrandChef\Configuration\Configure::getAccountCredentials(),
         $reference,
         $options
     );

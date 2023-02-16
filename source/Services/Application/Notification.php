@@ -22,13 +22,13 @@
  *
  */
 
-namespace PagSeguro\Services\Application;
+namespace GrandChef\Services\Application;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class Notifications
@@ -51,12 +51,12 @@ class Notification
             $http->get(
                 self::request($connection),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
 
             $response = Responsibility::http(
                 $http,
-                new \PagSeguro\Parsers\Authorization\Notification\Request
+                new \GrandChef\Parsers\Authorization\Notification\Request
             );
             Logger::info(
                 sprintf(

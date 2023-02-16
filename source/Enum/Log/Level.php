@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Enum\Log;
+namespace GrandChef\Enum\Log;
 
-use PagSeguro\Enum\Enum;
+use GrandChef\Enum\Enum;
 
 /**
  * Describes log levels.

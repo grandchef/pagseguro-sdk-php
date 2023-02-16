@@ -22,26 +22,26 @@
  *
  */
 
-namespace PagSeguro\Parsers\DirectPayment\OnlineDebit;
+namespace GrandChef\Parsers\DirectPayment\OnlineDebit;
 
 /**
  * Request from the Online debit direct payment
  * @package PagSeguro\Parsers\DirectPayment\OnlineDebit
  */
 
-use PagSeguro\Enum\Properties\Current;
-use PagSeguro\Parsers\Basic;
-use PagSeguro\Parsers\Currency;
-use PagSeguro\Parsers\DirectPayment\Mode;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Item;
-use PagSeguro\Parsers\Parameter;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Parsers\ReceiverEmail;
-use PagSeguro\Parsers\Sender;
-use PagSeguro\Parsers\Shipping;
-use PagSeguro\Parsers\Transaction\OnlineDebit\Response;
-use PagSeguro\Resources\Http;
+use GrandChef\Enum\Properties\Current;
+use GrandChef\Parsers\Basic;
+use GrandChef\Parsers\Currency;
+use GrandChef\Parsers\DirectPayment\Mode;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Item;
+use GrandChef\Parsers\Parameter;
+use GrandChef\Parsers\Parser;
+use GrandChef\Parsers\ReceiverEmail;
+use GrandChef\Parsers\Sender;
+use GrandChef\Parsers\Shipping;
+use GrandChef\Parsers\Transaction\OnlineDebit\Response;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request
@@ -61,7 +61,7 @@ class Request extends Error implements Parser
     use Shipping;
 
     /**
-     * @param \PagSeguro\Domains\Requests\DirectPayment\OnlineDebit $onlineDebit
+     * @param \GrandChef\Domains\Requests\DirectPayment\OnlineDebit $onlineDebit
      * @return array
      */
     public static function getData(\PagSeguro\Domains\Requests\DirectPayment\OnlineDebit $onlineDebit)

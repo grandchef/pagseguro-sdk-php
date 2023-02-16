@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard\Holder;
+namespace GrandChef\Domains\Requests\DirectPayment\CreditCard\Holder;
 
 trait Document
 {
@@ -37,7 +37,7 @@ trait Document
     public function setDocument()
     {
         $this->document =
-            new \PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard\Holder\Document($this->holder);
+            new \GrandChef\Resources\Factory\Request\DirectPayment\CreditCard\Holder\Document($this->holder);
         return $this->document;
     }
 }

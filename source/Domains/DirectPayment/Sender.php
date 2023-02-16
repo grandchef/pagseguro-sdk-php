@@ -22,14 +22,14 @@
  *
  */
 
-namespace PagSeguro\Domains\DirectPayment;
+namespace GrandChef\Domains\DirectPayment;
 
 /**
  * Direct Payment Sender
  *
  * @package PagSeguro\Domains\Requests\DirectPayment
  */
-class Sender extends \PagSeguro\Domains\Sender
+class Sender extends \GrandChef\Domains\Sender
 {
     /**
      * @var

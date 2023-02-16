@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard;
+namespace GrandChef\Domains\Requests\DirectPayment\CreditCard;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 trait Billing
 {
@@ -32,7 +32,7 @@ trait Billing
 
     /**
      *
-     * @return \PagSeguro\Domains\Requests\Adapter\DirectPayment\Billing
+     * @return \GrandChef\Domains\Requests\Adapter\DirectPayment\Billing
      */
     public function setBilling()
     {
@@ -40,7 +40,7 @@ trait Billing
             $this->billing,
             '\PagSeguro\Domains\DirectPayment\CreditCard\Billing'
         );
-        return new \PagSeguro\Domains\Requests\Adapter\DirectPayment\Billing($this->billing);
+        return new \GrandChef\Domains\Requests\Adapter\DirectPayment\Billing($this->billing);
     }
     
     /**

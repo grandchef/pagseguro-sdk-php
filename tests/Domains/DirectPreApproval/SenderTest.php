@@ -1,9 +1,9 @@
 <?php
 
-namespace PagSeguro\Tests;
+namespace GrandChef\Tests;
 
 use PHPUnit\Framework\TestCase;
-use PagSeguro\Domains\DirectPreApproval\Sender;
+use GrandChef\Domains\DirectPreApproval\Sender;
 
 class SenderTest extends TestCase
 {

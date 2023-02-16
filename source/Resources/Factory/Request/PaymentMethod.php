@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Request;
+namespace GrandChef\Resources\Factory\Request;
 
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class PaymentMethod
@@ -43,7 +43,7 @@ class PaymentMethod
     {
         $properties = new Current;
 
-        $paymentMethod = new \PagSeguro\Domains\PaymentMethod();
+        $paymentMethod = new \GrandChef\Domains\PaymentMethod();
         $paymentMethod->setKey($array[$properties::PAYMENT_METHOD_CONFIG_KEY])
             ->setValue($array[$properties::PAYMENT_METHOD_CONFIG_VALUE])
             ->setGroup($array[$properties::PAYMENT_METHOD_GROUP]);
@@ -57,7 +57,7 @@ class PaymentMethod
         $key,
         $value
     ) {
-        $paymentMethod = new \PagSeguro\Domains\PaymentMethod();
+        $paymentMethod = new \GrandChef\Domains\PaymentMethod();
         $paymentMethod->setKey($key)
             ->setValue($value)
             ->setGroup($group);

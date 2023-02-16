@@ -22,23 +22,23 @@
  *
  */
 
-namespace PagSeguro\Parsers\Checkout;
+namespace GrandChef\Parsers\Checkout;
 
-use PagSeguro\Enum\Properties\Current;
-use PagSeguro\Parsers\Accepted;
-use PagSeguro\Parsers\Basic;
-use PagSeguro\Parsers\Currency;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Item;
-use PagSeguro\Parsers\Metadata;
-use PagSeguro\Parsers\Parameter;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Parsers\PaymentMethod;
-use PagSeguro\Parsers\PreApproval;
-use PagSeguro\Parsers\ReceiverEmail;
-use PagSeguro\Parsers\Sender;
-use PagSeguro\Parsers\Shipping;
-use PagSeguro\Resources\Http;
+use GrandChef\Enum\Properties\Current;
+use GrandChef\Parsers\Accepted;
+use GrandChef\Parsers\Basic;
+use GrandChef\Parsers\Currency;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Item;
+use GrandChef\Parsers\Metadata;
+use GrandChef\Parsers\Parameter;
+use GrandChef\Parsers\Parser;
+use GrandChef\Parsers\PaymentMethod;
+use GrandChef\Parsers\PreApproval;
+use GrandChef\Parsers\ReceiverEmail;
+use GrandChef\Parsers\Sender;
+use GrandChef\Parsers\Shipping;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request
@@ -59,7 +59,7 @@ class Request extends Error implements Parser
     use PaymentMethod;
 
     /**
-     * @param \PagSeguro\Domains\Requests\Payment $payment
+     * @param \GrandChef\Domains\Requests\Payment $payment
      * @return array
      */
     public static function getData(\PagSeguro\Domains\Requests\Payment $payment)

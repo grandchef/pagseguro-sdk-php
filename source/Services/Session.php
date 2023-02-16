@@ -22,14 +22,14 @@
  *
  */
 
-namespace PagSeguro\Services;
+namespace GrandChef\Services;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Parsers\Session\Request;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Parsers\Session\Request;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * The Session Service class
@@ -48,7 +48,7 @@ class Session
             $http->post(self::request($connection),
                 null,
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding());
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding());
 
             $response = Responsibility::http(
                 $http,

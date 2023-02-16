@@ -22,12 +22,12 @@
  *
  */
 
-namespace PagSeguro\Parsers\Installment;
+namespace GrandChef\Parsers\Installment;
 
-use PagSeguro\Domains\Responses\Installments;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Resources\Http;
+use GrandChef\Domains\Responses\Installments;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Parser;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request

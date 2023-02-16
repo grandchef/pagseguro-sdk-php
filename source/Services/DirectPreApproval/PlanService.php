@@ -22,14 +22,14 @@
  *
  */
 
-namespace PagSeguro\Services\DirectPreApproval;
+namespace GrandChef\Services\DirectPreApproval;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Parsers\DirectPreApproval\PlanParser;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Parsers\DirectPreApproval\PlanParser;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class PlanService
@@ -63,7 +63,7 @@ class PlanService
                 self::request($connection),
                 PlanParser::getData($data),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
             $response = Responsibility::http(
                 $http,

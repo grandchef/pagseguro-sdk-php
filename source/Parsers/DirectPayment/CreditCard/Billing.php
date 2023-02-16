@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers\DirectPayment\CreditCard;
+namespace GrandChef\Parsers\DirectPayment\CreditCard;
 
-use PagSeguro\Domains\Requests\Requests;
+use GrandChef\Domains\Requests\Requests;
 
 /**
  * Trait Billing

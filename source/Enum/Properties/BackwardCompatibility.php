@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Enum\Properties;
+namespace GrandChef\Enum\Properties;
 
 /**
  * Class BackwardCompatibility

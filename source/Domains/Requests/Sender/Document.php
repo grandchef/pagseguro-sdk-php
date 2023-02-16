@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Sender;
+namespace GrandChef\Domains\Requests\Sender;
 
 trait Document
 {
@@ -36,7 +36,7 @@ trait Document
 
     public function setDocument()
     {
-        $this->document = new \PagSeguro\Resources\Factory\Sender\Document($this->sender);
+        $this->document = new \GrandChef\Resources\Factory\Sender\Document($this->sender);
         return $this->document;
     }
 }

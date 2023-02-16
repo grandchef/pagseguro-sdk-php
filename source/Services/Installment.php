@@ -22,16 +22,16 @@
  *
  */
 
-namespace PagSeguro\Services;
+namespace GrandChef\Services;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Enum\Properties\Current;
-use PagSeguro\Helpers\Currency;
-use PagSeguro\Parsers\Installment\Request;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Enum\Properties\Current;
+use GrandChef\Helpers\Currency;
+use GrandChef\Parsers\Installment\Request;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Description of Installment
@@ -54,7 +54,7 @@ class Installment
             Logger::info(sprintf("GET: %s", self::request($connection, $params)), ['service' => 'Installment']);
             $http->get(self::request($connection, $params),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding());
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding());
 
             $response = Responsibility::http(
                 $http,
@@ -70,7 +70,7 @@ class Installment
 
     /**
      * Build the service request url
-     * @param \PagSeguro\Resources\Connection\Data $connection
+     * @param \GrandChef\Resources\Connection\Data $connection
      * @param mixed $params
      * @return string
      */

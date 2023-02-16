@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Connection\Base\DirectPayment;
+namespace GrandChef\Resources\Connection\Base\DirectPayment;
 
-use PagSeguro\Resources\Builder;
+use GrandChef\Resources\Builder;
 
 /**
  * Class Payment

@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\PreApproval;
+namespace GrandChef\Domains\Requests\PreApproval;
 
-use PagSeguro\Domains\Requests\Currency;
-use PagSeguro\Domains\Requests\PaymentMethod;
-use PagSeguro\Domains\Requests\Requests;
-use PagSeguro\Domains\Requests\Review;
-use PagSeguro\Domains\Requests\Shipping;
-use PagSeguro\Domains\Requests\Reference;
-use PagSeguro\Domains\Requests\Redirect;
+use GrandChef\Domains\Requests\Currency;
+use GrandChef\Domains\Requests\PaymentMethod;
+use GrandChef\Domains\Requests\Requests;
+use GrandChef\Domains\Requests\Review;
+use GrandChef\Domains\Requests\Shipping;
+use GrandChef\Domains\Requests\Reference;
+use GrandChef\Domains\Requests\Redirect;
 
 /**
  * Class Request

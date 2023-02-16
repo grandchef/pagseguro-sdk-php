@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\PreApproval;
+namespace GrandChef\Domains\Requests\PreApproval;
 
-use PagSeguro\Domains\Requests\PreApproval\Charge\Request;
+use GrandChef\Domains\Requests\PreApproval\Charge\Request;
 
 class Charge extends Request
 {
@@ -54,6 +54,6 @@ class Charge extends Request
      */
     public function register($credentials)
     {
-        return \PagSeguro\Services\PreApproval\Charge::create($credentials, $this);
+        return \GrandChef\Services\PreApproval\Charge::create($credentials, $this);
     }
 }

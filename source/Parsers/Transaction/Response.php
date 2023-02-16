@@ -22,14 +22,14 @@
  *
  */
 
-namespace PagSeguro\Parsers\Transaction;
+namespace GrandChef\Parsers\Transaction;
 
-use PagSeguro\Parsers\Response\CreditorFees;
-use PagSeguro\Parsers\Response\Currency;
-use PagSeguro\Parsers\Response\Item;
-use PagSeguro\Parsers\Response\PaymentMethod;
-use PagSeguro\Parsers\Response\Sender;
-use PagSeguro\Parsers\Response\Shipping;
+use GrandChef\Parsers\Response\CreditorFees;
+use GrandChef\Parsers\Response\Currency;
+use GrandChef\Parsers\Response\Item;
+use GrandChef\Parsers\Response\PaymentMethod;
+use GrandChef\Parsers\Response\Sender;
+use GrandChef\Parsers\Response\Shipping;
 
 /**
  * Class Response

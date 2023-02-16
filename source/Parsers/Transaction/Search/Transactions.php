@@ -1,6 +1,6 @@
 <?php
 
-namespace PagSeguro\Parsers\Transaction\Search;
+namespace GrandChef\Parsers\Transaction\Search;
 
 /**
  * Class Transactions

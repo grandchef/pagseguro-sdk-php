@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPreApproval;
+namespace GrandChef\Domains\Requests\DirectPreApproval;
 
-use PagSeguro\Services\DirectPreApproval\ChangePaymentService;
+use GrandChef\Services\DirectPreApproval\ChangePaymentService;
 
 /**
  * Class ChangePayment

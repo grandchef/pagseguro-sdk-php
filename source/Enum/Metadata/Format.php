@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Enum\Metadata;
+namespace GrandChef\Enum\Metadata;
 
-use PagSeguro\Enum\Enum;
+use GrandChef\Enum\Enum;
 
 /**
  * Class Format

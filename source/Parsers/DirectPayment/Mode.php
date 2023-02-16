@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers\DirectPayment;
+namespace GrandChef\Parsers\DirectPayment;
 
-use PagSeguro\Domains\Requests\Requests;
+use GrandChef\Domains\Requests\Requests;
 
 /**
  * Class Mode

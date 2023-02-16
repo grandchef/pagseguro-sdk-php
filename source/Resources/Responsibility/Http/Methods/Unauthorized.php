@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Resources\Responsibility\Http\Methods;
+namespace GrandChef\Resources\Responsibility\Http\Methods;
 
-use PagSeguro\Enum\Http\Status;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Responsibility\Handler;
+use GrandChef\Enum\Http\Status;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Responsibility\Handler;
 
 /**
  * Class Unauthorized

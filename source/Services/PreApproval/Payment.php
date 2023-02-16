@@ -22,16 +22,16 @@
  *
  */
 
-namespace PagSeguro\Services\PreApproval;
+namespace GrandChef\Services\PreApproval;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Domains\Requests\PreApproval;
-use PagSeguro\Helpers\Crypto;
-use PagSeguro\Parsers\PreApproval\Request;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Domains\Requests\PreApproval;
+use GrandChef\Helpers\Crypto;
+use GrandChef\Parsers\PreApproval\Request;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 class Payment
 {
@@ -54,7 +54,7 @@ class Payment
                 self::request($connection),
                 Request::getData($preApproval),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
 
             $response = Responsibility::http(

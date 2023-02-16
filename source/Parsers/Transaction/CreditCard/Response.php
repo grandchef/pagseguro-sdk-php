@@ -22,18 +22,18 @@
  *
  */
 
-namespace PagSeguro\Parsers\Transaction\CreditCard;
+namespace GrandChef\Parsers\Transaction\CreditCard;
 
-use PagSeguro\Parsers\Response\Application;
-use PagSeguro\Parsers\Response\CreditorFees;
+use GrandChef\Parsers\Response\Application;
+use GrandChef\Parsers\Response\CreditorFees;
 
 /**
  * Class Response
  * @package PagSeguro\Parsers\Transaction\CreditCard
  */
-class Response extends \PagSeguro\Parsers\Transaction\Response
+class Response extends \GrandChef\Parsers\Transaction\Response
 {
     use Application;
     use CreditorFees;
-    use \PagSeguro\Parsers\Response\GatewaySystem;
+    use \GrandChef\Parsers\Response\GatewaySystem;
 }

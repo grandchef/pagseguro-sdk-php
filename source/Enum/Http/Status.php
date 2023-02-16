@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Enum\Http;
+namespace GrandChef\Enum\Http;
 
-use PagSeguro\Enum\Enum;
+use GrandChef\Enum\Enum;
 
 /**
  * Class Status

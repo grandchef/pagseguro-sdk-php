@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Transaction\Search\Date;
+namespace GrandChef\Parsers\Transaction\Search\Date;
 
 /**
  * Class Response

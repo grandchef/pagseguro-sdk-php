@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Resources\Framework\Platform;
+namespace GrandChef\Resources\Framework\Platform;
 
 /**
  * Interface Platform

@@ -22,17 +22,17 @@
  *
  */
 
-namespace PagSeguro\Parsers\PreApproval;
+namespace GrandChef\Parsers\PreApproval;
 
-use PagSeguro\Domains\Requests\Requests;
-use PagSeguro\Enum\Properties\Current;
-use PagSeguro\Parsers\Basic;
-use PagSeguro\Parsers\Currency;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Parsers\PreApproval;
-use PagSeguro\Parsers\Sender;
-use PagSeguro\Resources\Http;
+use GrandChef\Domains\Requests\Requests;
+use GrandChef\Enum\Properties\Current;
+use GrandChef\Parsers\Basic;
+use GrandChef\Parsers\Currency;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Parser;
+use GrandChef\Parsers\PreApproval;
+use GrandChef\Parsers\Sender;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request

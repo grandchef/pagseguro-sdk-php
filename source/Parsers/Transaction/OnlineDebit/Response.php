@@ -22,19 +22,19 @@
  *
  */
 
-namespace PagSeguro\Parsers\Transaction\OnlineDebit;
+namespace GrandChef\Parsers\Transaction\OnlineDebit;
 
-use PagSeguro\Parsers\Response\Application;
-use PagSeguro\Parsers\Response\CreditorFees;
+use GrandChef\Parsers\Response\Application;
+use GrandChef\Parsers\Response\CreditorFees;
 
 /**
  * Class Response
  * @package PagSeguro\Parsers\Transaction\OnlineDebit
  */
-class Response extends \PagSeguro\Parsers\Transaction\Response
+class Response extends \GrandChef\Parsers\Transaction\Response
 {
     use Application;
     use CreditorFees;
-    use \PagSeguro\Parsers\Response\PaymentLink;
-    use \PagSeguro\Parsers\Response\RecoveryCode;
+    use \GrandChef\Parsers\Response\PaymentLink;
+    use \GrandChef\Parsers\Response\RecoveryCode;
 }

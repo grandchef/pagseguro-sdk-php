@@ -24,13 +24,13 @@
 
 require_once "../../../vendor/autoload.php";
 
-\PagSeguro\Library::initialize();
+\GrandChef\Library::initialize();
 
 $code = '0B64FD7B4F9641378E9C9462982A8B95';
 
 try {
-    $response = \PagSeguro\Services\Transactions\Search\Code::search(
-        \PagSeguro\Configuration\Configure::getAccountCredentials(),
+    $response = \GrandChef\Services\Transactions\Search\Code::search(
+        \GrandChef\Configuration\Configure::getAccountCredentials(),
         $code
     );
 

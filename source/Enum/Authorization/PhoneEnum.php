@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Enum\Authorization;
+namespace GrandChef\Enum\Authorization;
 
-use PagSeguro\Enum\Enum;
+use GrandChef\Enum\Enum;
 
 /**
  * Class PhoneEnum

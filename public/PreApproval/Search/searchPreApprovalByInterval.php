@@ -24,13 +24,13 @@
 
 require_once "../../../vendor/autoload.php";
 
-\PagSeguro\Library::initialize();
+\GrandChef\Library::initialize();
 
 $days = 20;
 
 try {
-    $response = \PagSeguro\Services\PreApproval\Search\Interval::search(
-        \PagSeguro\Configuration\Configure::getAccountCredentials(),
+    $response = \GrandChef\Services\PreApproval\Search\Interval::search(
+        \GrandChef\Configuration\Configure::getAccountCredentials(),
         $days
     );
 

@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Builder\DirectPreApproval;
+namespace GrandChef\Resources\Builder\DirectPreApproval;
 
-use PagSeguro\Resources\Builder;
+use GrandChef\Resources\Builder;
 
 /**
  * Class Status

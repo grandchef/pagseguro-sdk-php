@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Enum\DirectPayment;
+namespace GrandChef\Enum\DirectPayment;
 
 /**
  * Lists all the available payment methods for direct payment

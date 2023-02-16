@@ -22,13 +22,13 @@
  *
  */
 
-namespace PagSeguro\Helpers;
+namespace GrandChef\Helpers;
 
 class Crypto
 {
     private static $list = [
-        "senderPhone" => array("phone", \PagSeguro\Enum\Mask::PHONE),
-        "senderCPF" => array("cpf", \PagSeguro\Enum\Mask::CPF)
+        "senderPhone" => array("phone", \GrandChef\Enum\Mask::PHONE),
+        "senderCPF" => array("cpf", \GrandChef\Enum\Mask::CPF)
     ];
 
     public static function encrypt($parameters)

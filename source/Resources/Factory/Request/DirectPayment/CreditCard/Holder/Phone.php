@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard\Holder;
+namespace GrandChef\Resources\Factory\Request\DirectPayment\CreditCard\Holder;
 
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class Document
@@ -34,7 +34,7 @@ class Phone
 {
 
     /**
-     * @var \PagSeguro\Domains\DirectPayment\CreditCard\Holder
+     * @var \GrandChef\Domains\DirectPayment\CreditCard\Holder
      */
     private $holder;
 
@@ -48,8 +48,8 @@ class Phone
     }
 
     /**
-     * @param \PagSeguro\Domains\Phone $phone
-     * @return \PagSeguro\Domains\DirectPayment\CreditCard\Holder
+     * @param \GrandChef\Domains\Phone $phone
+     * @return \GrandChef\Domains\DirectPayment\CreditCard\Holder
      */
     public function instance(\PagSeguro\Domains\Phone $phone)
     {
@@ -59,12 +59,12 @@ class Phone
 
     /**
      * @param $array
-     * @return \PagSeguro\Domains\DirectPayment\CreditCard\Holder
+     * @return \GrandChef\Domains\DirectPayment\CreditCard\Holder
      */
     public function withArray($array)
     {
         $properties = new Current;
-        $phone = new \PagSeguro\Domains\Phone();
+        $phone = new \GrandChef\Domains\Phone();
         $phone->setAreaCode($array[$properties::SENDER_PHONE_AREA_CODE])
             ->setNumber($array[$properties::SENDER_PHONE_NUMBER]);
         $this->holder->setPhone($phone);
@@ -75,11 +75,11 @@ class Phone
     /**
      * @param $areaCode
      * @param $number
-     * @return \PagSeguro\Domains\DirectPayment\CreditCard\Holder
+     * @return \GrandChef\Domains\DirectPayment\CreditCard\Holder
      */
     public function withParameters($areaCode, $number)
     {
-        $phone = new \PagSeguro\Domains\Phone();
+        $phone = new \GrandChef\Domains\Phone();
         $phone->setAreaCode($areaCode)
             ->setNumber($number);
         $this->holder->setPhone($phone);

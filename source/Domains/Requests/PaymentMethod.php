@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 trait PaymentMethod
 {
@@ -34,7 +34,7 @@ trait PaymentMethod
     {
         $this->paymentMethod = InitializeObject::Initialize(
             $this->paymentMethod,
-            new \PagSeguro\Resources\Factory\Request\PaymentMethod()
+            new \GrandChef\Resources\Factory\Request\PaymentMethod()
         );
         
         return $this->paymentMethod;
@@ -45,11 +45,11 @@ trait PaymentMethod
         if (is_array($paymentMethod)) {
             $arr = array();
             foreach ($paymentMethod as $key => $method) {
-                if ($method instanceof \PagSeguro\Domains\PaymentMethod) {
+                if ($method instanceof \GrandChef\Domains\PaymentMethod) {
                     $arr[$key] = $method;
                 } else {
                     if (is_array($paymentMethod)) {
-                        $arr[$key] = new \PagSeguro\Domains\PaymentMethod($method);
+                        $arr[$key] = new \GrandChef\Domains\PaymentMethod($method);
                     }
                 }
             }

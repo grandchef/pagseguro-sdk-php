@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard\Billing;
+namespace GrandChef\Domains\Requests\DirectPayment\CreditCard\Billing;
 
 trait Address
 {
@@ -37,7 +37,7 @@ trait Address
     public function setAddress()
     {
         $this->address =
-            new \PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard\Billing\Address($this->billing);
+            new \GrandChef\Resources\Factory\Request\DirectPayment\CreditCard\Billing\Address($this->billing);
         return $this->address;
     }
 }

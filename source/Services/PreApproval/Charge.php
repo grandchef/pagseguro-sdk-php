@@ -22,19 +22,19 @@
  *
  */
 
-namespace PagSeguro\Services\PreApproval;
+namespace GrandChef\Services\PreApproval;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Helpers\Crypto;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Parsers\PreApproval\Charge\Request;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Helpers\Crypto;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Parsers\PreApproval\Charge\Request;
+use GrandChef\Resources\Responsibility;
 
 class Charge
 {
-    public static function create(Credentials $credentials, \PagSeguro\Domains\Requests\PreApproval\Charge $charge)
+    public static function create(Credentials $credentials, \GrandChef\Domains\Requests\PreApproval\Charge $charge)
     {
         Logger::info("Begin", ['service' => 'PreApproval.Charge']);
         try {
@@ -52,7 +52,7 @@ class Charge
                 self::request($connection),
                 Request::getData($charge),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
 
             return Responsibility::http(

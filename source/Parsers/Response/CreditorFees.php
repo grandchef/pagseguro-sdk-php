@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Response;
+namespace GrandChef\Parsers\Response;
 
 /**
  * Trait CreditorFees
@@ -49,7 +49,7 @@ trait CreditorFees
      */
     public function setCreditorFees($creditorFees)
     {
-        $creditor = new \PagSeguro\Domains\CreditorFees();
+        $creditor = new \GrandChef\Domains\CreditorFees();
 
         if (!is_null($creditorFees->intermediationRateAmount)) {
             $creditor->setIntermediationRateAmount(current($creditorFees->intermediationRateAmount));

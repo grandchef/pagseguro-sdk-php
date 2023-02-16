@@ -6,7 +6,7 @@
  * Time: 11:18
  */
 
-namespace PagSeguro\Parsers\Authorization\Search\Date;
+namespace GrandChef\Parsers\Authorization\Search\Date;
 
 /**
  * Class Response
@@ -143,7 +143,7 @@ class Response
      */
     private function addAuthorization($authorization)
     {
-        $response = new \PagSeguro\Parsers\Authorization\Search\Response();
+        $response = new \GrandChef\Parsers\Authorization\Search\Response();
         $response->setCode(current($authorization->code))
             ->setCreationDate(current($authorization->creationDate))
             ->setReference(current($authorization->reference))

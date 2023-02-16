@@ -22,19 +22,19 @@
  *
  */
 
-namespace PagSeguro\Services\Application;
+namespace GrandChef\Services\Application;
 
-use PagSeguro\Configuration\Configure;
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Parsers\Authorization\Request;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Configuration\Configure;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Parsers\Authorization\Request;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 class Authorization
 {
-    public static function create(Credentials $credentials, \PagSeguro\Domains\Requests\Authorization $authorization)
+    public static function create(Credentials $credentials, \GrandChef\Domains\Requests\Authorization $authorization)
     {
         Logger::info("Begin", ['service' => 'Authorization']);
         try {

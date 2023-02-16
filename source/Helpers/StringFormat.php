@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Helpers;
+namespace GrandChef\Helpers;
 
 /**
  * Class with helper functions to format strings

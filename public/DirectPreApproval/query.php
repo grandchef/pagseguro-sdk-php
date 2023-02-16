@@ -24,9 +24,9 @@
 
 require_once "../../vendor/autoload.php";
 
-\PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::initialize();
+\GrandChef\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
 /**
  *  Para usa o ambiente de testes (sandbox) descomentar a linha abaixo
  */
@@ -41,11 +41,11 @@ require_once "../../vendor/autoload.php";
  * @param $preApprovalRequest
  * @param $senderEmail
  */
-$queryPreApproval = new \PagSeguro\Domains\Requests\DirectPreApproval\Query(null, null, '2017-08-01', '2017-08-02');
+$queryPreApproval = new \GrandChef\Domains\Requests\DirectPreApproval\Query(null, null, '2017-08-01', '2017-08-02');
 
 try {
     $response = $queryPreApproval->register(
-        new \PagSeguro\Domains\AccountCredentials('email vendedor', 'token vendedor') // credencias do vendedor no pagseguro
+        new \GrandChef\Domains\AccountCredentials('email vendedor', 'token vendedor') // credencias do vendedor no pagseguro
     );
 
     echo '<pre>';

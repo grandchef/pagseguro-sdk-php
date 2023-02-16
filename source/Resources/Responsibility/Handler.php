@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Resources\Responsibility;
+namespace GrandChef\Resources\Responsibility;
 
 /**
  * interface Handler

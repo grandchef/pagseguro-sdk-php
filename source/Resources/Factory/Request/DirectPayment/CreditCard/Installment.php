@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard;
+namespace GrandChef\Resources\Factory\Request\DirectPayment\CreditCard;
 
 /**
  * Description of Installment
@@ -45,7 +45,7 @@ class Installment
 
     public function withArray($array)
     {
-        $installment = new \PagSeguro\Domains\DirectPayment\CreditCard\Installment();
+        $installment = new \GrandChef\Domains\DirectPayment\CreditCard\Installment();
         $installment->setQuantity($array['quantity'])
             ->setValue($array['value']);
 
@@ -59,7 +59,7 @@ class Installment
 
     public function withParameters($quantity, $value, $noInterestInstallmentQuantity = null)
     {
-        $installment = new \PagSeguro\Domains\DirectPayment\CreditCard\Installment();
+        $installment = new \GrandChef\Domains\DirectPayment\CreditCard\Installment();
         $installment->setQuantity($quantity)
             ->setValue($value);
 

@@ -22,16 +22,16 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\PreApproval;
+namespace GrandChef\Domains\Requests\PreApproval;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 trait PreApproval
 {
     private $preApproval;
 
     /**
-     * @return \PagSeguro\Domains\PreApproval
+     * @return \GrandChef\Domains\PreApproval
      */
     public function getPreApproval()
     {
@@ -39,7 +39,7 @@ trait PreApproval
     }
 
     /**
-     * @return \PagSeguro\Domains\PreApproval
+     * @return \GrandChef\Domains\PreApproval
      */
     public function setPreApproval()
     {

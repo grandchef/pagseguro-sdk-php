@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Enum\PaymentMethod;
+namespace GrandChef\Enum\PaymentMethod;
 
 /**
  * Class Name

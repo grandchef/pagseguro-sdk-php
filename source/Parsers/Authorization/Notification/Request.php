@@ -22,12 +22,12 @@
  *
  */
 
-namespace PagSeguro\Parsers\Authorization\Notification;
+namespace GrandChef\Parsers\Authorization\Notification;
 
-use PagSeguro\Parsers\Authorization\Search\Response;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Resources\Http;
+use GrandChef\Parsers\Authorization\Search\Response;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Parser;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request

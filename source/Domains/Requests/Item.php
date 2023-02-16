@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 trait Item
 {
@@ -34,7 +34,7 @@ trait Item
     {
         $this->items = InitializeObject::Initialize(
             $this->items,
-            new \PagSeguro\Resources\Factory\Item()
+            new \GrandChef\Resources\Factory\Item()
         );
         
         return $this->items;
@@ -45,11 +45,11 @@ trait Item
         if (is_array($items)) {
             $arr = array();
             foreach ($items as $key => $item) {
-                if ($item instanceof \PagSeguro\Domains\Item) {
+                if ($item instanceof \GrandChef\Domains\Item) {
                     $arr[$key] = $item;
                 } else {
                     if (is_array($item)) {
-                        $arr[$key] = new \PagSeguro\Domains\Item($item);
+                        $arr[$key] = new \GrandChef\Domains\Item($item);
                     }
                 }
             }

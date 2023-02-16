@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard\Holder;
+namespace GrandChef\Resources\Factory\Request\DirectPayment\CreditCard\Holder;
 
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class Document
@@ -34,7 +34,7 @@ class Document
 {
 
     /**
-     * @var \PagSeguro\Domains\Document
+     * @var \GrandChef\Domains\Document
      */
     private $holder;
 
@@ -48,8 +48,8 @@ class Document
     }
 
     /**
-     * @param \PagSeguro\Domains\Document $document
-     * @return \PagSeguro\Domains\Document
+     * @param \GrandChef\Domains\Document $document
+     * @return \GrandChef\Domains\Document
      */
     public function instance(\PagSeguro\Domains\Document $document)
     {
@@ -59,12 +59,12 @@ class Document
 
     /**
      * @param $array
-     * @return \PagSeguro\Domains\Document
+     * @return \GrandChef\Domains\Document
      */
     public function withArray($array)
     {
         $properties = new Current;
-        $document = new \PagSeguro\Domains\Document();
+        $document = new \GrandChef\Domains\Document();
         $document->setType($array[$properties::DOCUMENT_TYPE])
             ->setIdentifier($array[$properties::DOCUMENT_VALUE]);
         $this->holder->setDocuments($document);
@@ -74,11 +74,11 @@ class Document
     /**
      * @param $type
      * @param $identifier
-     * @return \PagSeguro\Domains\Document
+     * @return \GrandChef\Domains\Document
      */
     public function withParameters($type, $identifier)
     {
-        $document = new \PagSeguro\Domains\Document();
+        $document = new \GrandChef\Domains\Document();
         $document->setType($type)
             ->setIdentifier($identifier);
         $this->holder->setDocuments($document);

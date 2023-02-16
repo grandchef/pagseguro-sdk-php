@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
 /**
  * Description of ReceiverEmail

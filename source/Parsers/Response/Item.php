@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers\Response;
+namespace GrandChef\Parsers\Response;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 /**
  * Trait Item
@@ -94,7 +94,7 @@ trait Item
     {
         $this->items = InitializeObject::Initialize(
             $this->items,
-            new \PagSeguro\Resources\Factory\Item()
+            new \GrandChef\Resources\Factory\Item()
         );
         return $this->items;
     }

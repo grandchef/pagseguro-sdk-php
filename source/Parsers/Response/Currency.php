@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Response;
+namespace GrandChef\Parsers\Response;
 
 /**
  * Trait Currency

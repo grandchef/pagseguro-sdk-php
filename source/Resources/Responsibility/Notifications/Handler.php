@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Resources\Responsibility\Notifications;
+namespace GrandChef\Resources\Responsibility\Notifications;
 
 /**
  * Interface Handler

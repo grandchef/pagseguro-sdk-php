@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Resources\Connection\Base;
+namespace GrandChef\Resources\Connection\Base;
 
 /**
  * Class Credentials
@@ -37,7 +37,7 @@ trait Credentials
     private $credentials;
 
     /**
-     * @return \PagSeguro\Domains\Account\Credentials
+     * @return \GrandChef\Domains\Account\Credentials
      */
     public function getCredentials()
     {
@@ -45,7 +45,7 @@ trait Credentials
     }
 
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
+     * @param \GrandChef\Domains\Account\Credentials $credentials
      * @return Credentials
      */
     public function setCredentials(\PagSeguro\Domains\Account\Credentials $credentials)

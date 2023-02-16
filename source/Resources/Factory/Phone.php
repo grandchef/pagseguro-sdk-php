@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory;
+namespace GrandChef\Resources\Factory;
 
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class Phone
@@ -33,7 +33,7 @@ use PagSeguro\Enum\Properties\Current;
 class Phone
 {
     /**
-     * @var \PagSeguro\Domains\Phone
+     * @var \GrandChef\Domains\Phone
      */
     private $phone;
 
@@ -42,12 +42,12 @@ class Phone
      */
     public function __construct()
     {
-        $this->phone = new \PagSeguro\Domains\Phone();
+        $this->phone = new \GrandChef\Domains\Phone();
     }
 
     /**
-     * @param \PagSeguro\Domains\Phone $phone
-     * @return \PagSeguro\Domains\Phone
+     * @param \GrandChef\Domains\Phone $phone
+     * @return \GrandChef\Domains\Phone
      */
     public function instance(\PagSeguro\Domains\Phone $phone)
     {
@@ -67,7 +67,7 @@ class Phone
     /**
      * @param $areaCode
      * @param $number
-     * @return \PagSeguro\Domains\Phone
+     * @return \GrandChef\Domains\Phone
      */
     public function withParameters($areaCode, $number)
     {

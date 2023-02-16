@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Parsers\Response;
+namespace GrandChef\Parsers\Response;
 
-use PagSeguro\Domains\Document;
-use PagSeguro\Domains\Phone;
+use GrandChef\Domains\Document;
+use GrandChef\Domains\Phone;
 
 /**
  * Trait Sender
@@ -60,7 +60,7 @@ trait Sender
                 ->setNumber(current($sender->phone->number));
         }
 
-        $senderClass = new \PagSeguro\Domains\Sender();
+        $senderClass = new \GrandChef\Domains\Sender();
         $this->sender = $senderClass->setName(current($sender->name))
             ->setEmail(current($sender->email))
             ->setPhone($phone)

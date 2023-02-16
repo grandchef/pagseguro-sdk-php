@@ -22,14 +22,14 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Application\Authorization;
+namespace GrandChef\Domains\Requests\Application\Authorization;
 
-use PagSeguro\Domains\Authorization\AccountTrait;
-use PagSeguro\Domains\Requests\Notification;
-use PagSeguro\Domains\Requests\Permissions;
-use PagSeguro\Domains\Requests\Reference;
-use PagSeguro\Domains\Requests\Redirect;
-use PagSeguro\Domains\Requests\Requests;
+use GrandChef\Domains\Authorization\AccountTrait;
+use GrandChef\Domains\Requests\Notification;
+use GrandChef\Domains\Requests\Permissions;
+use GrandChef\Domains\Requests\Reference;
+use GrandChef\Domains\Requests\Redirect;
+use GrandChef\Domains\Requests\Requests;
 
 /**
  * Class Request

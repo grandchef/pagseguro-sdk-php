@@ -22,12 +22,12 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Adapter;
+namespace GrandChef\Domains\Requests\Adapter;
 
-use PagSeguro\Domains\Requests\Shipping\Address;
-use PagSeguro\Domains\Requests\Shipping\AddressRequired;
-use PagSeguro\Domains\Requests\Shipping\Type;
-use PagSeguro\Domains\Requests\Shipping\Cost;
+use GrandChef\Domains\Requests\Shipping\Address;
+use GrandChef\Domains\Requests\Shipping\AddressRequired;
+use GrandChef\Domains\Requests\Shipping\Type;
+use GrandChef\Domains\Requests\Shipping\Cost;
 
 class Shipping
 {

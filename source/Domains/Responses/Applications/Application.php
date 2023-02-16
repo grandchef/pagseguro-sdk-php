@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Responses\Applications;
+namespace GrandChef\Domains\Responses\Applications;
 
 /**
  * Class Application

@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPreApproval;
+namespace GrandChef\Domains\Requests\DirectPreApproval;
 
-use PagSeguro\Domains\DirectPreApproval\PreApproval;
-use PagSeguro\Domains\DirectPreApproval\Receiver;
-use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
+use GrandChef\Domains\DirectPreApproval\PreApproval;
+use GrandChef\Domains\DirectPreApproval\Receiver;
+use GrandChef\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /**
  * Class PlanRequest

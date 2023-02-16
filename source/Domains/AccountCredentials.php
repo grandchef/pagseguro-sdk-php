@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains;
+namespace GrandChef\Domains;
 
-use PagSeguro\Domains\Account\Credentials;
+use GrandChef\Domains\Account\Credentials;
 
 /**
  * Class AccountCredentials

@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment;
+namespace GrandChef\Domains\Requests\DirectPayment;
 
-use PagSeguro\Domains\Requests\DirectPayment\Boleto\Request;
+use GrandChef\Domains\Requests\DirectPayment\Boleto\Request;
 
 /**
  * Class Payment
@@ -39,6 +39,6 @@ class Boleto extends Request
      */
     public function register($credentials)
     {
-        return \PagSeguro\Services\DirectPayment\Boleto::checkout($credentials, $this);
+        return \GrandChef\Services\DirectPayment\Boleto::checkout($credentials, $this);
     }
 }

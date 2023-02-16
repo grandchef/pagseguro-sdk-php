@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Adapter\DirectPayment;
+namespace GrandChef\Domains\Requests\Adapter\DirectPayment;
 
-use PagSeguro\Domains\Requests\DirectPayment\CreditCard\Holder\Document;
-use PagSeguro\Domains\Requests\DirectPayment\CreditCard\Holder\Phone;
+use GrandChef\Domains\Requests\DirectPayment\CreditCard\Holder\Document;
+use GrandChef\Domains\Requests\DirectPayment\CreditCard\Holder\Phone;
 
 class Holder
 {

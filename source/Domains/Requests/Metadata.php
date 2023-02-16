@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 trait Metadata
 {
@@ -34,7 +34,7 @@ trait Metadata
     {
         $this->metadata = InitializeObject::Initialize(
             $this->metadata,
-            new \PagSeguro\Resources\Factory\Request\Metadata()
+            new \GrandChef\Resources\Factory\Request\Metadata()
         );
         
         return $this->metadata;
@@ -45,11 +45,11 @@ trait Metadata
         if (is_array($metadata)) {
             $arr = array();
             foreach ($metadata as $key => $metadataItem) {
-                if ($metadataItem instanceof \PagSeguro\Domains\Metadata) {
+                if ($metadataItem instanceof \GrandChef\Domains\Metadata) {
                     $arr[$key] = $metadataItem;
                 } else {
                     if (is_array($metadata)) {
-                        $arr[$key] = new \PagSeguro\Domains\Metadata($metadataItem);
+                        $arr[$key] = new \GrandChef\Domains\Metadata($metadataItem);
                     }
                 }
             }

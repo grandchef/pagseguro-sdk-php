@@ -22,14 +22,14 @@
  *
  */
 
-namespace PagSeguro\Services\Transactions\Search;
+namespace GrandChef\Services\Transactions\Search;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Parsers\Transaction\Search\Code\Request;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Parsers\Transaction\Search\Code\Request;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class Payment
@@ -38,7 +38,7 @@ use PagSeguro\Resources\Responsibility;
 class Code
 {
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
+     * @param \GrandChef\Domains\Account\Credentials $credentials
      * @param $code
      * @return string
      * @throws \Exception
@@ -60,7 +60,7 @@ class Code
             $http->get(
                 self::request($connection, $code),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
 
             $response = Responsibility::http(

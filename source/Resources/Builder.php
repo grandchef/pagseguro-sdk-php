@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources;
+namespace GrandChef\Resources;
 
-use PagSeguro\Configuration\Configure;
+use GrandChef\Configuration\Configure;
 
 /**
  * Class Builder

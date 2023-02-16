@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Parsers\Transaction\Search\Date;
+namespace GrandChef\Parsers\Transaction\Search\Date;
 
-use PagSeguro\Parsers\Transaction\Search\Transactions;
+use GrandChef\Parsers\Transaction\Search\Transactions;
 
 /**
  * Class Transaction
@@ -32,8 +32,8 @@ use PagSeguro\Parsers\Transaction\Search\Transactions;
  */
 class Transaction extends Transactions
 {
-    use \PagSeguro\Parsers\Response\Currency;
-    use \PagSeguro\Parsers\Response\PaymentMethod;
+    use \GrandChef\Parsers\Response\Currency;
+    use \GrandChef\Parsers\Response\PaymentMethod;
 
     /**
      * @var

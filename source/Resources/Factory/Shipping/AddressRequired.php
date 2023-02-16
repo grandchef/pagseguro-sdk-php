@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Shipping;
+namespace GrandChef\Resources\Factory\Shipping;
 
-use PagSeguro\Domains\ShippingAddressRequired;
+use GrandChef\Domains\ShippingAddressRequired;
 
 /**
  * Class Shipping
@@ -34,7 +34,7 @@ class AddressRequired
 {
 
     /**
-     * @var \PagSeguro\Domains\Shipping
+     * @var \GrandChef\Domains\Shipping
      */
     private $shipping;
 

@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Request\DirectPayment;
+namespace GrandChef\Resources\Factory\Request\DirectPayment;
 
-use PagSeguro\Domains\Document;
-use PagSeguro\Domains\Phone;
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Domains\Document;
+use GrandChef\Domains\Phone;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class Sender from Direct Payment
@@ -36,7 +36,7 @@ class Sender
 {
 
     /**
-     * @var \PagSeguro\Domains\Sender
+     * @var \GrandChef\Domains\Sender
      */
     private $sender;
 
@@ -45,12 +45,12 @@ class Sender
      */
     public function __construct()
     {
-        $this->sender = new \PagSeguro\Domains\DirectPayment\Sender();
+        $this->sender = new \GrandChef\Domains\DirectPayment\Sender();
     }
 
     /**
-     * @param \PagSeguro\Domains\DirectPayment\Sender $sender
-     * @return \PagSeguro\Domains\DirectPayment\Sender
+     * @param \GrandChef\Domains\DirectPayment\Sender $sender
+     * @return \GrandChef\Domains\DirectPayment\Sender
      */
     public function instance(\PagSeguro\Domains\DirectPayment\Sender $sender)
     {
@@ -59,7 +59,7 @@ class Sender
 
     /**
      * @param $array
-     * @return \PagSeguro\Domains\Shipping
+     * @return \GrandChef\Domains\Shipping
      */
     public function withArray($array)
     {
@@ -77,7 +77,7 @@ class Sender
      * @param Phone $phone
      * @param Document $document
      * @param $ip
-     * @return \PagSeguro\Domains\DirectPayment\Sender
+     * @return \GrandChef\Domains\DirectPayment\Sender
      */
     public function withParameters(
         $name,

@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\Checkout;
+namespace GrandChef\Parsers\Checkout;
 
 /**
  * Class Response

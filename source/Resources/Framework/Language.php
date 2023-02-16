@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Resources\Framework;
+namespace GrandChef\Resources\Framework;
 
 /**
  * Class Language

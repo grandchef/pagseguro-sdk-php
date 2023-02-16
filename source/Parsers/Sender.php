@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Parsers;
+namespace GrandChef\Parsers;
 
-use PagSeguro\Domains\Requests\Requests;
-use PagSeguro\Helpers\Characters;
-use PagSeguro\Helpers\Mask;
+use GrandChef\Domains\Requests\Requests;
+use GrandChef\Helpers\Characters;
+use GrandChef\Helpers\Mask;
 
 /**
  * Trait Sender

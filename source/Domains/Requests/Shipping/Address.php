@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\Shipping;
+namespace GrandChef\Domains\Requests\Shipping;
 
 trait Address
 {
@@ -36,7 +36,7 @@ trait Address
 
     public function setAddress()
     {
-        $this->address = new \PagSeguro\Resources\Factory\Shipping\Address($this->shipping);
+        $this->address = new \GrandChef\Resources\Factory\Shipping\Address($this->shipping);
         return $this->address;
     }
 }

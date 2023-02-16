@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\Account;
+namespace GrandChef\Domains\Account;
 
 /**
  * Interface Credentials

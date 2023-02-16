@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 /**
  * Description of Parameter
@@ -38,7 +38,7 @@ trait Parameter
     {
         $this->parameter = InitializeObject::Initialize(
             $this->parameter,
-            new \PagSeguro\Resources\Factory\Request\Parameter()
+            new \GrandChef\Resources\Factory\Request\Parameter()
         );
         
         return $this->parameter;
@@ -49,11 +49,11 @@ trait Parameter
         if (is_array($parameter)) {
             $arr = array();
             foreach ($parameter as $key => $parameterItem) {
-                if ($parameterItem instanceof \PagSeguro\Domains\Parameter) {
+                if ($parameterItem instanceof \GrandChef\Domains\Parameter) {
                     $arr[$key] = $parameterItem;
                 } else {
                     if (is_array($parameter)) {
-                        $arr[$key] = new \PagSeguro\Domains\Parameter($parameterItem);
+                        $arr[$key] = new \GrandChef\Domains\Parameter($parameterItem);
                     }
                 }
             }

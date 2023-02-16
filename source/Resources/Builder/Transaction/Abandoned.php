@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Builder\Transaction;
+namespace GrandChef\Resources\Builder\Transaction;
 
-use PagSeguro\Resources\Builder;
+use GrandChef\Resources\Builder;
 
 /**
  * Class Payment

@@ -24,11 +24,11 @@
 
 require_once "../../vendor/autoload.php";
 
-\PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::initialize();
+\GrandChef\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
+\GrandChef\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
 
-$payment = new \PagSeguro\Domains\Requests\Payment();
+$payment = new \GrandChef\Domains\Requests\Payment();
 
 $payment->addItems()->withParameters(
     '0001',
@@ -104,22 +104,22 @@ $payment->addPaymentMethod()->withParameters(
 
 //Add installments with no interest
 $payment->addPaymentMethod()->withParameters(
-    \PagSeguro\Enum\PaymentMethod\Group::CREDIT_CARD,
-    \PagSeguro\Enum\PaymentMethod\Config\Keys::MAX_INSTALLMENTS_NO_INTEREST,
+    \GrandChef\Enum\PaymentMethod\Group::CREDIT_CARD,
+    \GrandChef\Enum\PaymentMethod\Config\Keys::MAX_INSTALLMENTS_NO_INTEREST,
     2 // (int) qty of installment
 );
 
 //Add a limit for installment
 $payment->addPaymentMethod()->withParameters(
-    \PagSeguro\Enum\PaymentMethod\Group::CREDIT_CARD,
-    \PagSeguro\Enum\PaymentMethod\Config\Keys::MAX_INSTALLMENTS_LIMIT,
+    \GrandChef\Enum\PaymentMethod\Group::CREDIT_CARD,
+    \GrandChef\Enum\PaymentMethod\Config\Keys::MAX_INSTALLMENTS_LIMIT,
     6 // (int) qty of installment
 );
 
 // Add a group and/or payment methods name
 $payment->acceptPaymentMethod()->groups(
-    \PagSeguro\Enum\PaymentMethod\Group::CREDIT_CARD,
-    \PagSeguro\Enum\PaymentMethod\Group::BALANCE
+    \GrandChef\Enum\PaymentMethod\Group::CREDIT_CARD,
+    \GrandChef\Enum\PaymentMethod\Group::BALANCE
 );
 $payment->acceptPaymentMethod()->name(\PagSeguro\Enum\PaymentMethod\Name::DEBITO_ITAU);
 // Remove a group and/or payment methods name
@@ -130,11 +130,11 @@ try {
 
     /**
      * @todo For checkout with application use:
-     * \PagSeguro\Configuration\Configure::getApplicationCredentials()
+     * \GrandChef\Configuration\Configure::getApplicationCredentials()
      *  ->setAuthorizationCode("FD3AF1B214EC40F0B0A6745D041BF50D")
      */
     $result = $payment->register(
-        \PagSeguro\Configuration\Configure::getAccountCredentials()
+        \GrandChef\Configuration\Configure::getAccountCredentials()
     );
 
     echo "<h2>Criando requisi&ccedil;&atilde;o de pagamento</h2>"

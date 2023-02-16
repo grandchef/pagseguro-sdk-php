@@ -22,10 +22,10 @@
  *
  */
 
-namespace PagSeguro\Parsers\DirectPayment\CreditCard;
+namespace GrandChef\Parsers\DirectPayment\CreditCard;
 
-use PagSeguro\Domains\Requests\Requests;
-use PagSeguro\Helpers\Currency;
+use GrandChef\Domains\Requests\Requests;
+use GrandChef\Helpers\Currency;
 
 /**
  * Trait Installment

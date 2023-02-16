@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Services\Application\Search;
+namespace GrandChef\Services\Application\Search;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Enum\Properties\Current;
-use PagSeguro\Parsers\Authorization\Search\Date\Request;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Enum\Properties\Current;
+use GrandChef\Parsers\Authorization\Search\Date\Request;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class Payment
@@ -40,7 +40,7 @@ class Date
 {
 
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
+     * @param \GrandChef\Domains\Account\Credentials $credentials
      * @param $options
      * @return string
      * @throws \Exception
@@ -63,7 +63,7 @@ class Date
             $http->get(
                 self::request($connection, $options),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
 
             $response = Responsibility::http(

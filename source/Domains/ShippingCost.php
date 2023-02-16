@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains;
+namespace GrandChef\Domains;
 
 /**
  * Class ShippingCost

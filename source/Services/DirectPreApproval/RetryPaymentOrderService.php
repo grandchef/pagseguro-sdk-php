@@ -22,15 +22,15 @@
  *
  */
 
-namespace PagSeguro\Services\DirectPreApproval;
+namespace GrandChef\Services\DirectPreApproval;
 
-use PagSeguro\Domains\Account\Credentials;
-use PagSeguro\Domains\Requests\DirectPreApproval\RetryPaymentOrder;
-use PagSeguro\Parsers\DirectPreApproval\RetryPaymentOrderParser;
-use PagSeguro\Resources\Connection;
-use PagSeguro\Resources\Http;
-use PagSeguro\Resources\Log\Logger;
-use PagSeguro\Resources\Responsibility;
+use GrandChef\Domains\Account\Credentials;
+use GrandChef\Domains\Requests\DirectPreApproval\RetryPaymentOrder;
+use GrandChef\Parsers\DirectPreApproval\RetryPaymentOrderParser;
+use GrandChef\Resources\Connection;
+use GrandChef\Resources\Http;
+use GrandChef\Resources\Log\Logger;
+use GrandChef\Resources\Responsibility;
 
 /**
  * Class RetryPaymentOrderService
@@ -65,7 +65,7 @@ class RetryPaymentOrderService
                 self::request($connection, RetryPaymentOrderParser::getData($retryPaymentOrder)),
                 RetryPaymentOrderParser::getData($retryPaymentOrder),
                 20,
-                \PagSeguro\Configuration\Configure::getCharset()->getEncoding()
+                \GrandChef\Configuration\Configure::getCharset()->getEncoding()
             );
             $response = Responsibility::http(
                 $http,

@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPayment;
+namespace GrandChef\Domains\Requests\DirectPayment;
 
-use PagSeguro\Helpers\InitializeObject;
+use GrandChef\Helpers\InitializeObject;
 
 trait Sender
 {
@@ -33,7 +33,7 @@ trait Sender
     public function setSender()
     {
         $this->sender =  InitializeObject::initialize($this->sender, '\PagSeguro\Domains\DirectPayment\Sender');
-        return new \PagSeguro\Domains\Requests\Adapter\DirectPayment\Sender($this->sender);
+        return new \GrandChef\Domains\Requests\Adapter\DirectPayment\Sender($this->sender);
     }
 
     public function getSender()

@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Connection\Base\DirectPreApproval;
+namespace GrandChef\Resources\Connection\Base\DirectPreApproval;
 
-use PagSeguro\Resources\Builder;
+use GrandChef\Resources\Builder;
 
 /**
  * Class RetryPaymentOrder

@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests;
+namespace GrandChef\Domains\Requests;
 
-use PagSeguro\Domains\Requests\Adapter\Url;
+use GrandChef\Domains\Requests\Adapter\Url;
 
 trait Redirect
 {

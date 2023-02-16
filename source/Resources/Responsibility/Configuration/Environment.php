@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Responsibility\Configuration;
+namespace GrandChef\Resources\Responsibility\Configuration;
 
-use PagSeguro\Resources\Responsibility\Handler;
+use GrandChef\Resources\Responsibility\Handler;
 
 class Environment implements Handler
 {

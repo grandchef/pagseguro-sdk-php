@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Parsers\Transaction\Search\Date;
+namespace GrandChef\Parsers\Transaction\Search\Date;
 
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Resources\Http;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Parser;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request
@@ -35,7 +35,7 @@ use PagSeguro\Resources\Http;
 class Request extends Error implements Parser
 {
     /**
-     * @param \PagSeguro\Resources\Http $http
+     * @param \GrandChef\Resources\Http $http
      * @return Response
      */
     public static function success(Http $http)
@@ -52,8 +52,8 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
-     * @return \PagSeguro\Domains\Error
+     * @param \GrandChef\Resources\Http $http
+     * @return \GrandChef\Domains\Error
      */
     public static function error(Http $http)
     {

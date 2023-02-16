@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Parsers\DirectPayment\Boleto;
+namespace GrandChef\Parsers\DirectPayment\Boleto;
 
 /**
  * Request from the Boleto direct payment
@@ -30,19 +30,19 @@ namespace PagSeguro\Parsers\DirectPayment\Boleto;
  * @package PagSeguro\Parsers\DirectPayment\Boleto
  */
 
-use PagSeguro\Enum\Properties\Current;
-use PagSeguro\Parsers\Basic;
-use PagSeguro\Parsers\Currency;
-use PagSeguro\Parsers\DirectPayment\Mode;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Item;
-use PagSeguro\Parsers\Parameter;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Parsers\ReceiverEmail;
-use PagSeguro\Parsers\Sender;
-use PagSeguro\Parsers\Shipping;
-use PagSeguro\Parsers\Transaction\Boleto\Response;
-use PagSeguro\Resources\Http;
+use GrandChef\Enum\Properties\Current;
+use GrandChef\Parsers\Basic;
+use GrandChef\Parsers\Currency;
+use GrandChef\Parsers\DirectPayment\Mode;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Item;
+use GrandChef\Parsers\Parameter;
+use GrandChef\Parsers\Parser;
+use GrandChef\Parsers\ReceiverEmail;
+use GrandChef\Parsers\Sender;
+use GrandChef\Parsers\Shipping;
+use GrandChef\Parsers\Transaction\Boleto\Response;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request
@@ -61,7 +61,7 @@ class Request extends Error implements Parser
     use Shipping;
 
     /**
-     * @param \PagSeguro\Domains\Requests\DirectPayment\Boleto $boleto
+     * @param \GrandChef\Domains\Requests\DirectPayment\Boleto $boleto
      * @return array
      */
     public static function getData(\PagSeguro\Domains\Requests\DirectPayment\Boleto $boleto)
@@ -85,7 +85,7 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
+     * @param \GrandChef\Resources\Http $http
      * @return Response
      */
     public static function success(Http $http)
@@ -117,8 +117,8 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
-     * @return \PagSeguro\Domains\Error
+     * @param \GrandChef\Resources\Http $http
+     * @return \GrandChef\Domains\Error
      */
     public static function error(Http $http)
     {

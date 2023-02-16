@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Shipping;
+namespace GrandChef\Resources\Factory\Shipping;
 
-use PagSeguro\Domains\ShippingCost;
+use GrandChef\Domains\ShippingCost;
 
 /**
  * Class Shipping
@@ -34,7 +34,7 @@ class Cost
 {
 
     /**
-     * @var \PagSeguro\Domains\Shipping
+     * @var \GrandChef\Domains\Shipping
      */
     private $shipping;
 

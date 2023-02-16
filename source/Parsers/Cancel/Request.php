@@ -22,12 +22,12 @@
  *
  */
 
-namespace PagSeguro\Parsers\Cancel;
+namespace GrandChef\Parsers\Cancel;
 
-use PagSeguro\Enum\Properties\Current;
-use PagSeguro\Parsers\Error;
-use PagSeguro\Parsers\Parser;
-use PagSeguro\Resources\Http;
+use GrandChef\Enum\Properties\Current;
+use GrandChef\Parsers\Error;
+use GrandChef\Parsers\Parser;
+use GrandChef\Resources\Http;
 
 /**
  * Class Request
@@ -51,20 +51,20 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
+     * @param \GrandChef\Resources\Http $http
      * @return Response
      */
     public static function success(Http $http)
     {
         $xml = simplexml_load_string($http->getResponse());
-        $result = new \PagSeguro\Parsers\Cancel\Response();
+        $result = new \GrandChef\Parsers\Cancel\Response();
         $result->setResult(current($xml));
         return $result;
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
-     * @return \PagSeguro\Domains\Error
+     * @param \GrandChef\Resources\Http $http
+     * @return \GrandChef\Domains\Error
      */
     public static function error(Http $http)
     {

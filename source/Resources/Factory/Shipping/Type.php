@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory\Shipping;
+namespace GrandChef\Resources\Factory\Shipping;
 
-use PagSeguro\Domains\ShippingType;
+use GrandChef\Domains\ShippingType;
 
 /**
  * Class Shipping
@@ -34,7 +34,7 @@ class Type
 {
 
     /**
-     * @var \PagSeguro\Domains\Shipping
+     * @var \GrandChef\Domains\Shipping
      */
     private $shipping;
 

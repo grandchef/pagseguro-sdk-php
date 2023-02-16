@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Resources\Factory;
+namespace GrandChef\Resources\Factory;
 
-use PagSeguro\Enum\Properties\Current;
+use GrandChef\Enum\Properties\Current;
 
 /**
  * Class Shipping
@@ -46,8 +46,8 @@ class Item
     }
 
     /**
-     * @param \PagSeguro\Domains\Item $item
-     * @return \PagSeguro\Domains\Item
+     * @param \GrandChef\Domains\Item $item
+     * @return \GrandChef\Domains\Item
      */
     public function instance(\PagSeguro\Domains\Item $item)
     {
@@ -62,7 +62,7 @@ class Item
     {
         $properties = new Current;
 
-        $item = new \PagSeguro\Domains\Item();
+        $item = new \GrandChef\Domains\Item();
         $item->setId($array[$properties::ITEM_ID])
             ->setAmount($array[$properties::ITEM_AMOUNT])
             ->setDescription($array[$properties::ITEM_DESCRIPTION])
@@ -91,7 +91,7 @@ class Item
         $weight = null,
         $shippingCost = null
     ) {
-        $item = new \PagSeguro\Domains\Item();
+        $item = new \GrandChef\Domains\Item();
         $item->setId($id)
             ->setAmount($amount)
             ->setDescription($description)

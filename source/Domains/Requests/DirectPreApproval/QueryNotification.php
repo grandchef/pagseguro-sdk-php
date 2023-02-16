@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPreApproval;
+namespace GrandChef\Domains\Requests\DirectPreApproval;
 
-use PagSeguro\Services\DirectPreApproval\QueryNotificationService;
+use GrandChef\Services\DirectPreApproval\QueryNotificationService;
 
 /**
  * Class QueryNotification

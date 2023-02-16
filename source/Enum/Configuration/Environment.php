@@ -22,9 +22,9 @@
  *
  */
 
-namespace PagSeguro\Enum\Configuration;
+namespace GrandChef\Enum\Configuration;
 
-use PagSeguro\Enum\Enum;
+use GrandChef\Enum\Enum;
 
 class Environment extends Enum
 {

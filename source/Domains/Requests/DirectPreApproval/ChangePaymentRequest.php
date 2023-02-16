@@ -22,11 +22,11 @@
  *
  */
 
-namespace PagSeguro\Domains\Requests\DirectPreApproval;
+namespace GrandChef\Domains\Requests\DirectPreApproval;
 
-use PagSeguro\Domains\DirectPreApproval\ChangePlanSender;
-use PagSeguro\Domains\DirectPreApproval\CreditCard;
-use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
+use GrandChef\Domains\DirectPreApproval\ChangePlanSender;
+use GrandChef\Domains\DirectPreApproval\CreditCard;
+use GrandChef\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /**
  * Class ChangePaymentRequest

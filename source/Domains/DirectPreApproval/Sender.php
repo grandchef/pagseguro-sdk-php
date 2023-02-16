@@ -22,7 +22,7 @@
  *
  */
 
-namespace PagSeguro\Domains\DirectPreApproval;
+namespace GrandChef\Domains\DirectPreApproval;
 
 /**
  * Class Sender
