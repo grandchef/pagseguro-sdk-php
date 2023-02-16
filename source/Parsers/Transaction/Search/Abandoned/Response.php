@@ -1,15 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
+/** Created by PhpStorm.
  * User: esilva
  * Date: 25/04/16
  * Time: 11:18
  */
 
-namespace GrandChef\Parsers\Transaction\Search\Abandoned;
+namespace PagSeguro\Parsers\Transaction\Search\Abandoned;
 
-/**
- * Class Response
+/** Class Response
  * @package PagSeguro\Parsers\Transaction\Search\Abandoned
  */
 class Response

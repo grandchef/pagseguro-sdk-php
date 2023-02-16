@@ -1,9 +1,9 @@
 <?php
 
-namespace GrandChef\Tests;
+namespace PagSeguro\Tests;
 
 use PHPUnit\Framework\TestCase;
-use GrandChef\Domains\DirectPreApproval\Holder;
+use PagSeguro\Domains\DirectPreApproval\Holder;
 
 class HolderTest extends TestCase
 {

@@ -1,40 +1,18 @@
 <?php
-/**
- * 2007-2016 [PagSeguro Internet Ltda.]
- *
- * NOTICE OF LICENSE
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @author    PagSeguro Internet Ltda.
- * @copyright 2007-2016 PagSeguro Internet Ltda.
- * @license   http://www.apache.org/licenses/LICENSE-2.0
- *
- */
 
-namespace GrandChef\Services\Application;
+namespace PagSeguro\Services\Application;
 
-use GrandChef\Configuration\Configure;
-use GrandChef\Domains\Account\Credentials;
-use GrandChef\Parsers\Authorization\Request;
-use GrandChef\Resources\Connection;
-use GrandChef\Resources\Http;
-use GrandChef\Resources\Log\Logger;
-use GrandChef\Resources\Responsibility;
+use PagSeguro\Configuration\Configure;
+use PagSeguro\Domains\Account\Credentials;
+use PagSeguro\Parsers\Authorization\Request;
+use PagSeguro\Resources\Connection;
+use PagSeguro\Resources\Http;
+use PagSeguro\Resources\Log\Logger;
+use PagSeguro\Resources\Responsibility;
 
 class Authorization
 {
-    public static function create(Credentials $credentials, \GrandChef\Domains\Requests\Authorization $authorization)
+    public static function create(Credentials $credentials, \PagSeguro\Domains\Requests\Authorization $authorization)
     {
         Logger::info("Begin", ['service' => 'Authorization']);
         try {

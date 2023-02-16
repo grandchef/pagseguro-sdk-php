@@ -1,14 +1,9 @@
 <?php
 
-namespace GrandChef\Domains;
+namespace PagSeguro\Domains;
 
-use GrandChef\Domains\Authorization\Account;
+use PagSeguro\Domains\Authorization\Account;
 
-/**
- * Class Seller
- *
- * @package PagSeguro\Domains\Authorization
- */
 class Authorization
 {
     /**

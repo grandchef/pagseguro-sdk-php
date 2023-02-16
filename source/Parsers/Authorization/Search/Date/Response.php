@@ -1,15 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
+/** Created by PhpStorm.
  * User: esilva
  * Date: 25/04/16
  * Time: 11:18
  */
 
-namespace GrandChef\Parsers\Authorization\Search\Date;
+namespace PagSeguro\Parsers\Authorization\Search\Date;
 
-/**
- * Class Response
+/** Class Response
  * @package PagSeguro\Parsers\Authorization\Search\Date
  */
 class Response
@@ -143,7 +141,7 @@ class Response
      */
     private function addAuthorization($authorization)
     {
-        $response = new \GrandChef\Parsers\Authorization\Search\Response();
+        $response = new \PagSeguro\Parsers\Authorization\Search\Response();
         $response->setCode(current($authorization->code))
             ->setCreationDate(current($authorization->creationDate))
             ->setReference(current($authorization->reference))

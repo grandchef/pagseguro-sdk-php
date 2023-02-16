@@ -1,43 +1,20 @@
 <?php
-/**
- * 2007-2016 [PagSeguro Internet Ltda.]
- *
- * NOTICE OF LICENSE
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @author    PagSeguro Internet Ltda.
- * @copyright 2007-2016 PagSeguro Internet Ltda.
- * @license   http://www.apache.org/licenses/LICENSE-2.0
- *
- */
 
-namespace GrandChef\Resources;
+namespace PagSeguro\Resources;
 
-use GrandChef\Resources\Responsibility\Configuration\Environment;
-use GrandChef\Resources\Responsibility\Configuration\Extensible;
-use GrandChef\Resources\Responsibility\Configuration\File;
-use GrandChef\Resources\Responsibility\Configuration\Wrapper;
-use GrandChef\Resources\Responsibility\Http\Methods\Generic;
-use GrandChef\Resources\Responsibility\Http\Methods\Request;
-use GrandChef\Resources\Responsibility\Http\Methods\Success;
-use GrandChef\Resources\Responsibility\Http\Methods\Unauthorized;
-use GrandChef\Resources\Responsibility\Notifications\Application;
-use GrandChef\Resources\Responsibility\Notifications\PreApproval;
-use GrandChef\Resources\Responsibility\Notifications\Transaction;
+use PagSeguro\Resources\Responsibility\Configuration\Environment;
+use PagSeguro\Resources\Responsibility\Configuration\Extensible;
+use PagSeguro\Resources\Responsibility\Configuration\File;
+use PagSeguro\Resources\Responsibility\Configuration\Wrapper;
+use PagSeguro\Resources\Responsibility\Http\Methods\Generic;
+use PagSeguro\Resources\Responsibility\Http\Methods\Request;
+use PagSeguro\Resources\Responsibility\Http\Methods\Success;
+use PagSeguro\Resources\Responsibility\Http\Methods\Unauthorized;
+use PagSeguro\Resources\Responsibility\Notifications\Application;
+use PagSeguro\Resources\Responsibility\Notifications\PreApproval;
+use PagSeguro\Resources\Responsibility\Notifications\Transaction;
 
-/**
- * class Handler
+/** class Handler
  *
  * @package PagSeguro\Services\Connection\Responsibility
  */

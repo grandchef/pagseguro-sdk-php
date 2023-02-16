@@ -1,9 +1,9 @@
 <?php
 
-namespace GrandChef\Tests;
+namespace PagSeguro\Tests;
 
 use PHPUnit\Framework\TestCase;
-use GrandChef\Domains\DirectPreApproval\PaymentMethod;
+use PagSeguro\Domains\DirectPreApproval\PaymentMethod;
 
 class PaymentMethodTest extends TestCase
 {

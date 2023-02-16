@@ -1,9 +1,9 @@
 <?php
 
-namespace GrandChef\Tests;
+namespace PagSeguro\Tests;
 
 use PHPUnit\Framework\TestCase;
-use GrandChef\Domains\DirectPreApproval\PreApproval;
+use PagSeguro\Domains\DirectPreApproval\PreApproval;
 
 class PreApprovalTest extends TestCase
 {

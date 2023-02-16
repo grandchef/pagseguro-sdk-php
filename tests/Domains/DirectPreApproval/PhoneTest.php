@@ -1,9 +1,9 @@
 <?php
 
-namespace GrandChef\Tests;
+namespace PagSeguro\Tests;
 
 use PHPUnit\Framework\TestCase;
-use GrandChef\Domains\DirectPreApproval\Phone;
+use PagSeguro\Domains\DirectPreApproval\Phone;
 
 class PhoneTest extends TestCase
 {

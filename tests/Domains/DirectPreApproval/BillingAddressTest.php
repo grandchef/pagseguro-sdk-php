@@ -1,9 +1,9 @@
 <?php
 
-namespace GrandChef\Tests;
+namespace PagSeguro\Tests;
 
 use PHPUnit\Framework\TestCase;
-use GrandChef\Domains\DirectPreApproval\BillingAddress;
+use PagSeguro\Domains\DirectPreApproval\BillingAddress;
 
 class BillingAddressTest extends TestCase
 {

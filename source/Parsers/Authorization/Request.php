@@ -1,41 +1,18 @@
 <?php
-/**
- * 2007-2016 [PagSeguro Internet Ltda.]
- *
- * NOTICE OF LICENSE
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @author    PagSeguro Internet Ltda.
- * @copyright 2007-2016 PagSeguro Internet Ltda.
- * @license   http://www.apache.org/licenses/LICENSE-2.0
- *
- */
 
-namespace GrandChef\Parsers\Authorization;
+namespace PagSeguro\Parsers\Authorization;
 
-use GrandChef\Domains\Authorization;
-use GrandChef\Parsers\Basic;
-use GrandChef\Parsers\Error;
-use GrandChef\Parsers\Parser;
-use GrandChef\Resources\Http;
-use GrandChef\Services\Authorization\CompanyService;
-use GrandChef\Services\Authorization\DefaultAuthorizationService;
-use GrandChef\Services\Authorization\PersonalService;
-use GrandChef\Services\Authorization\SellerService;
+use PagSeguro\Domains\Authorization;
+use PagSeguro\Parsers\Basic;
+use PagSeguro\Parsers\Error;
+use PagSeguro\Parsers\Parser;
+use PagSeguro\Resources\Http;
+use PagSeguro\Services\Authorization\CompanyService;
+use PagSeguro\Services\Authorization\DefaultAuthorizationService;
+use PagSeguro\Services\Authorization\PersonalService;
+use PagSeguro\Services\Authorization\SellerService;
 
-/**
- * Class Request
+/** Class Request
  * @package PagSeguro\Parsers\Authorization
  */
 class Request extends Error implements Parser
@@ -43,7 +20,7 @@ class Request extends Error implements Parser
     use Basic;
 
     /**
-     * @param \GrandChef\Domains\Requests\Authorization $authorization
+     * @param \PagSeguro\Domains\Requests\Authorization $authorization
      * @return string
      */
     public static function getData(\PagSeguro\Domains\Requests\Authorization $authorization)

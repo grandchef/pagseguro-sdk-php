@@ -1,45 +1,22 @@
 <?php
-/**
- * 2007-2016 [PagSeguro Internet Ltda.]
- *
- * NOTICE OF LICENSE
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @author    PagSeguro Internet Ltda.
- * @copyright 2007-2016 PagSeguro Internet Ltda.
- * @license   http://www.apache.org/licenses/LICENSE-2.0
- *
- */
 
-namespace GrandChef\Parsers\PreApproval\Notification;
+namespace PagSeguro\Parsers\PreApproval\Notification;
 
-use GrandChef\Domains\Address;
-use GrandChef\Domains\Phone;
-use GrandChef\Domains\PreApproval\Sender;
-use GrandChef\Parsers\Error;
-use GrandChef\Parsers\Parser;
-use GrandChef\Parsers\PreApproval\Search\Code\Response;
-use GrandChef\Resources\Http;
+use PagSeguro\Domains\Address;
+use PagSeguro\Domains\Phone;
+use PagSeguro\Domains\PreApproval\Sender;
+use PagSeguro\Parsers\Error;
+use PagSeguro\Parsers\Parser;
+use PagSeguro\Parsers\PreApproval\Search\Code\Response;
+use PagSeguro\Resources\Http;
 
-/**
- * Class Request
+/** Class Request
  * @package PagSeguro\Parsers\PreApproval\Notification
  */
 class Request extends Error implements Parser
 {
     /**
-     * @param \GrandChef\Resources\Http $http
+     * @param \PagSeguro\Resources\Http $http
      * @return Response
      */
     public static function success(Http $http)
@@ -78,8 +55,8 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \GrandChef\Resources\Http $http
-     * @return \GrandChef\Domains\Error
+     * @param \PagSeguro\Resources\Http $http
+     * @return \PagSeguro\Domains\Error
      */
     public static function error(Http $http)
     {

@@ -1,42 +1,19 @@
 <?php
-/**
- * 2007-2016 [PagSeguro Internet Ltda.]
- *
- * NOTICE OF LICENSE
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @author    PagSeguro Internet Ltda.
- * @copyright 2007-2016 PagSeguro Internet Ltda.
- * @license   http://www.apache.org/licenses/LICENSE-2.0
- *
- */
 
-namespace GrandChef\Resources\Factory\Request\DirectPayment;
+namespace PagSeguro\Resources\Factory\Request\DirectPayment;
 
-use GrandChef\Domains\Document;
-use GrandChef\Domains\Phone;
-use GrandChef\Enum\Properties\Current;
+use PagSeguro\Domains\Document;
+use PagSeguro\Domains\Phone;
+use PagSeguro\Enum\Properties\Current;
 
-/**
- * Class Sender from Direct Payment
+/** Class Sender from Direct Payment
  * @package PagSeguro\Resources\Factory\Request\DirectPayment
  */
 class Sender
 {
 
     /**
-     * @var \GrandChef\Domains\Sender
+     * @var \PagSeguro\Domains\Sender
      */
     private $sender;
 
@@ -45,12 +22,12 @@ class Sender
      */
     public function __construct()
     {
-        $this->sender = new \GrandChef\Domains\DirectPayment\Sender();
+        $this->sender = new \PagSeguro\Domains\DirectPayment\Sender();
     }
 
     /**
-     * @param \GrandChef\Domains\DirectPayment\Sender $sender
-     * @return \GrandChef\Domains\DirectPayment\Sender
+     * @param \PagSeguro\Domains\DirectPayment\Sender $sender
+     * @return \PagSeguro\Domains\DirectPayment\Sender
      */
     public function instance(\PagSeguro\Domains\DirectPayment\Sender $sender)
     {
@@ -59,7 +36,7 @@ class Sender
 
     /**
      * @param $array
-     * @return \GrandChef\Domains\Shipping
+     * @return \PagSeguro\Domains\Shipping
      */
     public function withArray($array)
     {
@@ -77,7 +54,7 @@ class Sender
      * @param Phone $phone
      * @param Document $document
      * @param $ip
-     * @return \GrandChef\Domains\DirectPayment\Sender
+     * @return \PagSeguro\Domains\DirectPayment\Sender
      */
     public function withParameters(
         $name,

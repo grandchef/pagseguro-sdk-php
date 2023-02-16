@@ -1,9 +1,8 @@
 <?php
 
-namespace GrandChef\Parsers\Transaction\Search;
+namespace PagSeguro\Parsers\Transaction\Search;
 
-/**
- * Class Transactions
+/** Class Transactions
  * @package PagSeguro\Parsers\Transaction\Search
  */
 abstract class Transactions

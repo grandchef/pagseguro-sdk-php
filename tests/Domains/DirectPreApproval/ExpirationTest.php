@@ -1,9 +1,9 @@
 <?php
 
-namespace GrandChef\Tests;
+namespace PagSeguro\Tests;
 
 use PHPUnit\Framework\TestCase;
-use GrandChef\Domains\DirectPreApproval\Expiration;
+use PagSeguro\Domains\DirectPreApproval\Expiration;
 
 class ExpirationTest extends TestCase
 {
