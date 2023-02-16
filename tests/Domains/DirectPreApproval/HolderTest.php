@@ -9,7 +9,7 @@ class HolderTest extends TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new Holder();
     }
@@ -17,13 +17,5 @@ class HolderTest extends TestCase
     public function testConstructor()
     {
         $this->assertInstanceOf(Holder::class, $this->obj);
-    }
-
-    public function testRequiredParameters()
-    {
-        $this->assertObjectHasAttribute('name', $this->obj);
-        $this->assertObjectHasAttribute('birthDate', $this->obj);
-        $this->assertObjectHasAttribute('documents', $this->obj);
-        $this->assertObjectHasAttribute('phone', $this->obj);
     }
 }

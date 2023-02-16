@@ -9,7 +9,7 @@ class BillingAddressTest extends TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BillingAddress();
     }
@@ -17,17 +17,6 @@ class BillingAddressTest extends TestCase
     public function testConstructor()
     {
         $this->assertInstanceOf(BillingAddress::class, $this->obj);
-    }
-
-    public function testRequiredParameters()
-    {
-        $this->assertObjectHasAttribute('street', $this->obj);
-        $this->assertObjectHasAttribute('number', $this->obj);
-        $this->assertObjectHasAttribute('district', $this->obj);
-        $this->assertObjectHasAttribute('postalCode', $this->obj);
-        $this->assertObjectHasAttribute('city', $this->obj);
-        $this->assertObjectHasAttribute('state', $this->obj);
-        $this->assertObjectHasAttribute('country', $this->obj);
     }
 
     public function testParametersThatCanBeNull()

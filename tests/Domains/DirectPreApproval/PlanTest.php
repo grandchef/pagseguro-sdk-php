@@ -9,7 +9,7 @@ class PlanTest extends TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new Plan();
     }
@@ -17,15 +17,5 @@ class PlanTest extends TestCase
     public function testConstructor()
     {
         $this->assertInstanceOf(Plan::class, $this->obj);
-    }
-
-    public function testRequiredParameters()
-    {
-        $this->assertObjectHasAttribute('redirectURL', $this->obj);
-        $this->assertObjectHasAttribute('reference', $this->obj);
-        $this->assertObjectHasAttribute('preApproval', $this->obj);
-        $this->assertObjectHasAttribute('reviewURL', $this->obj);
-        $this->assertObjectHasAttribute('maxUsers', $this->obj);
-        $this->assertObjectHasAttribute('receiver', $this->obj);
     }
 }

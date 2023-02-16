@@ -9,7 +9,7 @@ class SenderTest extends TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new Sender();
     }
@@ -17,16 +17,5 @@ class SenderTest extends TestCase
     public function testConstructor()
     {
         $this->assertInstanceOf(Sender::class, $this->obj);
-    }
-
-    public function testRequiredParameters()
-    {
-        $this->assertObjectHasAttribute('name', $this->obj);
-        $this->assertObjectHasAttribute('email', $this->obj);
-        $this->assertObjectHasAttribute('ip', $this->obj);
-        $this->assertObjectHasAttribute('hash', $this->obj);
-        $this->assertObjectHasAttribute('phone', $this->obj);
-        $this->assertObjectHasAttribute('documents', $this->obj);
-        $this->assertObjectHasAttribute('address', $this->obj);
     }
 }

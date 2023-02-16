@@ -1,20 +1,22 @@
 {
-  "name": "uol-pagseguro-moscou/pagseguro-php-sdk",
+  "name": "grandchef/pagseguro-php-sdk",
   "description": "Biblioteca de integração com o PagSeguro",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "authors": [
-    {
-      "name": "PagSeguro"
-    }
+      {
+        "name": "GrandChef",
+        "email": "desenvolvimento@grandchef.com.br",
+        "role": "Administrator"
+      }
   ],
   "require": {
-    "php": "^7.1.3",
+    "php": "^8.0",
     "ext-curl": "*",
     "lib-curl": "*",
     "lib-openssl": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "^7.0"
+    "phpunit/phpunit": "^10.0"
   },
   "autoload": {
     "psr-4": {

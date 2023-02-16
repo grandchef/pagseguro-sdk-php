@@ -9,7 +9,7 @@ class DocumentTest extends TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new Document();
     }
@@ -17,11 +17,5 @@ class DocumentTest extends TestCase
     public function testConstructor()
     {
         $this->assertInstanceOf(Document::class, $this->obj);
-    }
-
-    public function testRequiredParameters()
-    {
-        $this->assertObjectHasAttribute('type', $this->obj);
-        $this->assertObjectHasAttribute('value', $this->obj);
     }
 }

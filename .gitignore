@@ -202,3 +202,5 @@ composer.lock
 ## Code Coverage
 #################
 /tests/codeCoverage
+.phpunit.result.cache
+.phpunit.cache

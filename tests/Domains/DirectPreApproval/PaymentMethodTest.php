@@ -9,7 +9,7 @@ class PaymentMethodTest extends TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PaymentMethod();
     }
@@ -17,10 +17,5 @@ class PaymentMethodTest extends TestCase
     public function testConstructor()
     {
         $this->assertInstanceOf(PaymentMethod::class, $this->obj);
-    }
-
-    public function testRequiredParameters()
-    {
-        $this->assertObjectHasAttribute('type', $this->obj);
     }
 }

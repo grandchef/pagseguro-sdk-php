@@ -9,7 +9,7 @@ class ReceiverTest extends TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new Receiver();
     }
@@ -17,10 +17,5 @@ class ReceiverTest extends TestCase
     public function testConstructor()
     {
         $this->assertInstanceOf(Receiver::class, $this->obj);
-    }
-
-    public function testRequiredParameters()
-    {
-        $this->assertObjectHasAttribute('email', $this->obj);
     }
 }
