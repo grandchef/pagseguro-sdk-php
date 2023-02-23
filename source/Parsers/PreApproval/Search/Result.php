@@ -3,29 +3,17 @@
 namespace PagSeguro\Parsers\PreApproval\Search;
 
 /** Class Result
- * @package PagSeguro\Parsers\PreApproval\Search
  */
 class Result
 {
-    /**
-     * @var
-     */
     private $date;
-    /**
-     * @var
-     */
+
     private $resultsInThisPage;
-    /**
-     * @var
-     */
+
     private $preApprovals;
-    /**
-     * @var
-     */
+
     private $currentPage;
-    /**
-     * @var
-     */
+
     private $totalPages;
 
     /**
@@ -37,12 +25,13 @@ class Result
     }
 
     /**
-     * @param mixed $currentPage
+     * @param  mixed  $currentPage
      * @return Response
      */
     public function setCurrentPage($currentPage)
     {
         $this->currentPage = $currentPage;
+
         return $this;
     }
 
@@ -55,12 +44,13 @@ class Result
     }
 
     /**
-     * @param mixed $date
+     * @param  mixed  $date
      * @return Response
      */
     public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 
@@ -73,12 +63,13 @@ class Result
     }
 
     /**
-     * @param mixed $resultsInThisPage
+     * @param  mixed  $resultsInThisPage
      * @return Response
      */
     public function setResultsInThisPage($resultsInThisPage)
     {
         $this->resultsInThisPage = $resultsInThisPage;
+
         return $this;
     }
 
@@ -91,12 +82,13 @@ class Result
     }
 
     /**
-     * @param mixed $totalPages
+     * @param  mixed  $totalPages
      * @return Response
      */
     public function setTotalPages($totalPages)
     {
         $this->totalPages = $totalPages;
+
         return $this;
     }
 
@@ -109,7 +101,7 @@ class Result
     }
 
     /**
-     * @param mixed $preApprovals
+     * @param  mixed  $preApprovals
      * @return Response
      */
     public function setPreApprovals($preApprovals)
@@ -123,12 +115,10 @@ class Result
                 }
             }
         }
+
         return $this;
     }
 
-    /**
-     * @param $preApproval
-     */
     private function addPreApproval($preApproval)
     {
         $response = new Response();

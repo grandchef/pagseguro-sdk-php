@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class QueryPaymentOrder
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class QueryPaymentOrder extends Builder
 {

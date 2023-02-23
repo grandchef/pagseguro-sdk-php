@@ -4,26 +4,17 @@ namespace PagSeguro\Domains\DirectPreApproval;
 
 /** Class Holder
  *
- * @package PagSeguro\Domains\DirectPreApproval
  */
 class Holder
 {
-    /**
-     * @var
-     */
     public $name;
-    /**
-     * @var
-     */
+
     public $birthDate;
-    /**
-     * @var
-     */
+
     public $documents;
-    /**
-     * @var
-     */
+
     public $phone;
+
     /**
      * @var BillingAddress
      */
@@ -38,8 +29,6 @@ class Holder
     }
 
     /**
-     * @param $name
-     *
      * @return $this
      */
     public function setName($name)
@@ -50,8 +39,6 @@ class Holder
     }
 
     /**
-     * @param $birthDate
-     *
      * @return $this
      */
     public function setBirthDate($birthDate)
@@ -62,8 +49,6 @@ class Holder
     }
 
     /**
-     * @param Document $document
-     *
      * @return $this
      */
     public function setDocuments(Document $document)

@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class Discount
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class Discount extends Builder
 {

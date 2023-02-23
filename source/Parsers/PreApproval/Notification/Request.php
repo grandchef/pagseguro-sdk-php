@@ -11,12 +11,10 @@ use PagSeguro\Parsers\PreApproval\Search\Code\Response;
 use PagSeguro\Resources\Http;
 
 /** Class Request
- * @package PagSeguro\Parsers\PreApproval\Notification
  */
 class Request extends Error implements Parser
 {
     /**
-     * @param \PagSeguro\Resources\Http $http
      * @return Response
      */
     public static function success(Http $http)
@@ -50,17 +48,16 @@ class Request extends Error implements Parser
                     )
             );
 
-
         return $response;
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
      * @return \PagSeguro\Domains\Error
      */
     public static function error(Http $http)
     {
         $error = parent::error($http);
+
         return $error;
     }
 }

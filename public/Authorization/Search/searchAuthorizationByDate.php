@@ -1,6 +1,6 @@
 <?php
 
-require_once "../../../vendor/autoload.php";
+require_once '../../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
 
@@ -17,8 +17,8 @@ try {
         $options
     );
 
-    echo "<pre>";
+    echo '<pre>';
     print_r($response);
 } catch (Exception $e) {
-    die($e->getMessage());
+    exit($e->getMessage());
 }

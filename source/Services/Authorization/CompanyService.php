@@ -9,7 +9,6 @@ use PagSeguro\Domains\Phone;
 
 /** Class CompanySeller
  *
- * @package PagSeguro\Services\Authorization
  */
 class CompanyService
 {
@@ -17,6 +16,7 @@ class CompanyService
      * @var Company
      */
     private $authorization;
+
     /**
      * @var \DOMDocument
      */
@@ -24,8 +24,6 @@ class CompanyService
 
     /**
      * Seller constructor.
-     *
-     * @param Authorization $authorization
      */
     public function __construct(Authorization $authorization)
     {
@@ -76,8 +74,6 @@ class CompanyService
     }
 
     /**
-     * @param \DOMNode $accountDom
-     *
      * @return \DOMNode
      */
     private function makeAccountNode(\DOMNode $accountDom)
@@ -92,8 +88,6 @@ class CompanyService
     }
 
     /**
-     * @param \DOMNode $accountDom
-     *
      * @return \DOMNode
      */
     private function makeCompanyNode(\DOMNode $accountDom)
@@ -112,9 +106,6 @@ class CompanyService
         return $companyDom;
     }
 
-    /**
-     * @param \DOMNode $companyDom
-     */
     private function makePartnerNode(\DOMNode $companyDom)
     {
         $partnerElement = $this->dom->createElement('partner');
@@ -132,9 +123,6 @@ class CompanyService
         }
     }
 
-    /**
-     * @param \DOMNode $companyDom
-     */
     private function makePartnersPhonesNode(\DOMNode $companyDom)
     {
         $phonesElement = $this->dom->createElement('phones');
@@ -159,9 +147,6 @@ class CompanyService
         }
     }
 
-    /**
-     * @param \DOMNode $companyDom
-     */
     private function makePartnerDocumentsNode(\DOMNode $companyDom)
     {
         $documentsElement = $this->dom->createElement('documents');
@@ -183,9 +168,6 @@ class CompanyService
         }
     }
 
-    /**
-     * @param \DOMNode $companyDom
-     */
     private function makePhonesNode(\DOMNode $companyDom)
     {
         $phonesElement = $this->dom->createElement('phones');
@@ -210,9 +192,6 @@ class CompanyService
         }
     }
 
-    /**
-     * @param \DOMNode $companyDom
-     */
     private function makeDocumentsNode(\DOMNode $companyDom)
     {
         $documentsElement = $this->dom->createElement('documents');
@@ -234,9 +213,6 @@ class CompanyService
         }
     }
 
-    /**
-     * @param \DOMNode $companyDom
-     */
     private function makeAddressNode(\DOMNode $companyDom)
     {
         $addressElement = $this->dom->createElement('address');

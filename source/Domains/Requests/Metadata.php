@@ -7,21 +7,21 @@ use PagSeguro\Helpers\InitializeObject;
 trait Metadata
 {
     private $metadata;
-    
+
     public function addMetadata()
     {
         $this->metadata = InitializeObject::Initialize(
             $this->metadata,
             new \PagSeguro\Resources\Factory\Request\Metadata()
         );
-        
+
         return $this->metadata;
     }
 
     public function setMetadata($metadata)
     {
         if (is_array($metadata)) {
-            $arr = array();
+            $arr = [];
             foreach ($metadata as $key => $metadataItem) {
                 if ($metadataItem instanceof \PagSeguro\Domains\Metadata) {
                     $arr[$key] = $metadataItem;

@@ -4,13 +4,9 @@ namespace PagSeguro\Helpers;
 
 class Characters
 {
-    /**
-     *
-     */
-    const PATTERN = "/[^a-z0-9]/";
+    const PATTERN = '/[^a-z0-9]/';
 
     /**
-     * @param $subject
      * @return bool|string
      */
     public static function hasSpecialChars($subject)
@@ -18,11 +14,11 @@ class Characters
         if (preg_match(self::PATTERN, $subject)) {
             return self::removeSpecialChars($subject);
         }
+
         return $subject;
     }
 
     /**
-     * @param $subject
      * @return string
      */
     public static function removeSpecialChars($subject)

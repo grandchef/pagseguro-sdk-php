@@ -9,16 +9,17 @@ class Environment implements Handler
     private $successor;
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function successor($next)
     {
         $this->successor = $next;
+
         return $this;
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function handler($action, $class)
     {
@@ -31,13 +32,14 @@ class Environment implements Handler
                 $this->log()
             );
         }
+
         return $this->successor->handler($action, $class);
     }
 
     private function environment()
     {
         return [
-            'environment' => getenv(\PagSeguro\Enum\Configuration\Environment::ENV)
+            'environment' => getenv(\PagSeguro\Enum\Configuration\Environment::ENV),
         ];
     }
 
@@ -49,29 +51,29 @@ class Environment implements Handler
                 'token' => [
                     'environment' => [
                         'production' => getenv(\PagSeguro\Enum\Configuration\Environment::TOKEN_PRODUCTION),
-                        'sandbox' => getenv(\PagSeguro\Enum\Configuration\Environment::TOKEN_SANDBOX)
-                    ]
+                        'sandbox' => getenv(\PagSeguro\Enum\Configuration\Environment::TOKEN_SANDBOX),
+                    ],
                 ],
                 'appId' => [
                     'environment' => [
                         'production' => getenv(\PagSeguro\Enum\Configuration\Environment::APP_ID_PRODUCTION),
-                        'sandbox' => getenv(\PagSeguro\Enum\Configuration\Environment::APP_ID_SANDBOX)
-                    ]
+                        'sandbox' => getenv(\PagSeguro\Enum\Configuration\Environment::APP_ID_SANDBOX),
+                    ],
                 ],
                 'appKey' => [
                     'environment' => [
                         'production' => getenv(\PagSeguro\Enum\Configuration\Environment::APP_KEY_PRODUCTION),
-                        'sandbox' => getenv(\PagSeguro\Enum\Configuration\Environment::APP_KEY_SANDBOX)
-                    ]
-                ]
-            ]
+                        'sandbox' => getenv(\PagSeguro\Enum\Configuration\Environment::APP_KEY_SANDBOX),
+                    ],
+                ],
+            ],
         ];
     }
 
     private function charset()
     {
         return [
-            'charset' => getenv(\PagSeguro\Enum\Configuration\Environment::CHARSET)
+            'charset' => getenv(\PagSeguro\Enum\Configuration\Environment::CHARSET),
         ];
     }
 
@@ -80,8 +82,8 @@ class Environment implements Handler
         return [
             'log' => [
                 'active' => getenv(\PagSeguro\Enum\Configuration\Environment::LOG_ACTIVE),
-                'location' => getenv(\PagSeguro\Enum\Configuration\Environment::LOG_LOCATION)
-            ]
+                'location' => getenv(\PagSeguro\Enum\Configuration\Environment::LOG_LOCATION),
+            ],
         ];
     }
 }

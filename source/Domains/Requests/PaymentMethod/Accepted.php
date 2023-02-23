@@ -2,11 +2,10 @@
 
 namespace PagSeguro\Domains\Requests\PaymentMethod;
 
-use PagSeguro\Helpers\InitializeObject;
-
 trait Accepted
 {
     private $accept;
+
     private $exclude;
 
     /**
@@ -17,6 +16,7 @@ trait Accepted
         if (is_null($this->accept)) {
             $this->accept = new \PagSeguro\Resources\Factory\Request\Accepted();
         }
+
         return $this->accept;
     }
 
@@ -28,14 +28,15 @@ trait Accepted
         if (is_null($this->exclude)) {
             $this->exclude = new \PagSeguro\Resources\Factory\Request\Accepted();
         }
+
         return $this->exclude;
     }
 
     public function getAttributeMap()
     {
         return [
-          'accept' => $this->accept,
-          'exclude' => $this->exclude,
+            'accept' => $this->accept,
+            'exclude' => $this->exclude,
         ];
     }
 }

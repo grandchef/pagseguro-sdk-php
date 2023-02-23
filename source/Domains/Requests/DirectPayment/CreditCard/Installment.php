@@ -4,12 +4,11 @@ namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard;
 
 /** Description of Installment
  *
- * @package \PagSeguro\Domains\Requests\DirectPayment\CreditCard
  */
 trait Installment
 {
     private $installment;
-    
+
     public function getInstallment()
     {
         return $this->installment;
@@ -18,6 +17,7 @@ trait Installment
     public function setInstallment()
     {
         $this->installment = new \PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard\Installment();
+
         return $this->installment;
     }
 }

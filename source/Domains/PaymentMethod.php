@@ -3,21 +3,13 @@
 namespace PagSeguro\Domains;
 
 /** Class PaymentMethod
- * @package PagSeguro\Domains
  */
 class PaymentMethod
 {
-    /**
-     * @var
-     */
     private $group;
-    /**
-     * @var
-     */
+
     private $key;
-    /**
-     * @var
-     */
+
     private $value;
 
     /**
@@ -29,12 +21,13 @@ class PaymentMethod
     }
 
     /**
-     * @param mixed $group
+     * @param  mixed  $group
      * @return PaymentMethod
      */
     public function setGroup($group)
     {
         $this->group = $group;
+
         return $this;
     }
 
@@ -47,12 +40,13 @@ class PaymentMethod
     }
 
     /**
-     * @param mixed $key
+     * @param  mixed  $key
      * @return PaymentMethod
      */
     public function setKey($key)
     {
         $this->key = $key;
+
         return $this;
     }
 
@@ -65,12 +59,13 @@ class PaymentMethod
     }
 
     /**
-     * @param mixed $value
+     * @param  mixed  $value
      * @return PaymentMethod
      */
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 }

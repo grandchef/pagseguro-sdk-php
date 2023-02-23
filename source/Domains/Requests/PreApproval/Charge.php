@@ -6,7 +6,6 @@ use PagSeguro\Domains\Requests\PreApproval\Charge\Request;
 
 class Charge extends Request
 {
-
     private $code;
 
     /**
@@ -18,7 +17,7 @@ class Charge extends Request
     }
 
     /**
-     * @param string $code
+     * @param  string  $code
      */
     public function setCode($code)
     {
@@ -26,8 +25,8 @@ class Charge extends Request
     }
 
     /**
-     * @param $credentials
      * @return string
+     *
      * @throws \Exception
      */
     public function register($credentials)

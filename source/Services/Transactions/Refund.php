@@ -11,28 +11,26 @@ use PagSeguro\Resources\Log\Logger;
 use PagSeguro\Resources\Responsibility;
 
 /** Class Payment
- * @package PagSeguro\Services\Checkout
  */
 class Refund
 {
-
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
-     * @param \PagSeguro\Domains\Requests\Payment $payment
-     * @param bool $onlyCode
+     * @param  \PagSeguro\Domains\Requests\Payment  $payment
+     * @param  bool  $onlyCode
      * @return string
+     *
      * @throws \Exception
      */
     public static function create(Credentials $credentials, $code, $value = null)
     {
-        Logger::info("Begin", ['service' => 'Refund']);
+        Logger::info('Begin', ['service' => 'Refund']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http();
-            Logger::info(sprintf("POST: %s", self::request($connection)), ['service' => 'Refund']);
+            Logger::info(sprintf('POST: %s', self::request($connection)), ['service' => 'Refund']);
             Logger::info(
                 sprintf(
-                    "Params: %s",
+                    'Params: %s',
                     json_encode(Crypto::encrypt(Request::getData($code, $value)))
                 ),
                 ['service' => 'Refund']
@@ -49,7 +47,8 @@ class Refund
                 new Request
             );
 
-            Logger::info(sprintf("Result: %s", current($response)), ['service' => 'Refund']);
+            Logger::info(sprintf('Result: %s', current($response)), ['service' => 'Refund']);
+
             return $response;
         } catch (\Exception $exception) {
             Logger::error($exception->getMessage(), ['service' => 'Refund']);
@@ -58,11 +57,10 @@ class Refund
     }
 
     /**
-     * @param Connection\Data $connection
      * @return string
      */
     private static function request(Connection\Data $connection)
     {
-        return $connection->buildRefundRequestUrl() . "?" . $connection->buildCredentialsQuery();
+        return $connection->buildRefundRequestUrl().'?'.$connection->buildCredentialsQuery();
     }
 }

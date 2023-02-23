@@ -3,14 +3,9 @@
 namespace PagSeguro\Resources\Connection\Base;
 
 /** Class Credentials
- * @package PagSeguro\Services\Connection\Base
  */
 trait Credentials
 {
-
-    /**
-     * @var
-     */
     private $credentials;
 
     /**
@@ -22,12 +17,12 @@ trait Credentials
     }
 
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
      * @return Credentials
      */
     public function setCredentials(\PagSeguro\Domains\Account\Credentials $credentials)
     {
         $this->credentials = $credentials;
+
         return $this;
     }
 

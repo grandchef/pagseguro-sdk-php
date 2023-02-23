@@ -3,23 +3,24 @@
 namespace PagSeguro\Domains\DirectPayment\CreditCard;
 
 /** Class Holder
- * @package PagSeguro\Domains
  */
 class Holder
 {
-
     /***
      * Credit card holder name
      */
     private $name;
+
     /***
      * Credit card holder birth date
      */
     private $birthDate;
+
     /***
      * Credit card holder cpf
      */
     private $documents;
+
     /***
      * Credit card holder phone
      */
@@ -34,12 +35,13 @@ class Holder
     }
 
     /**
-     * @param mixed $birthDate
+     * @param  mixed  $birthDate
      * @return Holder
      */
     public function setBirthDate($birthDate)
     {
         $this->birthDate = $birthDate;
+
         return $this;
     }
 
@@ -52,12 +54,13 @@ class Holder
     }
 
     /**
-     * @param mixed $documents
+     * @param  mixed  $documents
      * @return Holder
      */
     public function setDocuments($documents)
     {
         $this->documents = $documents;
+
         return $this;
     }
 
@@ -70,12 +73,13 @@ class Holder
     }
 
     /**
-     * @param mixed $name
+     * @param  mixed  $name
      * @return Holder
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -88,12 +92,13 @@ class Holder
     }
 
     /**
-     * @param mixed $phone
+     * @param  mixed  $phone
      * @return Holder
      */
     public function setPhone($phone)
     {
         $this->phone = $phone;
+
         return $this;
     }
 }

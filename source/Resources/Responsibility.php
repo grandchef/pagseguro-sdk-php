@@ -16,14 +16,10 @@ use PagSeguro\Resources\Responsibility\Notifications\Transaction;
 
 /** class Handler
  *
- * @package PagSeguro\Services\Connection\Responsibility
  */
 class Responsibility
 {
     /**
-     * @param $http
-     * @param $class
-     *
      * @return mixed
      */
     public static function http($http, $class)

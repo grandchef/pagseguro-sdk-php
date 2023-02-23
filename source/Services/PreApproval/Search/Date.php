@@ -11,27 +11,24 @@ use PagSeguro\Resources\Log\Logger;
 use PagSeguro\Resources\Responsibility;
 
 /** Class Payment
- * @package PagSeguro\Services\Checkout
  */
 class Date
 {
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
-     * @param $options
      * @return string
+     *
      * @throws \Exception
      */
     public static function search(
         Credentials $credentials,
         array $options
-    )
-    {
-        Logger::info("Begin", ['service' => 'PreApproval.Search.Date']);
+    ) {
+        Logger::info('Begin', ['service' => 'PreApproval.Search.Date']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http();
             Logger::info(
-                sprintf("GET: %s", self::request($connection, $options)),
+                sprintf('GET: %s', self::request($connection, $options)),
                 ['service' => 'PreApproval.Search.Date']
             );
             $http->get(
@@ -47,13 +44,14 @@ class Date
 
             Logger::info(
                 sprintf(
-                    "Date: %s, Results in this page: %s, Total pages: %s",
+                    'Date: %s, Results in this page: %s, Total pages: %s',
                     $response->getDate(),
                     $response->getResultsInThisPage(),
                     $response->getTotalPages()
                 ),
                 ['service' => 'Transactions.Search.Date']
             );
+
             return $response;
         } catch (\Exception $exception) {
             Logger::error($exception->getMessage(), ['service' => 'PreApproval.Search.Date']);
@@ -62,21 +60,19 @@ class Date
     }
 
     /**
-     * @param Connection\Data $connection
-     * @param $params
      * @return string
      */
     private static function request(Connection\Data $connection, $params)
     {
         return sprintf(
-            "%s/?%s%s%s%s%s",
+            '%s/?%s%s%s%s%s',
             $connection->buildPreApprovalSearchRequestUrl(),
             $connection->buildCredentialsQuery(),
-            sprintf("&%s=%s", Current::SEARCH_INITIAL_DATE, $params["initial_date"]),
-            !isset($params["final_date"]) ? '' : sprintf("&%s=%s", Current::SEARCH_FINAL_DATE, $params["final_date"]),
-            !isset($params["max_per_page"]) ? '' :
-                sprintf("&%s=%s", Current::SEARCH_MAX_RESULTS_PER_PAGE, $params["max_per_page"]),
-            !isset($params["page"]) ? '' : sprintf("&%s=%s", Current::SEARCH_PAGE, $params["page"])
+            sprintf('&%s=%s', Current::SEARCH_INITIAL_DATE, $params['initial_date']),
+            ! isset($params['final_date']) ? '' : sprintf('&%s=%s', Current::SEARCH_FINAL_DATE, $params['final_date']),
+            ! isset($params['max_per_page']) ? '' :
+                sprintf('&%s=%s', Current::SEARCH_MAX_RESULTS_PER_PAGE, $params['max_per_page']),
+            ! isset($params['page']) ? '' : sprintf('&%s=%s', Current::SEARCH_PAGE, $params['page'])
         );
     }
 }

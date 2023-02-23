@@ -4,42 +4,24 @@ namespace PagSeguro\Domains\DirectPreApproval;
 
 /** Class Sender
  *
- * @package PagSeguro\Domains\DirectPreApproval
  */
 class Sender
 {
-    /**
-     * @var
-     */
     public $name;
-    /**
-     * @var
-     */
+
     public $email;
-    /**
-     * @var
-     */
+
     public $ip;
-    /**
-     * @var
-     */
+
     public $hash;
-    /**
-     * @var
-     */
+
     public $phone;
-    /**
-     * @var
-     */
+
     public $documents;
-    /**
-     * @var
-     */
+
     public $address;
 
     /**
-     * @param $name
-     *
      * @return $this
      */
     public function setName($name)
@@ -50,8 +32,6 @@ class Sender
     }
 
     /**
-     * @param $email
-     *
      * @return $this
      */
     public function setEmail($email)
@@ -62,8 +42,6 @@ class Sender
     }
 
     /**
-     * @param $ip
-     *
      * @return $this
      */
     public function setIp($ip)
@@ -74,8 +52,6 @@ class Sender
     }
 
     /**
-     * @param $hash
-     *
      * @return $this
      */
     public function setHash($hash)
@@ -96,8 +72,6 @@ class Sender
     }
 
     /**
-     * @param Document $document
-     *
      * @return $this
      */
     public function setDocuments(Document $document)

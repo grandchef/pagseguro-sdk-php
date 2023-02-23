@@ -5,15 +5,25 @@ namespace PagSeguro\Domains;
 class PreApproval
 {
     private $charge;
+
     private $name;
+
     private $details;
+
     private $amountPerPayment;
+
     private $maxAmountPerPayment;
+
     private $maxTotalAmount;
+
     private $maxAmountPerPeriod;
+
     private $maxPaymentsPerPeriod;
+
     private $period;
+
     private $initialDate;
+
     private $finalDate;
 
     /**
@@ -25,12 +35,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $amountPerPayment
+     * @param  mixed  $amountPerPayment
      * @return PreApproval
      */
     public function setAmountPerPayment($amountPerPayment)
     {
         $this->amountPerPayment = $amountPerPayment;
+
         return $this;
     }
 
@@ -43,12 +54,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $charge
+     * @param  mixed  $charge
      * @return PreApproval
      */
     public function setCharge($charge)
     {
         $this->charge = $charge;
+
         return $this;
     }
 
@@ -61,12 +73,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $details
+     * @param  mixed  $details
      * @return PreApproval
      */
     public function setDetails($details)
     {
         $this->details = $details;
+
         return $this;
     }
 
@@ -79,12 +92,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $finalDate
+     * @param  mixed  $finalDate
      * @return PreApproval
      */
     public function setFinalDate($finalDate)
     {
         $this->finalDate = $finalDate;
+
         return $this;
     }
 
@@ -97,12 +111,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $initialDate
+     * @param  mixed  $initialDate
      * @return PreApproval
      */
     public function setInitialDate($initialDate)
     {
         $this->initialDate = $initialDate;
+
         return $this;
     }
 
@@ -115,12 +130,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $maxAmountPerPeriod
+     * @param  mixed  $maxAmountPerPeriod
      * @return PreApproval
      */
     public function setMaxAmountPerPeriod($maxAmountPerPeriod)
     {
         $this->maxAmountPerPeriod = $maxAmountPerPeriod;
+
         return $this;
     }
 
@@ -133,12 +149,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $maxAmountPerPayment
+     * @param  mixed  $maxAmountPerPayment
      * @return PreApproval
      */
     public function setMaxAmountPerPayment($maxAmountPerPayment)
     {
         $this->maxAmountPerPayment = $maxAmountPerPayment;
+
         return $this;
     }
 
@@ -151,15 +168,14 @@ class PreApproval
     }
 
     /**
-     * @param $maxPaymentsPerPeriod
      * @return $this
      */
     public function setMaxPaymentsPerPeriod($maxPaymentsPerPeriod)
     {
         $this->maxPaymentsPerPeriod = $maxPaymentsPerPeriod;
+
         return $this;
     }
-
 
     /**
      * @return mixed
@@ -170,12 +186,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $maxTotalAmount
+     * @param  mixed  $maxTotalAmount
      * @return PreApproval
      */
     public function setMaxTotalAmount($maxTotalAmount)
     {
         $this->maxTotalAmount = $maxTotalAmount;
+
         return $this;
     }
 
@@ -188,12 +205,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $name
+     * @param  mixed  $name
      * @return PreApproval
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -206,12 +224,13 @@ class PreApproval
     }
 
     /**
-     * @param mixed $period
+     * @param  mixed  $period
      * @return PreApproval
      */
     public function setPeriod($period)
     {
         $this->period = $period;
+
         return $this;
     }
 }

@@ -14,6 +14,7 @@ trait AddressRequired
     public function setAddressRequired()
     {
         $this->addressRequired = new \PagSeguro\Resources\Factory\Shipping\AddressRequired($this->shipping);
+
         return $this->addressRequired;
     }
 }

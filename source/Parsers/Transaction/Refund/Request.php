@@ -8,13 +8,10 @@ use PagSeguro\Parsers\Parser;
 use PagSeguro\Resources\Http;
 
 /** Class Request
- * @package PagSeguro\Parsers\Transaction\Refund
  */
 class Request extends Error implements Parser
 {
     /**
-     * @param $code
-     * @param $value
      * @return array
      */
     public static function getData($code, $value)
@@ -22,11 +19,11 @@ class Request extends Error implements Parser
         $data = [];
         $properties = new Current;
 
-        if (!is_null($code)) {
+        if (! is_null($code)) {
             $data[$properties::TRANSACTION_CODE] = $code;
         }
 
-        if (!is_null($value)) {
+        if (! is_null($value)) {
             $data[$properties::REFUND_VALUE] = $value;
         }
 
@@ -34,7 +31,6 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
      * @return Response
      */
     public static function success(Http $http)
@@ -42,16 +38,17 @@ class Request extends Error implements Parser
         $xml = simplexml_load_string($http->getResponse());
         $result = new \PagSeguro\Parsers\Transaction\Refund\Response();
         $result->setResult(current($xml));
+
         return $result;
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
      * @return \PagSeguro\Domains\Error
      */
     public static function error(Http $http)
     {
         $error = parent::error($http);
+
         return $error;
     }
 }

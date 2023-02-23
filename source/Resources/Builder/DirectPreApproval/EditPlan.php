@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class EditPlan
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class EditPlan extends Builder
 {

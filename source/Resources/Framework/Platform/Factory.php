@@ -3,26 +3,20 @@
 namespace PagSeguro\Resources\Framework\Platform;
 
 /** Class Factory
- * @package PagSeguro\Resources\Framework\Platform
  */
 class Factory
 {
-    /**
-     * @var
-     */
     private $name;
-    /**
-     * @var
-     */
+
     private $release;
 
     /**
-     * @param $name
      * @return $this
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -35,12 +29,12 @@ class Factory
     }
 
     /**
-     * @param $release
      * @return $this
      */
     public function setRelease($release)
     {
         $this->release = $release;
+
         return $this;
     }
 

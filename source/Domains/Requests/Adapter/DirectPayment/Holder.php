@@ -26,7 +26,7 @@ class Holder
     }
 
     /**
-     * @param mixed $birthdate
+     * @param  mixed  $birthdate
      */
     public function setBirthDate($birthdate)
     {
@@ -42,7 +42,7 @@ class Holder
     }
 
     /**
-     * @param mixed $name
+     * @param  mixed  $name
      */
     public function setName($name)
     {

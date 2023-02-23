@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class Query
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class Query extends Builder
 {

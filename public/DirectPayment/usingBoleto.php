@@ -1,10 +1,10 @@
 <?php
 
-require_once "../../vendor/autoload.php";
+require_once '../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\PagSeguro\Library::cmsVersion()->setName('Nome')->setRelease('1.0.0');
+\PagSeguro\Library::moduleVersion()->setName('Nome')->setRelease('1.0.0');
 
 //Instantiate a new Boleto Object
 $boleto = new \PagSeguro\Domains\Requests\DirectPayment\Boleto();
@@ -14,10 +14,10 @@ $boleto->setMode('DEFAULT');
 
 /** @todo Change the receiver Email
  */
-//$boleto->setReceiverEmail('vendedor@lojamodelo.com.br'); 
+//$boleto->setReceiverEmail('vendedor@lojamodelo.com.br');
 
 // Set the currency
-$boleto->setCurrency("BRL");
+$boleto->setCurrency('BRL');
 
 // Add an item for this payment request
 $boleto->addItems()->withParameters(
@@ -37,7 +37,7 @@ $boleto->addItems()->withParameters(
 
 // Set a reference code for this payment request. It is useful to identify this payment
 // in future notifications.
-$boleto->setReference("LIBPHP000001-boleto");
+$boleto->setReference('LIBPHP000001-boleto');
 
 //set extra amount
 $boleto->setExtraAmount(11.5);
@@ -83,9 +83,9 @@ try {
     );
 
     // You can use methods like getCode() to get the transaction code and getPaymentLink() for the Payment's URL.
-    echo "<pre>";
+    echo '<pre>';
     print_r($result);
 } catch (Exception $e) {
-    echo "</br> <strong>";
-    die($e->getMessage());
+    echo '</br> <strong>';
+    exit($e->getMessage());
 }

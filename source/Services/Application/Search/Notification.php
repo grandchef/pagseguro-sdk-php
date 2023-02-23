@@ -10,25 +10,22 @@ use PagSeguro\Resources\Log\Logger;
 use PagSeguro\Resources\Responsibility;
 
 /** Class Payment
- * @package PagSeguro\Services\Checkout
  */
 class Notification
 {
-
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
-     * @param $code
      * @return string
+     *
      * @throws \Exception
      */
     public static function search(Credentials $credentials, $code)
     {
-        Logger::info("Begin", ['service' => 'Application.Search.Notification']);
+        Logger::info('Begin', ['service' => 'Application.Search.Notification']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http();
             Logger::info(
-                sprintf("GET: %s", self::request($connection, $code)),
+                sprintf('GET: %s', self::request($connection, $code)),
                 ['service' => 'Application.Search.Notification']
             );
             $http->get(
@@ -43,12 +40,13 @@ class Notification
             );
             Logger::info(
                 sprintf(
-                    "Creation Date: %s, Code: %s",
+                    'Creation Date: %s, Code: %s',
                     $response->getCreationDate(),
                     $response->getCode()
                 ),
                 ['service' => 'Application.Search.Notification']
             );
+
             return $response;
         } catch (\Exception $exception) {
             Logger::error($exception->getMessage(), ['service' => 'Application.Search.Notification']);
@@ -57,13 +55,12 @@ class Notification
     }
 
     /**
-     * @param Connection\Data $connection
      * @return string
      */
     private static function request(Connection\Data $connection, $code)
     {
         return sprintf(
-            "%s/%s/?%s",
+            '%s/%s/?%s',
             $connection->buildNotificationAuthorizationRequestUrl(),
             $code,
             $connection->buildCredentialsQuery()

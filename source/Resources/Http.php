@@ -6,27 +6,22 @@ use PagSeguro\Library;
 
 /** Class Http
  *
- * @package PagSeguro\Resources
  */
 class Http
 {
-    /**
-     * @var
-     */
     private $status;
-    /**
-     * @var
-     */
+
     private $response;
+
     private $contentType = 'Content-Type: application/x-www-form-urlencoded;';
+
     private $accept = '';
 
     /**
      * Http constructor.
      *
-     * @param string $contentType
-     *
-     * @param null $accept
+     * @param  string  $contentType
+     * @param  null  $accept
      *
      * @throws \Exception
      */
@@ -38,7 +33,7 @@ class Http
         if ($contentType) {
             $this->accept = $accept;
         }
-        if (!function_exists('curl_init')) {
+        if (! function_exists('curl_init')) {
             throw new \Exception('PagSeguro Library: cURL library is required.');
         }
     }
@@ -51,9 +46,6 @@ class Http
         return $this->status;
     }
 
-    /**
-     * @param $status
-     */
     public function setStatus($status)
     {
         $this->status = $status;
@@ -67,21 +59,17 @@ class Http
         return $this->response;
     }
 
-    /**
-     * @param $response
-     */
     public function setResponse($response)
     {
         $this->response = $response;
     }
 
     /**
-     * @param              $url
-     * @param array|string $data
-     * @param int $timeout
-     * @param string $charset
-     *
+     * @param  array|string  $data
+     * @param  int  $timeout
+     * @param  string  $charset
      * @return bool
+     *
      * @throws \Exception
      */
     public function post($url, $data = null, $timeout = 20, $charset = 'ISO-8859-1')
@@ -90,13 +78,9 @@ class Http
     }
 
     /**
-     * @param              $method
-     * @param              $url
-     * @param              $timeout
-     * @param              $charset
-     * @param array|string $data
-     *
+     * @param  array|string  $data
      * @return bool
+     *
      * @throws \Exception
      */
     private function curlConnection($method, $url, $timeout, $charset, $data = null)
@@ -109,7 +93,7 @@ class Http
             } else {
                 $postFields = (is_array($data) ? http_build_query($data, '', '&') : $data);
             }
-            $contentLength = "Content-length: " . strlen($postFields);
+            $contentLength = 'Content-length: '.strlen($postFields);
             $methodOptions = [
                 CURLOPT_POST => true,
                 CURLOPT_POSTFIELDS => $postFields,
@@ -120,7 +104,7 @@ class Http
             } else {
                 $postFields = (is_array($data) ? http_build_query($data, '', '&') : $data);
             }
-            $contentLength = "Content-length: " . strlen($postFields);
+            $contentLength = 'Content-length: '.strlen($postFields);
             $methodOptions = [
                 CURLOPT_CUSTOMREQUEST => 'PUT',
                 CURLOPT_POSTFIELDS => $postFields,
@@ -142,7 +126,7 @@ class Http
             //CURLOPT_TIMEOUT => $timeout
         ];
 
-        if (!is_null(Library::moduleVersion()->getRelease())) {
+        if (! is_null(Library::moduleVersion()->getRelease())) {
             array_push(
                 $options[CURLOPT_HTTPHEADER],
                 sprintf('module-description: %s', Library::moduleVersion()->getName())
@@ -153,7 +137,7 @@ class Http
             );
         }
 
-        if (!is_null(Library::cmsVersion()->getRelease())) {
+        if (! is_null(Library::cmsVersion()->getRelease())) {
             array_push(
                 $options[CURLOPT_HTTPHEADER],
                 sprintf('cms-description: %s :%s', Library::cmsVersion()->getName(),
@@ -169,8 +153,8 @@ class Http
         $error = curl_errno($curl);
         $errorMessage = curl_error($curl);
         curl_close($curl);
-        $this->setStatus((int)$info['http_code']);
-        $this->setResponse((String)$resp);
+        $this->setStatus((int) $info['http_code']);
+        $this->setResponse((string) $resp);
         if ($error) {
             throw new \Exception("CURL can't connect: $errorMessage");
         } else {
@@ -179,9 +163,6 @@ class Http
     }
 
     /**
-     * @param $charset
-     * @param $contentLength
-     *
      * @return array
      */
     private function setHeader($charset, $contentLength)
@@ -189,8 +170,8 @@ class Http
         $httpHeader = [
             "$this->contentType charset= $charset",
             $contentLength,
-            'lib-description: php:' . Library::libraryVersion(),
-            'language-engine-description: php:' . Library::phpVersion(),
+            'lib-description: php:'.Library::libraryVersion(),
+            'language-engine-description: php:'.Library::phpVersion(),
         ];
         if ($this->accept) {
             $httpHeader[] = $this->accept;
@@ -200,12 +181,10 @@ class Http
     }
 
     /**
-     * @param        $url
-     * @param        $data
-     * @param int $timeout
-     * @param string $charset
-     *
+     * @param  int  $timeout
+     * @param  string  $charset
      * @return bool
+     *
      * @throws \Exception
      */
     public function put($url, $data, $timeout = 20, $charset = 'ISO-8859-1')
@@ -214,11 +193,10 @@ class Http
     }
 
     /**
-     * @param        $url
-     * @param int $timeout
-     * @param string $charset
-     *
+     * @param  int  $timeout
+     * @param  string  $charset
      * @return bool
+     *
      * @throws \Exception
      */
     public function get($url, $timeout = 20, $charset = 'ISO-8859-1')

@@ -12,28 +12,25 @@ use PagSeguro\Resources\Responsibility;
 
 /** Class DiscountService
  *
- * @package PagSeguro\Services\DirectPreApproval
  */
 class DiscountService
 {
     /**
-     * @param Credentials $credentials
-     * @param Discount $discount
-     *
      * @return mixed
+     *
      * @throws \Exception
      */
     public static function create(Credentials $credentials, Discount $discount)
     {
-        Logger::info("Begin", ['service' => 'DirectPreApproval']);
+        Logger::info('Begin', ['service' => 'DirectPreApproval']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http('Content-Type: application/json;', 'Accept: application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1');
-            Logger::info(sprintf("PUT: %s", self::request($connection, DiscountParser::getPreApprovalCode($discount))),
+            Logger::info(sprintf('PUT: %s', self::request($connection, DiscountParser::getPreApprovalCode($discount))),
                 ['service' => 'DirectPreApproval']);
             Logger::info(
                 sprintf(
-                    "Params: %s",
+                    'Params: %s',
                     json_encode(DiscountParser::getData($discount))
                 ),
                 ['service' => 'DirectPreApproval']
@@ -49,7 +46,7 @@ class DiscountService
                 new DiscountParser
             );
             Logger::info(
-                sprintf("DirectPreApproval URL: %s", json_encode(self::response($response))),
+                sprintf('DirectPreApproval URL: %s', json_encode(self::response($response))),
                 ['service' => 'DirectPreApproval']
             );
 
@@ -61,19 +58,14 @@ class DiscountService
     }
 
     /**
-     * @param Connection\Data $connection
-     * @param                 $preApprovalCode
-     *
      * @return string
      */
     private static function request(Connection\Data $connection, $preApprovalCode)
     {
-        return $connection->buildDirectPreApprovalDiscountRequestUrl($preApprovalCode) . "?" . $connection->buildCredentialsQuery();
+        return $connection->buildDirectPreApprovalDiscountRequestUrl($preApprovalCode).'?'.$connection->buildCredentialsQuery();
     }
 
     /**
-     * @param $response
-     *
      * @return mixed
      */
     private static function response($response)

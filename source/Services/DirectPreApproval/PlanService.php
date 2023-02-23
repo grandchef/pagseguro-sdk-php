@@ -11,27 +11,24 @@ use PagSeguro\Resources\Responsibility;
 
 /** Class PlanService
  *
- * @package PagSeguro\Services\DirectPreApproval
  */
 class PlanService
 {
     /**
-     * @param Credentials $credentials
-     * @param             $data
-     *
      * @return mixed
+     *
      * @throws \Exception
      */
     public static function create(Credentials $credentials, $data)
     {
-        Logger::info("Begin", ['service' => 'DirectPreApproval']);
+        Logger::info('Begin', ['service' => 'DirectPreApproval']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http('Content-Type: application/json;', 'Accept: application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1');
-            Logger::info(sprintf("POST: %s", self::request($connection)), ['service' => 'DirectPreApproval']);
+            Logger::info(sprintf('POST: %s', self::request($connection)), ['service' => 'DirectPreApproval']);
             Logger::info(
                 sprintf(
-                    "Params: %s",
+                    'Params: %s',
                     json_encode(PlanParser::getData($data))
                 ),
                 ['service' => 'DirectPreApproval']
@@ -47,7 +44,7 @@ class PlanService
                 new PlanParser()
             );
             Logger::info(
-                sprintf("DirectPreApproval URL: %s", json_encode(self::response($response))),
+                sprintf('DirectPreApproval URL: %s', json_encode(self::response($response))),
                 ['service' => 'DirectPreApproval']
             );
 
@@ -59,18 +56,14 @@ class PlanService
     }
 
     /**
-     * @param Connection\Data $connection
-     *
      * @return string
      */
     private static function request(Connection\Data $connection)
     {
-        return $connection->buildDirectPreApprovalPlanRequestUrl() . "?" . $connection->buildCredentialsQuery();
+        return $connection->buildDirectPreApprovalPlanRequestUrl().'?'.$connection->buildCredentialsQuery();
     }
 
     /**
-     * @param $response
-     *
      * @return mixed
      */
     private static function response($response)

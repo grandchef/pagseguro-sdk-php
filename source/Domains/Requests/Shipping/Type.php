@@ -14,6 +14,7 @@ trait Type
     public function setType()
     {
         $this->type = new \PagSeguro\Resources\Factory\Shipping\Type($this->shipping);
+
         return $this->type;
     }
 }

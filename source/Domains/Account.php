@@ -3,13 +3,9 @@
 namespace PagSeguro\Domains;
 
 /** Class Account
- * @package PagSeguro\Domains
  */
 class Account
 {
-    /**
-     * @var
-     */
     private $publicKey;
 
     /**
@@ -21,7 +17,7 @@ class Account
     }
 
     /**
-     * @param mixed $publicKey
+     * @param  mixed  $publicKey
      */
     public function setPublicKey($publicKey)
     {

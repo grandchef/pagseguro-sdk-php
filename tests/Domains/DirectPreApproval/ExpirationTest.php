@@ -2,8 +2,8 @@
 
 namespace PagSeguro\Tests;
 
-use PHPUnit\Framework\TestCase;
 use PagSeguro\Domains\DirectPreApproval\Expiration;
+use PHPUnit\Framework\TestCase;
 
 class ExpirationTest extends TestCase
 {

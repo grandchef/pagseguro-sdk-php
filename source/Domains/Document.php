@@ -3,24 +3,15 @@
 namespace PagSeguro\Domains;
 
 /** Class Document
- * @package PagSeguro\Domains
  */
 class Document
 {
-    /**
-     * @var
-     */
     private $type;
-    /**
-     * @var
-     */
+
     private $identifier;
 
     /**
      * Document constructor.
-     *
-     * @param $type
-     * @param $identifier
      */
     public function __construct($type = null, $identifier = null)
     {
@@ -37,12 +28,13 @@ class Document
     }
 
     /**
-     * @param string $identifier
+     * @param  string  $identifier
      * @return Document
      */
     public function setIdentifier($identifier)
     {
         $this->identifier = $identifier;
+
         return $this;
     }
 
@@ -55,12 +47,13 @@ class Document
     }
 
     /**
-     * @param mixed $type
+     * @param  mixed  $type
      * @return Document
      */
     public function setType($type)
     {
         $this->type = strtoupper($type);
+
         return $this;
     }
 
@@ -70,7 +63,7 @@ class Document
     public function toString()
     {
         return sprintf(
-            "Document[ Type : %s , Identifier: %s ]",
+            'Document[ Type : %s , Identifier: %s ]',
             $this->getType(),
             $this->getIdentifier()
         );

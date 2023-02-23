@@ -8,16 +8,21 @@ use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /** Class PlanRequest
  *
- * @package PagSeguro\Domains\Requests\DirectPreApproval
  */
 class PlanRequest
 {
     use ParserTrait;
+
     public $redirectURL;
+
     public $reference;
+
     public $preApproval;
+
     public $reviewURL;
+
     public $maxUses;
+
     public $receiver;
 
     /**
@@ -29,18 +34,12 @@ class PlanRequest
         $this->receiver = new Receiver();
     }
 
-    /**
-     * @param $redirectURL
-     */
     public function setRedirectURL($redirectURL)
     {
         $this->redirectURL = $redirectURL;
     }
 
-    /**
-     * @param $reference
-     */
-    function setReference($reference)
+    public function setReference($reference)
     {
         $this->reference = $reference;
     }
@@ -53,17 +52,11 @@ class PlanRequest
         return $this->preApproval;
     }
 
-    /**
-     * @param $reviewURL
-     */
     public function setReviewURL($reviewURL)
     {
         $this->reviewURL = $reviewURL;
     }
 
-    /**
-     * @param $maxUsers
-     */
     public function setMaxUses($maxUsers)
     {
         $this->maxUses = $maxUsers;

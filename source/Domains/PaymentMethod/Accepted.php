@@ -3,17 +3,11 @@
 namespace PagSeguro\Domains\PaymentMethod;
 
 /** Class Accepted
- * @package PagSeguro\Domains\PaymentMethod
  */
 class Accepted
 {
-    /**
-     * @var
-     */
     private $groups;
-    /**
-     * @var
-     */
+
     private $names;
 
     /**
@@ -25,12 +19,13 @@ class Accepted
     }
 
     /**
-     * @param mixed $groups
+     * @param  mixed  $groups
      * @return Accepted
      */
     public function setGroups($groups)
     {
         $this->groups[] = $groups;
+
         return $this;
     }
 
@@ -43,12 +38,13 @@ class Accepted
     }
 
     /**
-     * @param mixed $names
+     * @param  mixed  $names
      * @return Accepted
      */
     public function setNames($names)
     {
         $this->names[] = $names;
+
         return $this;
     }
 }

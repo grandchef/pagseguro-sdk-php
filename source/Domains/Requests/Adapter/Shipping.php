@@ -4,8 +4,8 @@ namespace PagSeguro\Domains\Requests\Adapter;
 
 use PagSeguro\Domains\Requests\Shipping\Address;
 use PagSeguro\Domains\Requests\Shipping\AddressRequired;
-use PagSeguro\Domains\Requests\Shipping\Type;
 use PagSeguro\Domains\Requests\Shipping\Cost;
+use PagSeguro\Domains\Requests\Shipping\Type;
 
 class Shipping
 {

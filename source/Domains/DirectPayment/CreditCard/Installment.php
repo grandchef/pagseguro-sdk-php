@@ -4,12 +4,13 @@ namespace PagSeguro\Domains\DirectPayment\CreditCard;
 
 /** Description of Installment
  *
- * @package PagSeguro\Domains\DirectPayment\CreditCard
  */
 class Installment
 {
     private $quantity;
+
     private $value;
+
     private $noInterestInstallmentQuantity;
 
     public function getQuantity()
@@ -20,6 +21,7 @@ class Installment
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
+
         return $this;
     }
 
@@ -31,6 +33,7 @@ class Installment
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 
@@ -42,6 +45,7 @@ class Installment
     public function setNoInterestInstallmentQuantity($noInterestQuantity)
     {
         $this->noInterestInstallmentQuantity = $noInterestQuantity;
+
         return $this;
     }
 }

@@ -6,12 +6,13 @@ use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /** Class StatusRequest
  *
- * @package PagSeguro\Domains\Requests\DirectPreApproval
  */
 class StatusRequest
 {
     use ParserTrait;
+
     private $status;
+
     private $preApprovalCode;
 
     /**
@@ -21,17 +22,11 @@ class StatusRequest
     {
     }
 
-    /**
-     * @param $status
-     */
     public function setStatus($status)
     {
         $this->status = $status;
     }
 
-    /**
-     * @param $preApprovalCode
-     */
     public function setPreApprovalCode($preApprovalCode)
     {
         $this->preApprovalCode = $preApprovalCode;

@@ -1,28 +1,28 @@
 <?php
 
-require_once "../../vendor/autoload.php";
+require_once '../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\PagSeguro\Library::cmsVersion()->setName('Nome')->setRelease('1.0.0');
+\PagSeguro\Library::moduleVersion()->setName('Nome')->setRelease('1.0.0');
 
 ?>
     <!DOCTYPE html>
     <html>
     <head>
-        <?php if (\PagSeguro\Configuration\Configure::getEnvironment()->getEnvironment() == "sandbox") : ?>
+        <?php if (\PagSeguro\Configuration\Configure::getEnvironment()->getEnvironment() == 'sandbox') { ?>
             <!--Para integração em ambiente de testes no Sandbox use este link-->
             <script
                     type="text/javascript"
                     src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js">
             </script>
-        <?php else : ?>
+        <?php } else { ?>
             <!--Para integração em ambiente de produção use este link-->
             <script
                     type="text/javascript"
                     src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js">
             </script>
-        <?php endif; ?>
+        <?php } ?>
     </head>
     </html>
 
@@ -44,10 +44,10 @@ $payment->addItems()->withParameters(
     430.00
 );
 
-$payment->setCurrency("BRL");
-$payment->setReference("LIBPHP000001");
+$payment->setCurrency('BRL');
+$payment->setReference('LIBPHP000001');
 
-$payment->setRedirectUrl("http://www.lojamodelo.com.br");
+$payment->setRedirectUrl('http://www.lojamodelo.com.br');
 
 // Set your customer information.
 $payment->setSender()->setName('João Comprador');
@@ -88,9 +88,8 @@ $payment->addParameter()->withParameters('itemAmount', '201.40')->index(3);
 //Add items by parameter using an array
 $payment->addParameter()->withArray(['notificationURL', 'http://www.lojamodelo.com.br/nofitication']);
 
-
-$payment->setRedirectUrl("http://www.lojamodelo.com.br");
-$payment->setNotificationUrl("http://www.lojamodelo.com.br/nofitication");
+$payment->setRedirectUrl('http://www.lojamodelo.com.br');
+$payment->setNotificationUrl('http://www.lojamodelo.com.br/nofitication');
 
 try {
     $onlyCheckoutCode = true;
@@ -99,9 +98,9 @@ try {
         $onlyCheckoutCode
     );
 
-    echo "<h2>Criando requisi&ccedil;&atilde;o de pagamento. Aguarde...</h2>"
-        . "<p>C&oacute;digo da transa&ccedil;&atilde;o: <strong>" . $result->getCode() . "</strong></p>"
-        . "<script>PagSeguroLightbox('" . $result->getCode() . "');</script>";
+    echo '<h2>Criando requisi&ccedil;&atilde;o de pagamento. Aguarde...</h2>'
+        .'<p>C&oacute;digo da transa&ccedil;&atilde;o: <strong>'.$result->getCode().'</strong></p>'
+        ."<script>PagSeguroLightbox('".$result->getCode()."');</script>";
 } catch (Exception $e) {
-    die($e->getMessage());
+    exit($e->getMessage());
 }

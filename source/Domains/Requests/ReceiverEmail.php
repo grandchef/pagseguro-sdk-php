@@ -8,7 +8,7 @@ namespace PagSeguro\Domains\Requests;
 trait ReceiverEmail
 {
     private $receiverEmail;
-    
+
     public function getReceiverEmail()
     {
         return $this->receiverEmail;

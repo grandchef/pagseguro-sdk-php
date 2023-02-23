@@ -15,7 +15,6 @@ use PagSeguro\Domains\Requests\Requests;
 use PagSeguro\Domains\Requests\Shipping;
 
 /** Class Request
- * @package PagSeguro\Domains\Requests\DirectPayment\CreditCard
  */
 class Request implements Requests
 {

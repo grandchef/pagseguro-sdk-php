@@ -6,13 +6,9 @@ use PagSeguro\Domains\Document;
 use PagSeguro\Domains\Phone;
 
 /** Trait Sender
- * @package PagSeguro\Parsers\Response
  */
 trait Sender
 {
-    /**
-     * @var
-     */
     private $sender;
 
     /**
@@ -24,7 +20,6 @@ trait Sender
     }
 
     /**
-     * @param $sender
      * @return $this
      */
     public function setSender($sender)

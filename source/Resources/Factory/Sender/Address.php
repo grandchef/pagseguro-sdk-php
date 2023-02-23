@@ -5,11 +5,9 @@ namespace PagSeguro\Resources\Factory\Sender;
 use PagSeguro\Enum\Properties\Current;
 
 /** Class Shipping
- * @package PagSeguro\Resources\Factory\Request
  */
 class Address
 {
-
     /**
      * @var \PagSeguro\Domains\Shipping
      */
@@ -17,7 +15,6 @@ class Address
 
     /**
      * Address constructor.
-     * @param $sender
      */
     public function __construct($sender)
     {
@@ -25,17 +22,16 @@ class Address
     }
 
     /**
-     * @param \PagSeguro\Domains\Address $address
      * @return \PagSeguro\Domains\Shipping
      */
     public function instance(\PagSeguro\Domains\Address $address)
     {
         $this->sender->setAddress($address);
+
         return $this->sender;
     }
 
     /**
-     * @param $array
      * @return \PagSeguro\Domains\Shipping
      */
     public function withArray($array)
@@ -51,18 +47,12 @@ class Address
             ->setState($array[$properties::SHIPPING_ADDRESS_STATE])
             ->setCountry($array[$properties::SHIPPING_ADDRESS_COUNTRY]);
         $this->sender->setAddress($address);
+
         return $this->sender;
     }
 
     /**
-     * @param $street
-     * @param $number
-     * @param null $complement
-     * @param $district
-     * @param $postalCode
-     * @param $city
-     * @param $state
-     * @param $country
+     * @param  null  $complement
      * @return \PagSeguro\Domains\Shipping
      */
     public function withParameters(
@@ -85,6 +75,7 @@ class Address
             ->setState($state)
             ->setCountry($country);
         $this->sender->setAddress($address);
+
         return $this->sender;
     }
 }

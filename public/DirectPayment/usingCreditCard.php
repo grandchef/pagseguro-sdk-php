@@ -1,10 +1,10 @@
 <?php
 
-require_once "../../vendor/autoload.php";
+require_once '../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\PagSeguro\Library::cmsVersion()->setName('Nome')->setRelease('1.0.0');
+\PagSeguro\Library::moduleVersion()->setName('Nome')->setRelease('1.0.0');
 
 //Instantiate a new direct payment request, using Credit Card
 $creditCard = new \PagSeguro\Domains\Requests\DirectPayment\CreditCard();
@@ -15,10 +15,10 @@ $creditCard->setReceiverEmail('vendedor@lojamodelo.com.br');
 
 // Set a reference code for this payment request. It is useful to identify this payment
 // in future notifications.
-$creditCard->setReference("LIBPHP000001");
+$creditCard->setReference('LIBPHP000001');
 
 // Set the currency
-$creditCard->setCurrency("BRL");
+$creditCard->setCurrency('BRL');
 
 // Add an item for this payment request
 $creditCard->addItems()->withParameters(
@@ -111,9 +111,9 @@ try {
     $result = $creditCard->register(
         \PagSeguro\Configuration\Configure::getAccountCredentials()
     );
-    echo "<pre>";
+    echo '<pre>';
     print_r($result);
 } catch (Exception $e) {
-    echo "</br> <strong>";
-    die($e->getMessage());
+    echo '</br> <strong>';
+    exit($e->getMessage());
 }

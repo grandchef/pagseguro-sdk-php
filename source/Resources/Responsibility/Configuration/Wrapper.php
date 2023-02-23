@@ -11,6 +11,7 @@ class Wrapper implements Handler
     public function successor($next)
     {
         $this->successor = $next;
+
         return $this;
     }
 
@@ -18,6 +19,7 @@ class Wrapper implements Handler
     {
         if (class_exists('ConfigWrapper')) {
             $configWrapper = new \ConfigWrapper;
+
             return array_merge(
                 \PagSeguro\Helpers\Wrapper::environment($configWrapper),
                 \PagSeguro\Helpers\Wrapper::credentials($configWrapper),
@@ -25,6 +27,7 @@ class Wrapper implements Handler
                 \PagSeguro\Helpers\Wrapper::log($configWrapper)
             );
         }
+
         return $this->successor->handler($action, $class);
     }
 }

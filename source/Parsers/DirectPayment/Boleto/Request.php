@@ -4,7 +4,6 @@ namespace PagSeguro\Parsers\DirectPayment\Boleto;
 
 /** Request from the Boleto direct payment
  *
- * @package PagSeguro\Parsers\DirectPayment\Boleto
  */
 
 use PagSeguro\Enum\Properties\Current;
@@ -22,7 +21,6 @@ use PagSeguro\Parsers\Transaction\Boleto\Response;
 use PagSeguro\Resources\Http;
 
 /** Class Request
- * @package PagSeguro\Parsers\DirectPayment\Boleto
  */
 class Request extends Error implements Parser
 {
@@ -37,7 +35,6 @@ class Request extends Error implements Parser
     use Shipping;
 
     /**
-     * @param \PagSeguro\Domains\Requests\DirectPayment\Boleto $boleto
      * @return array
      */
     public static function getData(\PagSeguro\Domains\Requests\DirectPayment\Boleto $boleto)
@@ -61,7 +58,6 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
      * @return Response
      */
     public static function success(Http $http)
@@ -93,7 +89,6 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param \PagSeguro\Resources\Http $http
      * @return \PagSeguro\Domains\Error
      */
     public static function error(Http $http)

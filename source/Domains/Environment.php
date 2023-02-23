@@ -4,9 +4,6 @@ namespace PagSeguro\Domains;
 
 class Environment
 {
-    /**
-     * @var
-     */
     private $environment;
 
     /**
@@ -18,7 +15,7 @@ class Environment
     }
 
     /**
-     * @param string $environment
+     * @param  string  $environment
      */
     public function setEnvironment($environment)
     {

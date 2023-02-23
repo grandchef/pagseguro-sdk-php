@@ -8,7 +8,6 @@ use PagSeguro\Domains\Phone;
 
 /** Class Company
  *
- * @package PagSeguro\Domains\Authorization
  */
 class Company
 {
@@ -16,22 +15,27 @@ class Company
      * @var string
      */
     private $displayName = '';
+
     /**
      * @var \DateTime
      */
     private $websiteURL = null;
+
     /**
      * @var array
      */
     private $documents = [];
+
     /**
      * @var array
      */
     private $phones = [];
+
     /**
      * @var Address
      */
     private $address = null;
+
     /**
      * @var Partner
      */
@@ -40,12 +44,12 @@ class Company
     /**
      * Person constructor.
      *
-     * @param string $displayName
-     * @param string $websiteURL
-     * @param Document $document
-     * @param Phone $phone
-     * @param Address $address
-     * @param Partner $partner
+     * @param  string  $displayName
+     * @param  string  $websiteURL
+     * @param  Document  $document
+     * @param  Phone  $phone
+     * @param  Address  $address
+     * @param  Partner  $partner
      */
     public function __construct(
         $displayName = null,
@@ -68,8 +72,6 @@ class Company
     }
 
     /**
-     * @param Document $document
-     *
      * @return array
      */
     public function addDocuments(Document $document)
@@ -80,18 +82,16 @@ class Company
     }
 
     /**
-     * @param Phone $phone
-     *
      * @return array
      */
     public function addPhones(Phone $phone)
     {
         try {
-            if (!$phone->getType()) {
+            if (! $phone->getType()) {
                 throw new \InvalidArgumentException('Phone Type is required');
-            };
+            }
         } catch (\InvalidArgumentException $exception) {
-            die($exception);
+            exit($exception);
         }
         $this->phones[] = $phone;
 

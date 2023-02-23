@@ -4,18 +4,11 @@ namespace PagSeguro\Domains\DirectPayment;
 
 /** Direct Payment Sender
  *
- * @package PagSeguro\Domains\Requests\DirectPayment
  */
 class Sender extends \PagSeguro\Domains\Sender
 {
-    /**
-     * @var
-     */
     private $ip;
 
-    /**
-     * @var
-     */
     private $hash;
 
     /**
@@ -24,6 +17,7 @@ class Sender extends \PagSeguro\Domains\Sender
     public function __construct()
     {
         parent::__construct();
+
         return $this;
     }
 
@@ -36,12 +30,13 @@ class Sender extends \PagSeguro\Domains\Sender
     }
 
     /**
-     * @param string $ip
+     * @param  string  $ip
      * @return Sender
      */
     public function setIp($ip)
     {
         $this->ip = $ip;
+
         return $this;
     }
 
@@ -54,12 +49,12 @@ class Sender extends \PagSeguro\Domains\Sender
     }
 
     /**
-     * @param $hash
      * @return $this
      */
     public function setHash($hash)
     {
         $this->hash = $hash;
+
         return $this;
     }
 }

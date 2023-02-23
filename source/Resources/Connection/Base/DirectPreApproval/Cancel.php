@@ -8,6 +8,6 @@ trait Cancel
 {
     public function buildDirectPreApprovalCancelRequestUrl($preApprovalCode)
     {
-        return Builder\DirectPreApproval\Cancel::getCancelUrl() . '/' . $preApprovalCode . '/cancel';
+        return Builder\DirectPreApproval\Cancel::getCancelUrl().'/'.$preApprovalCode.'/cancel';
     }
 }

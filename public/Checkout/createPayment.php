@@ -1,10 +1,10 @@
 <?php
 
-require_once "../../vendor/autoload.php";
+require_once '../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\PagSeguro\Library::cmsVersion()->setName('Nome')->setRelease('1.0.0');
+\PagSeguro\Library::moduleVersion()->setName('Nome')->setRelease('1.0.0');
 
 $payment = new \PagSeguro\Domains\Requests\Payment();
 
@@ -22,13 +22,13 @@ $payment->addItems()->withParameters(
     430.00
 );
 
-$payment->setCurrency("BRL");
+$payment->setCurrency('BRL');
 
 $payment->setExtraAmount(11.5);
 
-$payment->setReference("LIBPHP000001");
+$payment->setReference('LIBPHP000001');
 
-$payment->setRedirectUrl("http://www.lojamodelo.com.br");
+$payment->setRedirectUrl('http://www.lojamodelo.com.br');
 
 // Set your customer information.
 $payment->setSender()->setName('João Comprador');
@@ -70,8 +70,8 @@ $payment->addParameter()->withParameters('itemAmount', '200.00')->index(3);
 //Add items by parameter using an array
 $payment->addParameter()->withArray(['notificationURL', 'http://www.lojamodelo.com.br/nofitication']);
 
-$payment->setRedirectUrl("http://www.lojamodelo.com.br");
-$payment->setNotificationUrl("http://www.lojamodelo.com.br/nofitication");
+$payment->setRedirectUrl('http://www.lojamodelo.com.br');
+$payment->setNotificationUrl('http://www.lojamodelo.com.br/nofitication');
 
 //Add discount
 $payment->addPaymentMethod()->withParameters(
@@ -103,9 +103,7 @@ $payment->acceptPaymentMethod()->name(\PagSeguro\Enum\PaymentMethod\Name::DEBITO
 // Remove a group and/or payment methods name
 $payment->excludePaymentMethod()->group(\PagSeguro\Enum\PaymentMethod\Group::BOLETO);
 
-
 try {
-
     /**
      * @todo For checkout with application use:
      * \PagSeguro\Configuration\Configure::getApplicationCredentials()
@@ -115,9 +113,9 @@ try {
         \PagSeguro\Configuration\Configure::getAccountCredentials()
     );
 
-    echo "<h2>Criando requisi&ccedil;&atilde;o de pagamento</h2>"
-        . "<p>URL do pagamento: <strong>$result</strong></p>"
-        . "<p><a title=\"URL do pagamento\" href=\"$result\" target=\_blank\">Ir para URL do pagamento.</a></p>";
+    echo '<h2>Criando requisi&ccedil;&atilde;o de pagamento</h2>'
+        ."<p>URL do pagamento: <strong>$result</strong></p>"
+        ."<p><a title=\"URL do pagamento\" href=\"$result\" target=\_blank\">Ir para URL do pagamento.</a></p>";
 } catch (Exception $e) {
-    die($e->getMessage());
+    exit($e->getMessage());
 }

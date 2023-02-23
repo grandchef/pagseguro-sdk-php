@@ -6,7 +6,6 @@ use PagSeguro\Enum\Authorization\PhoneEnum;
 
 /** Class Phone
  *
- * @package PagSeguro\Domains
  */
 class Phone
 {
@@ -14,21 +13,23 @@ class Phone
      * @var string
      */
     private $type;
+
     /**
-     * @var integer
+     * @var int
      */
     private $areaCode;
+
     /**
-     * @var integer
+     * @var int
      */
     private $number;
 
     /**
      * Phone constructor.
      *
-     * @param null      $areaCode
-     * @param null      $number
-     * @param PhoneEnum $type
+     * @param  null  $areaCode
+     * @param  null  $number
+     * @param  PhoneEnum  $type
      */
     public function __construct($areaCode = null, $number = null, $type = null)
     {
@@ -41,7 +42,7 @@ class Phone
 
     private function validateType($type)
     {
-        if (!array_key_exists($type, PhoneEnum::getList())) {
+        if (! array_key_exists($type, PhoneEnum::getList())) {
             throw new \InvalidArgumentException("Must be a valid currency, see \PagSeguro\Enum\Authorization\PhoneEnum");
         }
 
@@ -49,7 +50,7 @@ class Phone
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getAreaCode()
     {
@@ -57,8 +58,7 @@ class Phone
     }
 
     /**
-     * @param integer $areaCode
-     *
+     * @param  int  $areaCode
      * @return Phone
      */
     public function setAreaCode($areaCode)
@@ -69,7 +69,7 @@ class Phone
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getNumber()
     {
@@ -77,8 +77,7 @@ class Phone
     }
 
     /**
-     * @param integer $number
-     *
+     * @param  int  $number
      * @return Phone
      */
     public function setNumber($number)

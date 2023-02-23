@@ -2,8 +2,8 @@
 
 namespace PagSeguro\Tests;
 
-use PHPUnit\Framework\TestCase;
 use PagSeguro\Domains\DirectPreApproval\BillingAddress;
+use PHPUnit\Framework\TestCase;
 
 class BillingAddressTest extends TestCase
 {

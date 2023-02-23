@@ -8,12 +8,10 @@ use PagSeguro\Parsers\Parser;
 use PagSeguro\Resources\Http;
 
 /** Class DiscountParser
- * @package PagSeguro\Parsers\DirectPreApproval
  */
 class DiscountParser extends Error implements Parser
 {
     /**
-     * @param Discount $discount
      * @return mixed
      */
     public static function getPreApprovalCode(Discount $discount)
@@ -25,7 +23,6 @@ class DiscountParser extends Error implements Parser
     }
 
     /**
-     * @param Discount $discount
      * @return array|Discount
      */
     public static function getData(Discount $discount)
@@ -37,7 +34,6 @@ class DiscountParser extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed
      */
     public static function success(Http $http)
@@ -48,7 +44,6 @@ class DiscountParser extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed|\PagSeguro\Domains\Error
      */
     public static function error(Http $http)

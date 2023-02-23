@@ -4,7 +4,6 @@ namespace PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard;
 
 /** Description of Installment
  *
- * @package PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard
  */
 class Installment
 {
@@ -31,6 +30,7 @@ class Installment
         }
 
         $this->installment = $installment;
+
         return $this->installment;
     }
 

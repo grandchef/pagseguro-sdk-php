@@ -6,33 +6,19 @@ namespace PagSeguro\Domains\Responses;
  */
 class Installment
 {
-    /**
-     * @var
-     */
     private $cardBrand;
-    
-    /**
-     * @var
-     */
+
     private $quantity;
-    
-    /**
-     * @var
-     */
+
     private $amount;
-    
-    /**
-     * @var
-     */
+
     private $totalAmount;
-    
-    /**
-     * @var
-     */
+
     private $interestFree;
-    
+
     /**
      * Get the cardBrand attribute
+     *
      * @return Installment
      */
     public function getCardBrand()
@@ -42,6 +28,7 @@ class Installment
 
     /**
      * Get the quantity attribute
+     *
      * @return Installment
      */
     public function getQuantity()
@@ -51,6 +38,7 @@ class Installment
 
     /**
      * Get the amount attribute
+     *
      * @return Installment
      */
     public function getAmount()
@@ -60,6 +48,7 @@ class Installment
 
     /**
      * Get the totalAmount attribute
+     *
      * @return Installment
      */
     public function getTotalAmount()
@@ -69,6 +58,7 @@ class Installment
 
     /**
      * Get the cardBrand attribute
+     *
      * @return Installment
      */
     public function getInterestFree()
@@ -78,51 +68,61 @@ class Installment
 
     /**
      * Get the cardBrand attribute
+     *
      * @return Installment
      */
     public function setCardBrand($cardBrand)
     {
         $this->cardBrand = $cardBrand;
+
         return $this;
     }
 
     /**
      * Get the quantity attribute
+     *
      * @return Installment
      */
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
+
         return $this;
     }
 
     /**
      * Get the amount attribute
+     *
      * @return Installment
      */
     public function setAmount($amount)
     {
         $this->amount = $amount;
+
         return $this;
     }
 
     /**
      * Get the totalAmount attribute
+     *
      * @return Installment
      */
     public function setTotalAmount($totalAmount)
     {
         $this->totalAmount = $totalAmount;
+
         return $this;
     }
 
     /**
      * Get the setInterestFree attribute
+     *
      * @return Installment
      */
     public function setInterestFree($interestFree)
     {
         $this->interestFree = $interestFree;
+
         return $this;
     }
 }

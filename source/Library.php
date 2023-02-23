@@ -8,23 +8,13 @@ use PagSeguro\Resources\Framework\Language;
 use PagSeguro\Resources\Framework\Module;
 
 /** Class Library
- * @package PagSeguro
  */
 class Library
 {
-    /**
-     *
-     */
     const VERSION = '6.0.0';
 
-    /**
-     * @var
-     */
     private static $module;
 
-    /**
-     * @var
-     */
     private static $cms;
 
     /**
@@ -34,9 +24,9 @@ class Library
     {
         //Basic configuration
         defined('PS_BASEPATH') or define('PS_BASEPATH', __DIR__);
-        defined('PS_CONFIG_PATH') or define('PS_CONFIG_PATH', PS_BASEPATH . '/Configuration/');
-        defined('PS_CONFIG') or define('PS_CONFIG', PS_CONFIG_PATH . 'Properties/Conf.xml');
-        defined('PS_RESOURCES') or define('PS_RESOURCES', PS_CONFIG_PATH . 'Properties/Resources.xml');
+        defined('PS_CONFIG_PATH') or define('PS_CONFIG_PATH', PS_BASEPATH.'/Configuration/');
+        defined('PS_CONFIG') or define('PS_CONFIG', PS_CONFIG_PATH.'Properties/Conf.xml');
+        defined('PS_RESOURCES') or define('PS_RESOURCES', PS_CONFIG_PATH.'Properties/Resources.xml');
         //Validates for cUrl and SimpleXml.
         self::validate();
         //Garbage Collection
@@ -45,6 +35,7 @@ class Library
 
     /**
      * @return bool
+     *
      * @throws \Exception
      */
     final public static function validate()
@@ -52,6 +43,7 @@ class Library
         try {
             Validate::cUrl();
             Validate::simpleXml();
+
             return true;
         } catch (\Exception $exception) {
             throw new \Exception(
@@ -86,6 +78,7 @@ class Library
         if (is_null(self::$module)) {
             return self::$module = new Module();
         }
+
         return self::$module;
     }
 
@@ -97,6 +90,7 @@ class Library
         if (is_null(self::$cms)) {
             return self::$cms = new ContentManagementSystems();
         }
+
         return self::$cms;
     }
 }

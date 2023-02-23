@@ -8,14 +8,17 @@ use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /** Class ChangePaymentRequest
  *
- * @package PagSeguro\Domains\Requests\DirectPreApproval
  */
 class ChangePaymentRequest
 {
     use ParserTrait;
+
     private $type;
+
     private $creditCard;
+
     private $sender;
+
     private $preApprovalCode;
 
     /**
@@ -44,9 +47,6 @@ class ChangePaymentRequest
         return $this->sender;
     }
 
-    /**
-     * @param $preApprovalCode
-     */
     public function setPreApprovalCode($preApprovalCode)
     {
         $this->preApprovalCode = $preApprovalCode;

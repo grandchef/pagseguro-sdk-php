@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class RetryPaymentOrder
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class RetryPaymentOrder extends Builder
 {

@@ -13,14 +13,12 @@ use PagSeguro\Services\Authorization\PersonalService;
 use PagSeguro\Services\Authorization\SellerService;
 
 /** Class Request
- * @package PagSeguro\Parsers\Authorization
  */
 class Request extends Error implements Parser
 {
     use Basic;
 
     /**
-     * @param \PagSeguro\Domains\Requests\Authorization $authorization
      * @return string
      */
     public static function getData(\PagSeguro\Domains\Requests\Authorization $authorization)
@@ -32,7 +30,7 @@ class Request extends Error implements Parser
             $authorization->getNotificationUrl(),
             $authorization->getAccount()
         );
-        if (!$authorization->getAccount()) {
+        if (! $authorization->getAccount()) {
             $xml = new DefaultAuthorizationService($authorization);
         } else {
             if ($authorization->getAccount()->getCompany() instanceof Authorization\Company) {
@@ -43,27 +41,28 @@ class Request extends Error implements Parser
                 $xml = new PersonalService($authorization);
             }
         }
+
         return $xml->getAsXML();
     }
 
     /**
-     * @param Http $http
      * @return mixed|Response
      */
     public static function success(Http $http)
     {
         $xml = simplexml_load_string($http->getResponse());
+
         return (new Response)->setCode(current($xml->code))
             ->setDate(current($xml->date));
     }
 
     /**
-     * @param Http $http
      * @return mixed|\PagSeguro\Domains\Error
      */
     public static function error(Http $http)
     {
         $error = parent::error($http);
+
         return $error;
     }
 }

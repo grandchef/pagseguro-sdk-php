@@ -3,33 +3,19 @@
 namespace PagSeguro\Parsers\Response;
 
 /** Trait Currency
- * @package PagSeguro\Parsers\Response
  */
 trait Currency
 {
-    /**
-     * @var
-     */
     private $discountAmount;
-    /**
-     * @var
-     */
+
     private $escrowEndDate;
-    /**
-     * @var
-     */
+
     private $extraAmount;
-    /**
-     * @var
-     */
+
     private $feeAmount;
-    /**
-     * @var
-     */
+
     private $grossAmount;
-    /**
-     * @var
-     */
+
     private $netAmount;
 
     /**
@@ -41,12 +27,12 @@ trait Currency
     }
 
     /**
-     * @param $discountAmount
      * @return $this
      */
     public function setDiscountAmount($discountAmount)
     {
         $this->discountAmount = $discountAmount;
+
         return $this;
     }
 
@@ -59,12 +45,12 @@ trait Currency
     }
 
     /**
-     * @param $escrowEndDate
      * @return $this
      */
     public function setEscrowEndDate($escrowEndDate)
     {
         $this->escrowEndDate = $escrowEndDate;
+
         return $this;
     }
 
@@ -77,12 +63,12 @@ trait Currency
     }
 
     /**
-     * @param $extraAmount
      * @return $this
      */
     public function setExtraAmount($extraAmount)
     {
         $this->extraAmount = $extraAmount;
+
         return $this;
     }
 
@@ -101,6 +87,7 @@ trait Currency
     public function setFeeAmount($feeAmount)
     {
         $this->feeAmount = $feeAmount;
+
         return $this;
     }
 
@@ -113,12 +100,12 @@ trait Currency
     }
 
     /**
-     * @param $grossAmount
      * @return $this
      */
     public function setGrossAmount($grossAmount)
     {
         $this->grossAmount = $grossAmount;
+
         return $this;
     }
 
@@ -131,12 +118,12 @@ trait Currency
     }
 
     /**
-     * @param $netAmount
      * @return $this
      */
     public function setNetAmount($netAmount)
     {
         $this->netAmount = $netAmount;
+
         return $this;
     }
 }

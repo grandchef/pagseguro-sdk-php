@@ -5,11 +5,9 @@ namespace PagSeguro\Resources\Factory\Shipping;
 use PagSeguro\Domains\ShippingCost;
 
 /** Class Shipping
- * @package PagSeguro\Resources\Factory\Request
  */
 class Cost
 {
-
     /**
      * @var \PagSeguro\Domains\Shipping
      */
@@ -34,6 +32,7 @@ class Cost
         $this->shipping->setCost(
             $shipping->setCost($cost)
         );
+
         return $this->shipping;
     }
 }

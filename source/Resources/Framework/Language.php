@@ -3,7 +3,6 @@
 namespace PagSeguro\Resources\Framework;
 
 /** Class Language
- * @package PagSeguro\Resources\Framework
  */
 class Language
 {

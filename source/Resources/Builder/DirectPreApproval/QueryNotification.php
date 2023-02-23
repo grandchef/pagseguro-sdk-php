@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class QueryNotification
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class QueryNotification extends Builder
 {

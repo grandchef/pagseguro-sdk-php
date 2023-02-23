@@ -4,7 +4,6 @@ namespace PagSeguro\Enum\DirectPayment;
 
 /** Lists all the available payment methods for direct payment
  *
- * @package PagSeguro\Enum\DirectPayment
  */
 class Method
 {

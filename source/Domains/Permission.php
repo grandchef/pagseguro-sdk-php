@@ -3,21 +3,13 @@
 namespace PagSeguro\Domains;
 
 /** Class Permission
- * @package PagSeguro\Domains
  */
 class Permission
 {
-    /**
-     * @var
-     */
     private $code;
-    /**
-     * @var
-     */
+
     private $status;
-    /**
-     * @var
-     */
+
     private $lastUpdate;
 
     /**
@@ -29,12 +21,13 @@ class Permission
     }
 
     /**
-     * @param mixed $code
+     * @param  mixed  $code
      * @return Permission
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -47,12 +40,13 @@ class Permission
     }
 
     /**
-     * @param mixed $lastUpdate
+     * @param  mixed  $lastUpdate
      * @return Permission
      */
     public function setLastUpdate($lastUpdate)
     {
         $this->lastUpdate = $lastUpdate;
+
         return $this;
     }
 
@@ -65,12 +59,13 @@ class Permission
     }
 
     /**
-     * @param mixed $status
+     * @param  mixed  $status
      * @return Permission
      */
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 }

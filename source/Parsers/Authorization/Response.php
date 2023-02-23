@@ -3,18 +3,10 @@
 namespace PagSeguro\Parsers\Authorization;
 
 /** Class Response
- * @package PagSeguro\Parsers\Authorization
  */
 class Response
 {
-
-    /**
-     * @var
-     */
     private $code;
-    /**
-     * @var
-     */
 
     private $date;
 
@@ -27,12 +19,13 @@ class Response
     }
 
     /**
-     * @param string $code
+     * @param  string  $code
      * @return $this
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -45,12 +38,13 @@ class Response
     }
 
     /**
-     * @param \DateTime $date
+     * @param  \DateTime  $date
      * @return Response
      */
     public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 }

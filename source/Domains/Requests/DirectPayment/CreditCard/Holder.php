@@ -5,13 +5,9 @@ namespace PagSeguro\Domains\Requests\DirectPayment\CreditCard;
 use PagSeguro\Helpers\InitializeObject;
 
 /** Class Sender
- * @package PagSeguro\Domains\Requests
  */
 trait Holder
 {
-    /**
-     * @var
-     */
     private $holder;
 
     /**
@@ -23,6 +19,7 @@ trait Holder
             $this->holder,
             '\PagSeguro\Domains\DirectPayment\CreditCard\Holder'
         );
+
         return new \PagSeguro\Domains\Requests\Adapter\DirectPayment\Holder($this->holder);
     }
 

@@ -1,6 +1,5 @@
 <?php
 /**
-
 namespace PagSeguro\Parsers;
 
 use PagSeguro\Domains\Requests\Requests;
@@ -8,13 +7,10 @@ use PagSeguro\Enum\Metadata\Description;
 use PagSeguro\Helpers\StringFormat;
 
 /** Trait Metadata
- * @package PagSeguro\Parsers
  */
 trait Metadata
 {
     /**
-     * @param Requests $request
-     * @param $properties
      * @return array
      */
     public static function getData(Requests $request, $properties)
@@ -27,28 +23,30 @@ trait Metadata
 
             foreach ($metadata as $key => $value) {
                 $count++;
-                if (!is_null($metadata[$key]->getKey())) {
+                if (! is_null($metadata[$key]->getKey())) {
                     $data[sprintf($properties::METADATA_ITEM_KEY, $count)] = $metadata[$key]->getKey();
                 }
-                if (!is_null($metadata[$key]->getValue())) {
+                if (! is_null($metadata[$key]->getValue())) {
                     $data[sprintf($properties::METADATA_ITEM_VALUE, $count)] = self::formatKeyValue(
                         $metadata[$key]->getKey(),
                         $metadata[$key]->getValue()
                     );
                 }
-                if (!is_null($metadata[$key]->getGroup())) {
+                if (! is_null($metadata[$key]->getGroup())) {
                     $data[sprintf($properties::METADATA_ITEM_GROUP, $count)] = $metadata[$key]->getGroup();
                 }
             }
         }
+
         return $data;
     }
 
     /**
      * Format the $value to fit the limit of 100 characters and according
      * with the $key value, if it needs an special format
-     * @param string $key
-     * @param string $value
+     *
+     * @param  string  $key
+     * @param  string  $value
      * @return string
      */
     private static function formatKeyValue($key, $value)
@@ -72,7 +70,8 @@ trait Metadata
 
     /**
      * Gets item key type by description
-     * @param string $itemDescription
+     *
+     * @param  string  $itemDescription
      * @return string
      */
     public static function getKeyByDescription($itemDescription)

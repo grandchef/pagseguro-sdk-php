@@ -10,14 +10,17 @@ use PagSeguro\Domains\Log;
 use PagSeguro\Resources\Responsibility;
 
 /** Class Configure
- * @package PagSeguro\Configuration
  */
 class Configure
 {
     private static $accountCredentials;
+
     private static $applicationCredentials;
+
     private static $charset;
+
     private static $environment;
+
     private static $log;
 
     /**
@@ -25,7 +28,7 @@ class Configure
      */
     public static function getAccountCredentials()
     {
-        if (!isset(self::$accountCredentials)) {
+        if (! isset(self::$accountCredentials)) {
             $configuration = Responsibility::configuration();
             self::setAccountCredentials(
                 $configuration['credentials']['email'],
@@ -37,8 +40,8 @@ class Configure
     }
 
     /**
-     * @param string $email
-     * @param string $token
+     * @param  string  $email
+     * @param  string  $token
      */
     public static function setAccountCredentials($email, $token)
     {
@@ -52,7 +55,7 @@ class Configure
      */
     public static function getApplicationCredentials()
     {
-        if (!isset(self::$applicationCredentials)) {
+        if (! isset(self::$applicationCredentials)) {
             $configuration = Responsibility::configuration();
             self::setApplicationCredentials(
                 $configuration['credentials']['appId']['environment'][$configuration['environment']],
@@ -64,8 +67,8 @@ class Configure
     }
 
     /**
-     * @param string $appId
-     * @param string $appKey
+     * @param  string  $appId
+     * @param  string  $appKey
      */
     public static function setApplicationCredentials($appId, $appKey)
     {
@@ -79,15 +82,16 @@ class Configure
      */
     public static function getEnvironment()
     {
-        if (!isset(self::$environment)) {
+        if (! isset(self::$environment)) {
             $configuration = Responsibility::configuration();
             self::setEnvironment($configuration['environment']);
         }
+
         return self::$environment;
     }
 
     /**
-     * @param string $environment
+     * @param  string  $environment
      */
     public static function setEnvironment($environment)
     {
@@ -100,15 +104,16 @@ class Configure
      */
     public static function getCharset()
     {
-        if (!isset(self::$charset)) {
+        if (! isset(self::$charset)) {
             $configuration = Responsibility::configuration();
             self::setCharset($configuration['charset']);
         }
+
         return self::$charset;
     }
 
     /**
-     * @param string $charset
+     * @param  string  $charset
      */
     public static function setCharset($charset)
     {
@@ -121,19 +126,20 @@ class Configure
      */
     public static function getLog()
     {
-        if (!isset(self::$log)) {
+        if (! isset(self::$log)) {
             $configuration = Responsibility::configuration();
             self::setLog(
-                $configuration['log']['active'] === "false" ? false : true,
+                $configuration['log']['active'] === 'false' ? false : true,
                 $configuration['log']['location']
             );
         }
+
         return self::$log;
     }
 
     /**
-     * @param boolean $active
-     * @param string $location
+     * @param  bool  $active
+     * @param  string  $location
      */
     public static function setLog($active, $location)
     {

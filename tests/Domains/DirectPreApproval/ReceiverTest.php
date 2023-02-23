@@ -2,8 +2,8 @@
 
 namespace PagSeguro\Tests;
 
-use PHPUnit\Framework\TestCase;
 use PagSeguro\Domains\DirectPreApproval\Receiver;
+use PHPUnit\Framework\TestCase;
 
 class ReceiverTest extends TestCase
 {

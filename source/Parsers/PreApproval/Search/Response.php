@@ -3,17 +3,23 @@
 namespace PagSeguro\Parsers\PreApproval\Search;
 
 /** Class Response
- * @package PagSeguro\Parsers\PreApproval\Search
  */
 class Response
 {
     private $name;
+
     private $code;
+
     private $date;
+
     private $tracker;
+
     private $status;
+
     private $reference;
+
     private $lastEventDate;
+
     private $charge;
 
     /**
@@ -25,12 +31,13 @@ class Response
     }
 
     /**
-     * @param mixed $charge
+     * @param  mixed  $charge
      * @return Response
      */
     public function setCharge($charge)
     {
         $this->charge = $charge;
+
         return $this;
     }
 
@@ -43,12 +50,13 @@ class Response
     }
 
     /**
-     * @param mixed $code
+     * @param  mixed  $code
      * @return Response
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -61,12 +69,13 @@ class Response
     }
 
     /**
-     * @param mixed $date
+     * @param  mixed  $date
      * @return Response
      */
     public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 
@@ -79,12 +88,13 @@ class Response
     }
 
     /**
-     * @param mixed $lastEventDate
+     * @param  mixed  $lastEventDate
      * @return Response
      */
     public function setLastEventDate($lastEventDate)
     {
         $this->lastEventDate = $lastEventDate;
+
         return $this;
     }
 
@@ -97,12 +107,13 @@ class Response
     }
 
     /**
-     * @param mixed $name
+     * @param  mixed  $name
      * @return Response
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -115,12 +126,13 @@ class Response
     }
 
     /**
-     * @param mixed $reference
+     * @param  mixed  $reference
      * @return Response
      */
     public function setReference($reference)
     {
         $this->reference = $reference;
+
         return $this;
     }
 
@@ -133,12 +145,13 @@ class Response
     }
 
     /**
-     * @param mixed $status
+     * @param  mixed  $status
      * @return Response
      */
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -151,12 +164,13 @@ class Response
     }
 
     /**
-     * @param mixed $tracker
+     * @param  mixed  $tracker
      * @return Response
      */
     public function setTracker($tracker)
     {
         $this->tracker = $tracker;
+
         return $this;
     }
 }

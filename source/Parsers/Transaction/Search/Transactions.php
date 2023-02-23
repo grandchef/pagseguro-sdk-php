@@ -3,25 +3,15 @@
 namespace PagSeguro\Parsers\Transaction\Search;
 
 /** Class Transactions
- * @package PagSeguro\Parsers\Transaction\Search
  */
 abstract class Transactions
 {
-    /**
-     * @var
-     */
     private $date;
-    /**
-     * @var
-     */
+
     private $code;
-    /**
-     * @var
-     */
+
     private $reference;
-    /**
-     * @var
-     */
+
     private $type;
 
     /**
@@ -33,12 +23,13 @@ abstract class Transactions
     }
 
     /**
-     * @param mixed $code
+     * @param  mixed  $code
      * @return Transactions
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -51,12 +42,13 @@ abstract class Transactions
     }
 
     /**
-     * @param mixed $date
+     * @param  mixed  $date
      * @return Transactions
      */
     public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 
@@ -69,12 +61,13 @@ abstract class Transactions
     }
 
     /**
-     * @param mixed $reference
+     * @param  mixed  $reference
      * @return Transactions
      */
     public function setReference($reference)
     {
         $this->reference = $reference;
+
         return $this;
     }
 
@@ -87,12 +80,13 @@ abstract class Transactions
     }
 
     /**
-     * @param mixed $type
+     * @param  mixed  $type
      * @return Transactions
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 }

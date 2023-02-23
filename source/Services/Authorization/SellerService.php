@@ -8,7 +8,6 @@ use PagSeguro\Domains\Phone;
 
 /** Class BusinessService
  *
- * @package PagSeguro\Services\Authorization
  */
 class SellerService
 {
@@ -16,6 +15,7 @@ class SellerService
      * @var Authorization
      */
     private $authorization;
+
     /**
      * @var \DOMDocument
      */
@@ -23,8 +23,6 @@ class SellerService
 
     /**
      * Seller constructor.
-     *
-     * @param Authorization $authorization
      */
     public function __construct(Authorization $authorization)
     {
@@ -74,8 +72,6 @@ class SellerService
     }
 
     /**
-     * @param \DOMNode $accountDom
-     *
      * @return \DOMNode
      */
     private function makeAccountNode(\DOMNode $accountDom)
@@ -90,8 +86,6 @@ class SellerService
     }
 
     /**
-     * @param \DOMNode $accountDom
-     *
      * @return \DOMNode
      */
     private function makePersonNode(\DOMNode $accountDom)
@@ -109,9 +103,6 @@ class SellerService
         return $personDom;
     }
 
-    /**
-     * @param \DOMNode $personDom
-     */
     private function makePhonesNode(\DOMNode $personDom)
     {
         $phonesElement = $this->dom->createElement('phones');
@@ -136,9 +127,6 @@ class SellerService
         }
     }
 
-    /**
-     * @param \DOMNode $personDom
-     */
     private function makeDocumentsNode(\DOMNode $personDom)
     {
         $documentsElement = $this->dom->createElement('documents');
@@ -160,9 +148,6 @@ class SellerService
         }
     }
 
-    /**
-     * @param \DOMNode $personDom
-     */
     private function makeAddressNode(\DOMNode $personDom)
     {
         $addressElement = $this->dom->createElement('address');

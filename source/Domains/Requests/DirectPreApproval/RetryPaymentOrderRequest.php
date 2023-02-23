@@ -6,12 +6,13 @@ use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /** Class PaymentRequest
  *
- * @package PagSeguro\Domains\Requests\DirectPreApproval
  */
 class RetryPaymentOrderRequest
 {
     use ParserTrait;
+
     private $preApprovalCode;
+
     private $paymentOrderCode;
 
     /**
@@ -21,16 +22,13 @@ class RetryPaymentOrderRequest
     {
     }
 
-    /**
-     * @param $preApprovalCode
-     */
     public function setPreApprovalCode($preApprovalCode)
     {
         $this->preApprovalCode = $preApprovalCode;
     }
 
     /**
-     * @param mixed $paymentOrderCode
+     * @param  mixed  $paymentOrderCode
      */
     public function setPaymentOrderCode($paymentOrderCode)
     {

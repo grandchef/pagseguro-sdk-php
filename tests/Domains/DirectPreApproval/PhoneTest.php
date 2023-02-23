@@ -2,8 +2,8 @@
 
 namespace PagSeguro\Tests;
 
-use PHPUnit\Framework\TestCase;
 use PagSeguro\Domains\DirectPreApproval\Phone;
+use PHPUnit\Framework\TestCase;
 
 class PhoneTest extends TestCase
 {

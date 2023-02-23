@@ -1,10 +1,10 @@
 <?php
 
-require_once "../../vendor/autoload.php";
+require_once '../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\PagSeguro\Library::cmsVersion()->setName('Nome')->setRelease('1.0.0');
+\PagSeguro\Library::moduleVersion()->setName('Nome')->setRelease('1.0.0');
 /**  Para usa o ambiente de testes (sandbox) descomentar a linha abaixo
  */
 //\PagSeguro\Configuration\Configure::setEnvironment('sandbox');
@@ -13,11 +13,11 @@ require_once "../../vendor/autoload.php";
 $preApproval = new \PagSeguro\Domains\Requests\DirectPreApproval\Accession();
 $preApproval->setPlan('código do plano');
 $preApproval->setReference('referência da assinatura');
-$preApproval->setSender()->setName('nome');//assinante
-$preApproval->setSender()->setEmail('email');//assinante
-$preApproval->setSender()->setIp('ip');//assinante
+$preApproval->setSender()->setName('nome'); //assinante
+$preApproval->setSender()->setEmail('email'); //assinante
+$preApproval->setSender()->setIp('ip'); //assinante
 $preApproval->setSender()->setAddress()->withParameters('logradouro', 'numero', 'bairro', 'cep', 'cidade', 'UF',
-    'BRA');//assinante
+    'BRA'); //assinante
 $document = new \PagSeguro\Domains\DirectPreApproval\Document();
 $document->withParameters('CPF', 'cpf'); //assinante
 $preApproval->setSender()->setDocuments($document);
@@ -40,6 +40,5 @@ try {
     echo '<pre>';
     print_r($response);
 } catch (Exception $e) {
-    die($e->getMessage());
+    exit($e->getMessage());
 }
-

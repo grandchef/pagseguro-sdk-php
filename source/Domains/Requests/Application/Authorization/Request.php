@@ -5,12 +5,11 @@ namespace PagSeguro\Domains\Requests\Application\Authorization;
 use PagSeguro\Domains\Authorization\AccountTrait;
 use PagSeguro\Domains\Requests\Notification;
 use PagSeguro\Domains\Requests\Permissions;
-use PagSeguro\Domains\Requests\Reference;
 use PagSeguro\Domains\Requests\Redirect;
+use PagSeguro\Domains\Requests\Reference;
 use PagSeguro\Domains\Requests\Requests;
 
 /** Class Request
- * @package PagSeguro\Domains\Requests
  */
 class Request implements Requests
 {

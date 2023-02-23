@@ -5,11 +5,9 @@ namespace PagSeguro\Resources\Factory\Shipping;
 use PagSeguro\Domains\ShippingAddressRequired;
 
 /** Class Shipping
- * @package PagSeguro\Resources\Factory\Request
  */
 class AddressRequired
 {
-
     /**
      * @var \PagSeguro\Domains\Shipping
      */
@@ -17,7 +15,6 @@ class AddressRequired
 
     /**
      * AddressRequired constructor.
-     * @param $shipping
      */
     public function __construct($shipping)
     {
@@ -36,6 +33,7 @@ class AddressRequired
         $this->shipping->setAddressRequired(
             $shipping
         );
+
         return $this->shipping;
     }
 }

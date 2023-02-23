@@ -13,12 +13,13 @@ trait Hash
     }
 
     /**
-     * @param mixed $email
+     * @param  mixed  $email
      * @return Customer
      */
     public function setHash($hash)
     {
         $this->sender->setHash($hash);
+
         return $this;
     }
 }

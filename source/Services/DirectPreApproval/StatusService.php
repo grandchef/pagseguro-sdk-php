@@ -12,28 +12,25 @@ use PagSeguro\Resources\Responsibility;
 
 /** Class StatusService
  *
- * @package PagSeguro\Services\DirectPreApproval
  */
 class StatusService
 {
     /**
-     * @param Credentials $credentials
-     * @param Status      $status
-     *
      * @return mixed
+     *
      * @throws \Exception
      */
     public static function create(Credentials $credentials, Status $status)
     {
-        Logger::info("Begin", ['service' => 'DirectPreApproval']);
+        Logger::info('Begin', ['service' => 'DirectPreApproval']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http('Content-Type: application/json;', 'Accept: application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1');
-            Logger::info(sprintf("PUT: %s", self::request($connection, StatusParser::getPreApprovalCode($status))),
+            Logger::info(sprintf('PUT: %s', self::request($connection, StatusParser::getPreApprovalCode($status))),
                 ['service' => 'DirectPreApproval']);
             Logger::info(
                 sprintf(
-                    "Params: %s",
+                    'Params: %s',
                     json_encode(StatusParser::getData($status))
                 ),
                 ['service' => 'DirectPreApproval']
@@ -49,7 +46,7 @@ class StatusService
                 new StatusParser
             );
             Logger::info(
-                sprintf("DirectPreApproval URL: %s", json_encode(self::response($response))),
+                sprintf('DirectPreApproval URL: %s', json_encode(self::response($response))),
                 ['service' => 'DirectPreApproval']
             );
 
@@ -61,19 +58,14 @@ class StatusService
     }
 
     /**
-     * @param Connection\Data $connection
-     * @param                 $preApprovalCode
-     *
      * @return string
      */
     private static function request(Connection\Data $connection, $preApprovalCode)
     {
-        return $connection->buildDirectPreApprovalStatusRequestUrl($preApprovalCode)."?".$connection->buildCredentialsQuery();
+        return $connection->buildDirectPreApprovalStatusRequestUrl($preApprovalCode).'?'.$connection->buildCredentialsQuery();
     }
 
     /**
-     * @param $response
-     *
      * @return mixed
      */
     private static function response($response)

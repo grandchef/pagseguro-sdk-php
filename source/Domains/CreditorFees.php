@@ -3,29 +3,17 @@
 namespace PagSeguro\Domains;
 
 /** Class CreditorFees
- * @package PagSeguro\Domains
  */
 class CreditorFees
 {
-    /**
-     * @var
-     */
     private $intermediationRateAmount;
-    /**
-     * @var
-     */
+
     private $intermediationFeeAmount;
-    /**
-     * @var
-     */
+
     private $installmentFeeAmount;
-    /**
-     * @var
-     */
+
     private $operationalFeeAmount;
-    /**
-     * @var
-     */
+
     private $commissionFeeAmount;
 
     /**
@@ -37,12 +25,13 @@ class CreditorFees
     }
 
     /**
-     * @param mixed $intermediationFeeAmount
+     * @param  mixed  $intermediationFeeAmount
      * @return CreditorFees
      */
     public function setIntermediationFeeAmount($intermediationFeeAmount)
     {
         $this->intermediationFeeAmount = $intermediationFeeAmount;
+
         return $this;
     }
 
@@ -55,12 +44,13 @@ class CreditorFees
     }
 
     /**
-     * @param mixed $intermediationRateAmount
+     * @param  mixed  $intermediationRateAmount
      * @return CreditorFees
      */
     public function setIntermediationRateAmount($intermediationRateAmount)
     {
         $this->intermediationRateAmount = $intermediationRateAmount;
+
         return $this;
     }
 
@@ -73,12 +63,13 @@ class CreditorFees
     }
 
     /**
-     * @param mixed $installmentFeeAmount
+     * @param  mixed  $installmentFeeAmount
      * @return CreditorFees
      */
     public function setInstallmentFeeAmount($installmentFeeAmount)
     {
         $this->installmentFeeAmount = $installmentFeeAmount;
+
         return $this;
     }
 
@@ -91,12 +82,13 @@ class CreditorFees
     }
 
     /**
-     * @param mixed $operationalFeeAmount
+     * @param  mixed  $operationalFeeAmount
      * @return CreditorFees
      */
     public function setOperationalFeeAmount($operationalFeeAmount)
     {
         $this->operationalFeeAmount = $operationalFeeAmount;
+
         return $this;
     }
 
@@ -107,13 +99,15 @@ class CreditorFees
     {
         return $this->commissionFeeAmount;
     }
+
     /**
-     * @param mixed $commissionFeeAmount
+     * @param  mixed  $commissionFeeAmount
      * @return CreditorFees
      */
     public function setCommissionFeeAmount($commissionFeeAmount)
     {
         $this->commissionFeeAmount = $commissionFeeAmount;
+
         return $this;
     }
 }

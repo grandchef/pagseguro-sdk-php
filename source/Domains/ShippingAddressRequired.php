@@ -3,14 +3,9 @@
 namespace PagSeguro\Domains;
 
 /** Class ShippingAddressRequired
- * @package PagSeguro\Domains
  */
 class ShippingAddressRequired
 {
-
-    /**
-     * @var
-     */
     private $addressRequired;
 
     /**
@@ -22,7 +17,7 @@ class ShippingAddressRequired
     }
 
     /**
-     * @param string $addressRequired
+     * @param  string  $addressRequired
      */
     public function setAddressRequired($addressRequired)
     {

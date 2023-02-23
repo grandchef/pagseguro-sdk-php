@@ -10,21 +10,21 @@ use PagSeguro\Helpers\InitializeObject;
 trait Parameter
 {
     private $parameter;
-    
+
     public function addParameter()
     {
         $this->parameter = InitializeObject::Initialize(
             $this->parameter,
             new \PagSeguro\Resources\Factory\Request\Parameter()
         );
-        
+
         return $this->parameter;
     }
 
     public function setParameter($parameter)
     {
         if (is_array($parameter)) {
-            $arr = array();
+            $arr = [];
             foreach ($parameter as $key => $parameterItem) {
                 if ($parameterItem instanceof \PagSeguro\Domains\Parameter) {
                     $arr[$key] = $parameterItem;

@@ -6,11 +6,11 @@ use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /** Class CancelRequest
  *
- * @package PagSeguro\Domains\Requests\DirectPreApproval
  */
 class CancelRequest
 {
     use ParserTrait;
+
     private $preApprovalCode;
 
     /**
@@ -20,9 +20,6 @@ class CancelRequest
     {
     }
 
-    /**
-     * @param $preApprovalCode
-     */
     public function setPreApprovalCode($preApprovalCode)
     {
         $this->preApprovalCode = $preApprovalCode;

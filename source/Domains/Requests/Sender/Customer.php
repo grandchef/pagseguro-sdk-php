@@ -13,12 +13,13 @@ trait Customer
     }
 
     /**
-     * @param mixed $email
+     * @param  mixed  $email
      * @return Customer
      */
     public function setEmail($email)
     {
         $this->sender->setEmail($email);
+
         return $this;
     }
 
@@ -31,12 +32,13 @@ trait Customer
     }
 
     /**
-     * @param mixed $name
+     * @param  mixed  $name
      * @return Customer
      */
     public function setName($name)
     {
         $this->sender->setName($name);
+
         return $this;
     }
 }

@@ -5,38 +5,29 @@ namespace PagSeguro\Domains;
 use PagSeguro\Domains\Account\Credentials;
 
 /** Class ApplicationCredentials
- * @package PagSeguro\Domains
  */
 class ApplicationCredentials implements Credentials
 {
-
-    /**
-     * @var
-     */
     private $appId;
-    /**
-     * @var
-     */
-    private $appKey;
-    /**
-     * @var
-     */
-    private $authorizationCode;
 
+    private $appKey;
+
+    private $authorizationCode;
 
     /**
      * ApplicationCredentials constructor.
-     * @param null $appId
-     * @param null $appKey
+     *
+     * @param  null  $appId
+     * @param  null  $appKey
      */
     public function __construct($appId = null, $appKey = null)
     {
         //Setting app id
-        if (!is_null($appId)) {
+        if (! is_null($appId)) {
             $this->setAppId($appId);
         }
         //Setting app key
-        if (!is_null($appKey)) {
+        if (! is_null($appKey)) {
             $this->setAppKey($appKey);
         }
     }
@@ -50,12 +41,12 @@ class ApplicationCredentials implements Credentials
     }
 
     /**
-     * @param $appId
      * @return $this
      */
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -68,12 +59,12 @@ class ApplicationCredentials implements Credentials
     }
 
     /**
-     * @param $appKey
      * @return $this
      */
     public function setAppKey($appKey)
     {
         $this->appKey = $appKey;
+
         return $this;
     }
 
@@ -86,12 +77,13 @@ class ApplicationCredentials implements Credentials
     }
 
     /**
-     * @param mixed $authorizationCode
+     * @param  mixed  $authorizationCode
      * @return ApplicationCredentials
      */
     public function setAuthorizationCode($authorizationCode)
     {
         $this->authorizationCode = $authorizationCode;
+
         return $this;
     }
 
@@ -103,7 +95,7 @@ class ApplicationCredentials implements Credentials
         return [
             'appId' => $this->getAppId(),
             'appKey' => $this->getAppKey(),
-            'authorizationCode' => $this->getAuthorizationCode()
+            'authorizationCode' => $this->getAuthorizationCode(),
         ];
     }
 
@@ -113,7 +105,7 @@ class ApplicationCredentials implements Credentials
     public function toString()
     {
         return sprintf(
-            "ApplicationCredentials[ Email : %s , Token: %s ]",
+            'ApplicationCredentials[ Email : %s , Token: %s ]',
             $this->getAppId(),
             $this->getAppKey()
         );

@@ -3,7 +3,6 @@
 namespace PagSeguro\Parsers\Response;
 
 /** Trait PaymentLink
- * @package PagSeguro\Parsers\Response
  */
 trait PaymentLink
 {
@@ -17,6 +16,7 @@ trait PaymentLink
     public function setPaymentLink($paymentLink)
     {
         $this->paymentLink = $paymentLink;
+
         return $this;
     }
 }

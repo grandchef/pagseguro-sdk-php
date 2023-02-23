@@ -4,7 +4,6 @@ namespace PagSeguro\Domains\Requests\Sender;
 
 trait Document
 {
-
     private $document;
 
     public function getDocument()
@@ -15,6 +14,7 @@ trait Document
     public function setDocument()
     {
         $this->document = new \PagSeguro\Resources\Factory\Sender\Document($this->sender);
+
         return $this->document;
     }
 }

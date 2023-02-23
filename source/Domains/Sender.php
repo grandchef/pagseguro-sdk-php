@@ -3,26 +3,15 @@
 namespace PagSeguro\Domains;
 
 /** Class Sender
- * @package PagSeguro\Domains
  */
 class Sender
 {
-
-    /**
-     * @var
-     */
     private $name;
-    /**
-     * @var
-     */
+
     private $email;
-    /**
-     * @var
-     */
+
     private $phone;
-    /**
-     * @var
-     */
+
     private $documents;
 
     /**
@@ -42,12 +31,13 @@ class Sender
     }
 
     /**
-     * @param string $name
+     * @param  string  $name
      * @return Sender
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -60,17 +50,18 @@ class Sender
     }
 
     /**
-     * @param string $email
+     * @param  string  $email
      * @return Sender
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
         return $this;
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getPhone()
     {
@@ -78,12 +69,12 @@ class Sender
     }
 
     /**
-     * @param Phone $phone
      * @return Sender
      */
     public function setPhone(Phone $phone)
     {
         $this->phone = $phone;
+
         return $this;
     }
 
@@ -96,12 +87,12 @@ class Sender
     }
 
     /**
-     * @param Document $document
      * @return $this
      */
     public function setDocuments(Document $document)
     {
         $this->documents[] = $document;
+
         return $this;
     }
 

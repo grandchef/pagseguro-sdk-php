@@ -6,29 +6,17 @@ use PagSeguro\Domains\Account;
 use PagSeguro\Domains\Permission;
 
 /** Class Response
- * @package PagSeguro\Parsers\Authorization\Search
  */
 class Response
 {
-    /**
-     * @var
-     */
     private $code;
-    /**
-     * @var
-     */
+
     private $creationDate;
-    /**
-     * @var
-     */
+
     private $reference;
-    /**
-     * @var
-     */
+
     private $account;
-    /**
-     * @var
-     */
+
     private $permissions;
 
     /**
@@ -40,13 +28,14 @@ class Response
     }
 
     /**
-     * @param mixed $account
+     * @param  mixed  $account
      * @return Response
      */
     public function setAccount($account)
     {
         $this->account = new Account();
         $this->account->setPublicKey($account);
+
         return $this;
     }
 
@@ -59,12 +48,13 @@ class Response
     }
 
     /**
-     * @param mixed $code
+     * @param  mixed  $code
      * @return Response
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -77,12 +67,13 @@ class Response
     }
 
     /**
-     * @param mixed $creationDate
+     * @param  mixed  $creationDate
      * @return Response
      */
     public function setCreationDate($creationDate)
     {
         $this->creationDate = $creationDate;
+
         return $this;
     }
 
@@ -95,7 +86,7 @@ class Response
     }
 
     /**
-     * @param mixed $permissions
+     * @param  mixed  $permissions
      * @return Response
      */
     public function setPermissions($permissions)
@@ -109,6 +100,7 @@ class Response
                 }
             }
         }
+
         return $this;
     }
 
@@ -118,6 +110,7 @@ class Response
         $permission->setCode(current($parameter->code))
             ->setStatus(current($parameter->status))
             ->setLastUpdate(current($parameter->lastUpdate));
+
         return $permission;
     }
 
@@ -130,12 +123,13 @@ class Response
     }
 
     /**
-     * @param mixed $reference
+     * @param  mixed  $reference
      * @return Response
      */
     public function setReference($reference)
     {
         $this->reference = $reference;
+
         return $this;
     }
 }

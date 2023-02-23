@@ -8,12 +8,10 @@ use PagSeguro\Parsers\Parser;
 use PagSeguro\Resources\Http;
 
 /** Class PaymentParser
- * @package PagSeguro\Parsers\DirectPreApproval
  */
 class PaymentParser extends Error implements Parser
 {
     /**
-     * @param Payment $directPreApproval
      * @return array
      */
     public static function getData(Payment $directPreApproval)
@@ -22,7 +20,6 @@ class PaymentParser extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed
      */
     public static function success(Http $http)
@@ -33,7 +30,6 @@ class PaymentParser extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed|\PagSeguro\Domains\Error
      */
     public static function error(Http $http)

@@ -15,14 +15,14 @@ class Payment
 {
     public static function create(Credentials $credentials, PreApproval $preApproval)
     {
-        Logger::info("Begin", ['service' => 'PreApproval']);
+        Logger::info('Begin', ['service' => 'PreApproval']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http();
-            Logger::info(sprintf("POST: %s", self::request($connection)), ['service' => 'PreApproval']);
+            Logger::info(sprintf('POST: %s', self::request($connection)), ['service' => 'PreApproval']);
             Logger::info(
                 sprintf(
-                    "Params: %s",
+                    'Params: %s',
                     json_encode(Crypto::encrypt(Request::getData($preApproval)))
                 ),
                 ['service' => 'PreApproval']
@@ -40,9 +40,10 @@ class Payment
                 new Request
             );
             Logger::info(
-                sprintf("PreApproval URL: %s", self::response($connection, $response)),
+                sprintf('PreApproval URL: %s', self::response($connection, $response)),
                 ['service' => 'PreApproval']
             );
+
             return self::response($connection, $response);
         } catch (\Exception $exception) {
             Logger::error($exception->getMessage(), ['service' => 'PreApproval']);
@@ -51,21 +52,18 @@ class Payment
     }
 
     /**
-     * @param Connection\Data $connection
      * @return string
      */
     private static function request(Connection\Data $connection)
     {
-        return $connection->buildPreApprovalRequestUrl() . "?" . $connection->buildCredentialsQuery();
+        return $connection->buildPreApprovalRequestUrl().'?'.$connection->buildCredentialsQuery();
     }
 
     /**
-     * @param Connection\Data $connection
-     * @param $response
      * @return string
      */
     private static function response(Connection\Data $connection, $response)
     {
-        return $connection->buildPreApprovalResponseUrl() . "?code=" . $response->getCode();
+        return $connection->buildPreApprovalResponseUrl().'?code='.$response->getCode();
     }
 }

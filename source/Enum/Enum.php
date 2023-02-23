@@ -3,7 +3,6 @@
 namespace PagSeguro\Enum;
 
 /** Class Enum
- * @package PagSeguro\Enum
  */
 class Enum extends BaseEnum
 {
@@ -13,11 +12,11 @@ class Enum extends BaseEnum
     public static function getList()
     {
         $reflection = new \ReflectionClass(get_called_class());
+
         return $reflection->getConstants();
     }
 
     /**
-     * @param $key
      * @return string
      */
     public static function getType($key)
@@ -31,12 +30,12 @@ class Enum extends BaseEnum
     }
 
     /**
-     * @param $value
      * @return bool
      */
     public static function getValue($value)
     {
         $values = array_values(parent::getConstants());
+
         return in_array($value, $values, true);
     }
 }

@@ -27,6 +27,7 @@ class StringFormat
     public static function formatString($string, $limit, $endchars = '...')
     {
         $string = self::removeStringExtraSpaces($string);
+
         return self::truncateValue($string, $limit, $endchars);
     }
 
@@ -37,7 +38,7 @@ class StringFormat
      */
     public static function removeStringExtraSpaces($string)
     {
-        return trim(preg_replace("/( +)/", " ", $string));
+        return trim(preg_replace('/( +)/', ' ', $string));
     }
 
     /***
@@ -49,15 +50,16 @@ class StringFormat
      */
     public static function truncateValue($string, $limit, $endchars = '...')
     {
-        if (!is_array($string) && !is_object($string)) {
+        if (! is_array($string) && ! is_object($string)) {
             $stringLength = strlen($string);
             $endcharsLength = strlen($endchars);
 
-            if ($stringLength > (int)$limit) {
-                $cut = (int)($limit - $endcharsLength);
-                $string = substr($string, 0, $cut) . $endchars;
+            if ($stringLength > (int) $limit) {
+                $cut = (int) ($limit - $endcharsLength);
+                $string = substr($string, 0, $cut).$endchars;
             }
         }
+
         return $string;
     }
 }

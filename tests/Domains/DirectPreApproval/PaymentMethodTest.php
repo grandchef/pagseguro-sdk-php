@@ -2,8 +2,8 @@
 
 namespace PagSeguro\Tests;
 
-use PHPUnit\Framework\TestCase;
 use PagSeguro\Domains\DirectPreApproval\PaymentMethod;
+use PHPUnit\Framework\TestCase;
 
 class PaymentMethodTest extends TestCase
 {

@@ -5,7 +5,6 @@ namespace PagSeguro\Resources\Factory;
 use PagSeguro\Enum\Properties\Current;
 
 /** Class Shipping
- * @package PagSeguro\Resources\Factory\Request
  */
 class Item
 {
@@ -23,7 +22,6 @@ class Item
     }
 
     /**
-     * @param \PagSeguro\Domains\Item $item
      * @return \PagSeguro\Domains\Item
      */
     public function instance(\PagSeguro\Domains\Item $item)
@@ -32,7 +30,6 @@ class Item
     }
 
     /**
-     * @param $array
      * @return array
      */
     public function withArray($array)
@@ -48,16 +45,13 @@ class Item
             ->setShippingCost($array[$properties::ITEM_SHIPPING_COST]);
 
         array_push($this->item, $item);
+
         return $this->item;
     }
 
     /**
-     * @param $id
-     * @param $description
-     * @param $quantity
-     * @param $amount
-     * @param null $weight
-     * @param null $shippingCost
+     * @param  null  $weight
+     * @param  null  $shippingCost
      * @return array
      */
     public function withParameters(
@@ -76,6 +70,7 @@ class Item
             ->setWeight($weight)
             ->setShippingCost($shippingCost);
         array_push($this->item, $item);
+
         return $this->item;
     }
 }

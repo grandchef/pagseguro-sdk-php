@@ -3,7 +3,6 @@
 namespace PagSeguro\Enum\PaymentMethod\Config;
 
 /** Class Keys
- * @package PagSeguro\Enum\PaymentMethod\Config
  */
 class Keys
 {

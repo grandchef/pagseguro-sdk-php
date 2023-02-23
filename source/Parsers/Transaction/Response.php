@@ -10,7 +10,6 @@ use PagSeguro\Parsers\Response\Sender;
 use PagSeguro\Parsers\Response\Shipping;
 
 /** Class Response
- * @package PagSeguro\Parsers\Transaction
  */
 class Response
 {
@@ -21,44 +20,27 @@ class Response
     use Sender;
     use Shipping;
 
-    /**
-     * @var
-     */
     private $date;
-    /**
-     * @var
-     */
+
     private $code;
-    /**
-     * @var
-     */
+
     private $reference;
-    /**
-     * @var
-     */
+
     private $type;
-    /**
-     * @var
-     */
+
     private $status;
-    /**
-     * @var
-     */
+
     private $lastEventDate;
-    /**
-     * @var
-     */
+
     private $installmentCount;
 
     /**
      * Only present when the status = 7
+     *
      * @var string
      */
     private $cancelationSource;
 
-    /**
-     * @var
-     */
     private $promoCode;
 
     public function getCancelationSource()
@@ -69,6 +51,7 @@ class Response
     public function setCancelationSource($cancelationSource)
     {
         $this->cancelationSource = $cancelationSource;
+
         return $this;
     }
 
@@ -81,12 +64,13 @@ class Response
     }
 
     /**
-     * @param mixed $installmentCount
+     * @param  mixed  $installmentCount
      * @return Response
      */
     public function setInstallmentCount($installmentCount)
     {
         $this->installmentCount = $installmentCount;
+
         return $this;
     }
 
@@ -99,12 +83,13 @@ class Response
     }
 
     /**
-     * @param mixed $code
+     * @param  mixed  $code
      * @return Response
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -117,12 +102,13 @@ class Response
     }
 
     /**
-     * @param mixed $date
+     * @param  mixed  $date
      * @return Response
      */
     public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 
@@ -135,12 +121,13 @@ class Response
     }
 
     /**
-     * @param mixed $lastEventDate
+     * @param  mixed  $lastEventDate
      * @return Response
      */
     public function setLastEventDate($lastEventDate)
     {
         $this->lastEventDate = $lastEventDate;
+
         return $this;
     }
 
@@ -153,12 +140,13 @@ class Response
     }
 
     /**
-     * @param mixed $reference
+     * @param  mixed  $reference
      * @return Response
      */
     public function setReference($reference)
     {
         $this->reference = $reference;
+
         return $this;
     }
 
@@ -171,12 +159,13 @@ class Response
     }
 
     /**
-     * @param mixed $status
+     * @param  mixed  $status
      * @return Response
      */
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -189,12 +178,13 @@ class Response
     }
 
     /**
-     * @param mixed $type
+     * @param  mixed  $type
      * @return Response
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 
@@ -207,12 +197,13 @@ class Response
     }
 
     /**
-     * @param mixed $installmentCount
+     * @param  mixed  $installmentCount
      * @return Response
      */
     public function setPromoCode($promoCode)
     {
         $this->promoCode = $promoCode;
+
         return $this;
     }
 }

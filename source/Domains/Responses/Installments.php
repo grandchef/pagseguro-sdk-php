@@ -6,10 +6,6 @@ namespace PagSeguro\Domains\Responses;
  */
 class Installments
 {
-    /**
-     *
-     * @var
-     */
     private $installments;
 
     /**
@@ -21,7 +17,7 @@ class Installments
     }
 
     /**
-     * @param  PagSeguro\Domains\Responses\Installment $installments
+     * @param  PagSeguro\Domains\Responses\Installment  $installments
      */
     public function setInstallments($installments)
     {
@@ -37,7 +33,7 @@ class Installments
     }
 
     /**
-     * @param PagSeguro\Domains\Responses\Installment $installment
+     * @param  PagSeguro\Domains\Responses\Installment  $installment
      */
     private function addInstallment($installment)
     {

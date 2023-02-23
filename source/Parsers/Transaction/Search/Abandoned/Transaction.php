@@ -5,18 +5,11 @@ namespace PagSeguro\Parsers\Transaction\Search\Abandoned;
 use PagSeguro\Parsers\Transaction\Search\Transactions;
 
 /** Class Transaction
- * @package PagSeguro\Parsers\Transaction\Search\Abandoned
  */
 class Transaction extends Transactions
 {
-    /**
-     * @var
-     */
     private $recoveryCode;
 
-    /**
-     * @var
-     */
     private $grossAmount;
 
     /**
@@ -28,12 +21,13 @@ class Transaction extends Transactions
     }
 
     /**
-     * @param mixed $grossAmount
+     * @param  mixed  $grossAmount
      * @return Transaction
      */
     public function setGrossAmount($grossAmount)
     {
         $this->grossAmount = $grossAmount;
+
         return $this;
     }
 
@@ -46,12 +40,13 @@ class Transaction extends Transactions
     }
 
     /**
-     * @param mixed $recoveryCode
+     * @param  mixed  $recoveryCode
      * @return Transaction
      */
     public function setRecoveryCode($recoveryCode)
     {
         $this->recoveryCode = $recoveryCode;
+
         return $this;
     }
 }

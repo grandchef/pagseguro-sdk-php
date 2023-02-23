@@ -3,14 +3,11 @@
 namespace PagSeguro\Domains\Http;
 
 /** Class Status
- * @package PagSeguro\Domains\Http
  */
 class Status
 {
-
     /**
-     * @param $status
-     * @return integer
+     * @return int
      */
     public function getStatus($status)
     {
@@ -18,7 +15,6 @@ class Status
     }
 
     /**
-     * @param $type
      * @return string
      */
     public function getType($type)

@@ -6,23 +6,23 @@ use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /** Class QueryNotificationRequest
  *
- * @package PagSeguro\Domains\Requests\DirectPreApproval
  */
 class QueryNotificationRequest
 {
     use ParserTrait;
+
     /**
      * @var int
      */
     public $page;
+
     /**
      * @var int
      */
     public $maxPageResults;
-    /**
-     * @var
-     */
+
     public $interval;
+
     /**
      * @var null
      */
@@ -31,14 +31,13 @@ class QueryNotificationRequest
     /**
      * QueryNotificationRequest constructor.
      *
-     * @param int  $page
-     * @param int  $maxPageResults
-     * @param      $interval
-     * @param null $notificationCode
+     * @param  int  $page
+     * @param  int  $maxPageResults
+     * @param  null  $notificationCode
      */
     public function __construct(
-        $page = 1,
-        $maxPageResults = 50,
+        $page,
+        $maxPageResults,
         $interval,
         $notificationCode = null
     ) {

@@ -3,7 +3,6 @@
 namespace PagSeguro\Domains;
 
 /** Class Item
- * @package PagSeguro\Domains
  */
 class Item
 {
@@ -11,29 +10,34 @@ class Item
      * Product identifier, such as SKU
      */
     private $id;
+
     /***
      * Product description
      */
     private $description;
+
     /***
      * Quantity
      */
     private $quantity;
+
     /***
      * Product unit price
      */
     private $amount;
+
     /***
      * Single unit weight, in grams
      */
     private $weight;
+
     /***
      * Single unit shipping cost
      */
     private $shippingCost;
 
     /**
-     * @return double
+     * @return float
      */
     public function getAmount()
     {
@@ -41,12 +45,13 @@ class Item
     }
 
     /**
-     * @param double $amount
+     * @param  float  $amount
      * @return $this
      */
     public function setAmount($amount)
     {
         $this->amount = $amount;
+
         return $this;
     }
 
@@ -59,12 +64,13 @@ class Item
     }
 
     /**
-     * @param string $description
+     * @param  string  $description
      * @return $this
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -77,17 +83,18 @@ class Item
     }
 
     /**
-     * @param string $id
+     * @param  string  $id
      * @return $this
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getQuantity()
     {
@@ -95,17 +102,18 @@ class Item
     }
 
     /**
-     * @param integer $quantity
+     * @param  int  $quantity
      * @return $this
      */
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
+
         return $this;
     }
 
     /**
-     * @return double
+     * @return float
      */
     public function getShippingCost()
     {
@@ -113,12 +121,13 @@ class Item
     }
 
     /**
-     * @param double $shippingCost
+     * @param  float  $shippingCost
      * @return $this
      */
     public function setShippingCost($shippingCost)
     {
         $this->shippingCost = $shippingCost;
+
         return $this;
     }
 
@@ -131,12 +140,13 @@ class Item
     }
 
     /**
-     * @param float $weight
+     * @param  float  $weight
      * @return $this
      */
     public function setWeight($weight)
     {
         $this->weight = $weight;
+
         return $this;
     }
 }

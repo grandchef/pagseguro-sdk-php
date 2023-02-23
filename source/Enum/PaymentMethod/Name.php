@@ -3,147 +3,146 @@
 namespace PagSeguro\Enum\PaymentMethod;
 
 /** Class Name
- * @package PagSeguro\Enum\PaymentMethod
  */
 class Name
 {
     /**
      * Débito Bradesco
      */
-    const DEBITO_BRADESCO = "DEBITO_BRADESCO";
+    const DEBITO_BRADESCO = 'DEBITO_BRADESCO';
 
     /**
      * Débito Itaú
      */
-    const DEBITO_ITAU = "DEBITO_ITAU";
+    const DEBITO_ITAU = 'DEBITO_ITAU';
 
     /**
      * Débito Unibanco
      */
-    const DEBITO_UNIBANCO = "DEBITO_UNIBANCO";
+    const DEBITO_UNIBANCO = 'DEBITO_UNIBANCO';
 
     /**
      * Débito Banco do Brasil
      */
-    const DEBITO_BANCO_BRASIL = "DEBITO_BANCO_BRASIL";
+    const DEBITO_BANCO_BRASIL = 'DEBITO_BANCO_BRASIL';
 
     /**
      * Débito Barisul
      */
-    const DEBITO_BANRISUL = "DEBITO_BANRISUL";
+    const DEBITO_BANRISUL = 'DEBITO_BANRISUL';
 
     /**
      * Boleto
      */
-    const BOLETO = "BOLETO";
+    const BOLETO = 'BOLETO';
 
     /**
      * Bandeira Visa
      */
-    const VISA = "VISA";
+    const VISA = 'VISA';
 
     /**
      * Bandeira Mastercard
      */
-    const MASTERCARD = "MASTERCARD";
+    const MASTERCARD = 'MASTERCARD';
 
     /**
      * Bandeira Amex
      */
-    const AMEX = "AMEX";
+    const AMEX = 'AMEX';
 
     /**
      * Bandeira Diners
      */
-    const DINERS = "DINERS";
+    const DINERS = 'DINERS';
 
     /**
      * Bandeira Hipercard
      */
-    const HIPERCARD = "HIPERCARD";
+    const HIPERCARD = 'HIPERCARD';
 
     /**
      * Bandeira Aura
      */
-    const AURA = "AURA";
+    const AURA = 'AURA';
 
     /**
      * Bandeira Elo
      */
-    const ELO = "ELO";
+    const ELO = 'ELO';
 
     /**
      * Bandeira PlenoCard
      */
-    const PLENOCARD = "PLENOCARD";
+    const PLENOCARD = 'PLENOCARD';
 
     /**
      * Bandeira Bandeira PersonalCard
      */
-    const PERSONALCARD = "PERSONALCARD";
+    const PERSONALCARD = 'PERSONALCARD';
 
     /**
      * Bandeira JCB
      */
-    const JCB = "JCB";
+    const JCB = 'JCB';
 
     /**
      * Bandeira Discover
      */
-    const DISCOVER = "DISCOVER";
+    const DISCOVER = 'DISCOVER';
 
     /**
      * Bandeira BrasilCard
      */
-    const BRASILCARD = "BRASILCARD";
+    const BRASILCARD = 'BRASILCARD';
 
     /**
      * Bandeira FortBrasil
      */
-    const FORTBRASIL = "FORTBRASIL";
+    const FORTBRASIL = 'FORTBRASIL';
 
     /**
      * Bandeira CardBAN
      */
-    const CARDBAN = "CARDBAN";
+    const CARDBAN = 'CARDBAN';
 
     /**
      * Bandeira ValeCard
      */
-    const VALECARD = "VALECARD";
+    const VALECARD = 'VALECARD';
 
     /**
      * Bandeira Cabal
      */
-    const CABAL = "CABAL";
+    const CABAL = 'CABAL';
 
     /**
      * Bandeira MAIS
      */
-    const MAIS = "MAIS";
+    const MAIS = 'MAIS';
 
     /**
      * Bandeira Avista
      */
-    const AVISTA = "AVISTA";
+    const AVISTA = 'AVISTA';
 
     /**
      * Bandeira Grandcard
      */
-    const GRANDCARD = "GRANDCARD";
+    const GRANDCARD = 'GRANDCARD';
 
     /**
      * Bandeira Sorocred
      */
-    const SOROCRED = "SOROCRED";
+    const SOROCRED = 'SOROCRED';
 
     /**
      * Bandeira BaneseCard
      */
-    const BANESECARD = "BANESECARD";
+    const BANESECARD = 'BANESECARD';
 
     /**
      * Bandeira UpBrasil
      */
-    const UPBRASIL = "UPBRASIL";
+    const UPBRASIL = 'UPBRASIL';
 }

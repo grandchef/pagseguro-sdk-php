@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class Status
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class Status extends Builder
 {

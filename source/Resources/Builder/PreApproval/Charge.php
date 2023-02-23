@@ -5,11 +5,9 @@ namespace PagSeguro\Resources\Builder\PreApproval;
 use PagSeguro\Resources\Builder;
 
 /** Class Payment
- * @package PagSeguro\Resources\Builder
  */
 class Charge extends Builder
 {
-
     /**
      * @return string
      */

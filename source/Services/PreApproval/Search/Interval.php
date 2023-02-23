@@ -10,25 +10,24 @@ use PagSeguro\Resources\Log\Logger;
 use PagSeguro\Resources\Responsibility;
 
 /** Class Payment
- * @package PagSeguro\Services\Checkout
  */
 class Interval
 {
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
      * @param $code
      * @return string
+     *
      * @throws \Exception
      */
     public static function search(Credentials $credentials, $days)
     {
-        Logger::info("Begin", ['service' => 'PreApproval.Search.Interval']);
+        Logger::info('Begin', ['service' => 'PreApproval.Search.Interval']);
 
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http();
             Logger::info(
-                sprintf("GET: %s", self::request($connection, $days)),
+                sprintf('GET: %s', self::request($connection, $days)),
                 ['service' => 'PreApproval.Search.Interval']
             );
             $http->get(
@@ -44,13 +43,14 @@ class Interval
 
             Logger::info(
                 sprintf(
-                    "Date: %s, Results in this page: %s, Total pages: %s",
+                    'Date: %s, Results in this page: %s, Total pages: %s',
                     $response->getDate(),
                     $response->getResultsInThisPage(),
                     $response->getTotalPages()
                 ),
                 ['service' => 'PreApproval.Search.Interval']
             );
+
             return $response;
         } catch (\Exception $exception) {
             Logger::error($exception->getMessage(), ['service' => 'PreApproval.Search.Interval']);
@@ -59,14 +59,12 @@ class Interval
     }
 
     /**
-     * @param Connection\Data $connection
-     * @param $days
      * @return string
      */
     private static function request(Connection\Data $connection, $days)
     {
         return sprintf(
-            "%s/?%s&interval=%s",
+            '%s/?%s&interval=%s',
             $connection->buildNotificationPreApprovalRequestUrl(),
             $connection->buildCredentialsQuery(),
             $days

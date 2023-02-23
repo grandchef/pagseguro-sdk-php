@@ -2,8 +2,8 @@
 
 namespace PagSeguro\Tests;
 
-use PHPUnit\Framework\TestCase;
 use PagSeguro\Domains\DirectPreApproval\Item;
+use PHPUnit\Framework\TestCase;
 
 class ItemTest extends TestCase
 {

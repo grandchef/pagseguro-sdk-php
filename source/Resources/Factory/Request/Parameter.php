@@ -27,7 +27,7 @@ class Parameter
 
         array_push($this->parameter, $parameter);
 
-        if (!empty($array[2])) {
+        if (! empty($array[2])) {
             return $this->index($array[2]);
         }
 
@@ -40,12 +40,14 @@ class Parameter
         $parameter->setKey($key)
             ->setValue($value);
         array_push($this->parameter, $parameter);
+
         return $this;
     }
 
     public function index($index)
     {
         end($this->parameter)->setIndex($index);
+
         return $this->parameter;
     }
 }

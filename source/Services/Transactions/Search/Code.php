@@ -10,26 +10,24 @@ use PagSeguro\Resources\Log\Logger;
 use PagSeguro\Resources\Responsibility;
 
 /** Class Payment
- * @package PagSeguro\Services\Checkout
  */
 class Code
 {
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
-     * @param $code
      * @return string
+     *
      * @throws \Exception
      */
     public static function search(Credentials $credentials, $code)
     {
-        Logger::info("Begin", ['service' => 'Transactions.Search.Code']);
+        Logger::info('Begin', ['service' => 'Transactions.Search.Code']);
 
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http();
             Logger::info(
                 sprintf(
-                    "GET: %s",
+                    'GET: %s',
                     self::request($connection, $code)
                 ),
                 ['service' => 'Transactions.Search.Code']
@@ -47,12 +45,13 @@ class Code
 
             Logger::info(
                 sprintf(
-                    "Date: %s, Code: %s",
+                    'Date: %s, Code: %s',
                     $response->getDate(),
                     $response->getCode()
                 ),
                 ['service' => 'Transactions.Search.Code']
             );
+
             return $response;
         } catch (\Exception $exception) {
             Logger::error($exception->getMessage(), ['service' => 'Transactions.Search.Code']);
@@ -61,13 +60,12 @@ class Code
     }
 
     /**
-     * @param Connection\Data $connection
      * @return string
      */
     private static function request(Connection\Data $connection, $code)
     {
         return sprintf(
-            "%s/%s/?%s",
+            '%s/%s/?%s',
             $connection->buildTransactionSearchRequestUrl(),
             $code,
             $connection->buildCredentialsQuery()

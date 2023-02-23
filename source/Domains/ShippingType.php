@@ -3,14 +3,9 @@
 namespace PagSeguro\Domains;
 
 /** Class ShippingType
- * @package PagSeguro\Domains
  */
 class ShippingType
 {
-
-    /**
-     * @var
-     */
     private $type;
 
     /**
@@ -22,7 +17,7 @@ class ShippingType
     }
 
     /**
-     * @param string $type
+     * @param  string  $type
      */
     public function setType($type)
     {

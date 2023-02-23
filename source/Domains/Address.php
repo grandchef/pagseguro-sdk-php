@@ -4,54 +4,27 @@ namespace PagSeguro\Domains;
 
 /** Class Address
  *
- * @package PagSeguro\Domains
  */
 class Address
 {
-    /**
-     * @var
-     */
     private $street;
-    /**
-     * @var
-     */
+
     private $number;
-    /**
-     * @var
-     */
+
     private $complement;
-    /**
-     * @var
-     */
+
     private $district;
-    /**
-     * @var
-     */
+
     private $postalCode;
-    /**
-     * @var
-     */
+
     private $city;
-    /**
-     * @var
-     */
+
     private $state;
-    /**
-     * @var
-     */
+
     private $country;
 
     /**
      * Address constructor.
-     *
-     * @param $street
-     * @param $number
-     * @param $complement
-     * @param $district
-     * @param $postalCode
-     * @param $city
-     * @param $state
-     * @param $country
      */
     public function __construct(
         $street = null,
@@ -82,8 +55,6 @@ class Address
     }
 
     /**
-     * @param $city
-     *
      * @return $this
      */
     public function setCity($city)
@@ -102,8 +73,6 @@ class Address
     }
 
     /**
-     * @param $complement
-     *
      * @return $this
      */
     public function setComplement($complement)
@@ -122,8 +91,6 @@ class Address
     }
 
     /**
-     * @param $country
-     *
      * @return $this
      */
     public function setCountry($country)
@@ -142,8 +109,6 @@ class Address
     }
 
     /**
-     * @param $district
-     *
      * @return $this
      */
     public function setDistrict($district)
@@ -162,8 +127,6 @@ class Address
     }
 
     /**
-     * @param $number
-     *
      * @return $this
      */
     public function setNumber($number)
@@ -182,8 +145,6 @@ class Address
     }
 
     /**
-     * @param $postalCode
-     *
      * @return $this
      */
     public function setPostalCode($postalCode)
@@ -202,8 +163,6 @@ class Address
     }
 
     /**
-     * @param $state
-     *
      * @return $this
      */
     public function setState($state)
@@ -222,8 +181,6 @@ class Address
     }
 
     /**
-     * @param $street
-     *
      * @return $this
      */
     public function setStreet($street)

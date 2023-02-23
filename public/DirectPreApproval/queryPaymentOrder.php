@@ -1,10 +1,10 @@
 <?php
 
-require_once "../../vendor/autoload.php";
+require_once '../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\PagSeguro\Library::cmsVersion()->setName('Nome')->setRelease('1.0.0');
+\PagSeguro\Library::moduleVersion()->setName('Nome')->setRelease('1.0.0');
 /**  Para usa o ambiente de testes (sandbox) descomentar a linha abaixo
  */
 //\PagSeguro\Configuration\Configure::setEnvironment('sandbox');
@@ -24,6 +24,5 @@ try {
     echo '<pre>';
     print_r($response);
 } catch (Exception $e) {
-    die($e->getMessage());
+    exit($e->getMessage());
 }
-

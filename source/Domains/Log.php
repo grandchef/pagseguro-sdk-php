@@ -4,13 +4,8 @@ namespace PagSeguro\Domains;
 
 class Log
 {
-    /**
-     * @var
-     */
     private $active;
-    /**
-     * @var
-     */
+
     private $location;
 
     /**
@@ -22,12 +17,12 @@ class Log
     }
 
     /**
-     * @param $active
      * @return $this
      */
     public function setActive($active)
     {
         $this->active = $active;
+
         return $this;
     }
 
@@ -40,12 +35,12 @@ class Log
     }
 
     /**
-     * @param $location
      * @return $this
      */
     public function setLocation($location)
     {
         $this->location = $location;
+
         return $this;
     }
 }

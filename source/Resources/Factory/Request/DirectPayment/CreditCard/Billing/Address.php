@@ -5,11 +5,9 @@ namespace PagSeguro\Resources\Factory\Request\DirectPayment\CreditCard\Billing;
 use PagSeguro\Enum\Properties\Current;
 
 /** Class Shipping
- * @package PagSeguro\Resources\Factory\Request
  */
 class Address
 {
-
     /**
      * @var \PagSeguro\Domains\DirectPayment\CreditCard\Billing
      */
@@ -17,7 +15,6 @@ class Address
 
     /**
      * Shipping constructor.
-     * @param $billing
      */
     public function __construct($billing)
     {
@@ -25,17 +22,16 @@ class Address
     }
 
     /**
-     * @param \PagSeguro\Domains\Address $address
      * @return \PagSeguro\Domains\DirectPayment\CreditCard\Billing
      */
     public function instance(\PagSeguro\Domains\Address $address)
     {
         $this->billing->setAddress($address);
+
         return $this->billing;
     }
 
     /**
-     * @param $array
      * @return \PagSeguro\Domains\DirectPayment\CreditCard\Billing
      */
     public function withArray($array)
@@ -51,18 +47,12 @@ class Address
             ->setState($array[$properties::SHIPPING_ADDRESS_STATE])
             ->setCountry($array[$properties::SHIPPING_ADDRESS_COUNTRY]);
         $this->billing->setAddress($address);
+
         return $this->billing;
     }
 
     /**
-     * @param $street
-     * @param $number
-     * @param null $complement
-     * @param $district
-     * @param $postalCode
-     * @param $city
-     * @param $state
-     * @param $country
+     * @param  null  $complement
      * @return \PagSeguro\Domains\DirectPayment\CreditCard\Billing
      */
     public function withParameters(
@@ -85,6 +75,7 @@ class Address
             ->setState($state)
             ->setCountry($country);
         $this->billing->setAddress($address);
+
         return $this->billing;
     }
 }

@@ -3,17 +3,11 @@
 namespace PagSeguro\Domains\Responses;
 
 /** Class PaymentMethod
- * @package PagSeguro\Domains
  */
 class PaymentMethod
 {
-    /**
-     * @var
-     */
     private $code;
-    /**
-     * @var
-     */
+
     private $type;
 
     /**
@@ -25,12 +19,13 @@ class PaymentMethod
     }
 
     /**
-     * @param mixed $code
+     * @param  mixed  $code
      * @return PaymentMethod
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -43,12 +38,13 @@ class PaymentMethod
     }
 
     /**
-     * @param mixed $type
+     * @param  mixed  $type
      * @return PaymentMethod
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 }

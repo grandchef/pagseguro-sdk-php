@@ -13,7 +13,6 @@ use PagSeguro\Parsers\Sender;
 use PagSeguro\Resources\Http;
 
 /** Class Request
- * @package PagSeguro\Parsers\PreApproval
  */
 class Request extends Error implements Parser
 {
@@ -22,13 +21,13 @@ class Request extends Error implements Parser
     use Sender;
 
     /**
-     * @param Requests $request
      * @return array
      */
     public static function getData(Requests $request)
     {
         $data = [];
         $properties = new Current;
+
         return array_merge(
             $data,
             Basic::getData($request, $properties),
@@ -39,23 +38,23 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed|Response
      */
     public static function success(Http $http)
     {
         $xml = simplexml_load_string($http->getResponse());
+
         return (new Response)->setCode(current($xml->code))
             ->setDate(current($xml->date));
     }
 
     /**
-     * @param Http $http
      * @return mixed|\PagSeguro\Domains\Error
      */
     public static function error(Http $http)
     {
         $error = parent::error($http);
+
         return $error;
     }
 }

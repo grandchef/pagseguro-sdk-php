@@ -11,6 +11,7 @@ class Extensible implements Handler
     public function successor($next)
     {
         $this->successor = $next;
+
         return $this;
     }
 
@@ -25,7 +26,7 @@ class Extensible implements Handler
                 $this->log()
             );
         }
-        throw new \InvalidArgumentException("Configuration not found.");
+        throw new \InvalidArgumentException('Configuration not found.');
     }
 
     private function environment()
@@ -33,7 +34,7 @@ class Extensible implements Handler
         return [
             'environment' => current(
                 simplexml_load_file(PS_CONFIG)->environment
-            )
+            ),
         ];
     }
 
@@ -41,28 +42,29 @@ class Extensible implements Handler
     {
         //Loading XML configuration file.
         $xml = simplexml_load_file(PS_CONFIG)->credentials;
+
         return [
             'credentials' => [
                 'email' => current($xml->account->email),
                 'token' => [
                     'environment' => [
                         'production' => current($xml->account->production->token),
-                        'sandbox' => current($xml->account->sandbox->token)
-                    ]
+                        'sandbox' => current($xml->account->sandbox->token),
+                    ],
                 ],
                 'appId' => [
                     'environment' => [
                         'production' => current($xml->application->production->appId),
-                        'sandbox' => current($xml->application->sandbox->appId)
-                    ]
+                        'sandbox' => current($xml->application->sandbox->appId),
+                    ],
                 ],
                 'appKey' => [
                     'environment' => [
                         'production' => current($xml->application->production->appKey),
-                        'sandbox' => current($xml->application->sandbox->appKey)
-                    ]
-                ]
-            ]
+                        'sandbox' => current($xml->application->sandbox->appKey),
+                    ],
+                ],
+            ],
         ];
     }
 
@@ -71,7 +73,7 @@ class Extensible implements Handler
         return [
             'charset' => current(
                 simplexml_load_file(PS_CONFIG)->charset
-            )
+            ),
         ];
     }
 
@@ -79,11 +81,12 @@ class Extensible implements Handler
     {
         //Loading XML configuration file.
         $xml = simplexml_load_file(PS_CONFIG)->log;
+
         return [
             'log' => [
                 'active' => current($xml->active),
-                'location' => current($xml->location)
-            ]
+                'location' => current($xml->location),
+            ],
         ];
     }
 }

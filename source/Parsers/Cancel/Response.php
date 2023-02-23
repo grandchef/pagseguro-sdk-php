@@ -3,13 +3,9 @@
 namespace PagSeguro\Parsers\Cancel;
 
 /** Class Response
- * @package PagSeguro\Parsers\Cancel
  */
 class Response
 {
-    /**
-     * @var
-     */
     private $result;
 
     /**
@@ -21,7 +17,7 @@ class Response
     }
 
     /**
-     * @param mixed $result
+     * @param  mixed  $result
      * @return Response
      */
     public function setResult($result)

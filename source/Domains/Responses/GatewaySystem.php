@@ -3,18 +3,25 @@
 namespace PagSeguro\Domains\Responses;
 
 /** Class PaymentMethod
- * @package PagSeguro\Domains
  */
 class GatewaySystem
 {
     private $type;
+
     private $rawCode;
+
     private $rawMessage;
+
     private $normalizedCode;
+
     private $normalizedMessage;
+
     private $authorizationCode;
+
     private $nsu;
+
     private $tid;
+
     private $establishmentCode;
 
     public function getNsu()
@@ -30,12 +37,14 @@ class GatewaySystem
     public function setNsu($nsu)
     {
         $this->nsu = $nsu;
+
         return $this;
     }
 
     public function setTid($tid)
     {
         $this->tid = $tid;
+
         return $this;
     }
 
@@ -72,36 +81,42 @@ class GatewaySystem
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 
     public function setRawCode($rawCode)
     {
         $this->rawCode = $rawCode;
+
         return $this;
     }
 
     public function setRawMessage($rawMessage)
     {
         $this->rawMessage = $rawMessage;
+
         return $this;
     }
 
     public function setNormalizedCode($normalizedCode)
     {
         $this->normalizedCode = $normalizedCode;
+
         return $this;
     }
 
     public function setAuthorizationCode($authorizationCode)
     {
         $this->authorizationCode = $authorizationCode;
+
         return $this;
     }
 
     public function setEstablishmentCode($establishmentCode)
     {
         $this->establishmentCode = $establishmentCode;
+
         return $this;
     }
 
@@ -113,6 +128,7 @@ class GatewaySystem
     public function setNormalizedMessage($normalizedMessage)
     {
         $this->normalizedMessage = $normalizedMessage;
+
         return $this;
     }
 }

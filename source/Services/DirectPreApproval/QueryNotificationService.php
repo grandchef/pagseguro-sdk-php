@@ -12,28 +12,25 @@ use PagSeguro\Resources\Responsibility;
 
 /** Class QueryNotificationService
  *
- * @package PagSeguro\Services\DirectPreApproval
  */
 class QueryNotificationService
 {
     /**
-     * @param Credentials       $credentials
-     * @param QueryNotification $queryNotification
-     *
      * @return mixed
+     *
      * @throws \Exception
      */
     public static function create(Credentials $credentials, QueryNotification $queryNotification)
     {
-        Logger::info("Begin", ['service' => 'DirectPreApproval']);
+        Logger::info('Begin', ['service' => 'DirectPreApproval']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http('Content-Type: application/json;', 'Accept: application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1');
-            Logger::info(sprintf("GET: %s", self::request($connection, QueryNotificationParser::getData($queryNotification),
+            Logger::info(sprintf('GET: %s', self::request($connection, QueryNotificationParser::getData($queryNotification),
                 QueryNotificationParser::getNotificationCode($queryNotification))), ['service' => 'DirectPreApproval']);
             Logger::info(
                 sprintf(
-                    "Params: %s",
+                    'Params: %s',
                     json_encode(QueryNotificationParser::getData($queryNotification))
                 ),
                 ['service' => 'DirectPreApproval']
@@ -49,7 +46,7 @@ class QueryNotificationService
                 new QueryNotificationParser
             );
             Logger::info(
-                sprintf("DirectPreApproval URL: %s", json_encode(self::response($response))),
+                sprintf('DirectPreApproval URL: %s', json_encode(self::response($response))),
                 ['service' => 'DirectPreApproval']
             );
 
@@ -61,20 +58,16 @@ class QueryNotificationService
     }
 
     /**
-     * @param Connection\Data $connection
-     * @param null            $params
-     * @param null            $preApprovalCode
-     *
+     * @param  null  $params
+     * @param  null  $preApprovalCode
      * @return string
      */
     private static function request(Connection\Data $connection, $params = null, $preApprovalCode = null)
     {
-        return $connection->buildDirectPreApprovalQueryNotificationRequestUrl($preApprovalCode)."?".$connection->buildCredentialsQuery().($params ? '&'.$params : '');
+        return $connection->buildDirectPreApprovalQueryNotificationRequestUrl($preApprovalCode).'?'.$connection->buildCredentialsQuery().($params ? '&'.$params : '');
     }
 
     /**
-     * @param $response
-     *
      * @return mixed
      */
     private static function response($response)

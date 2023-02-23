@@ -1,6 +1,6 @@
 <?php
 
-require_once "../../../vendor/autoload.php";
+require_once '../../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
 
@@ -11,7 +11,7 @@ $options = [
     'max_per_page' => 20, //Optional
 ];
 
-$reference = "REF123";
+$reference = 'REF123';
 
 try {
     $response = \PagSeguro\Services\Application\Search\Reference::search(
@@ -20,8 +20,8 @@ try {
         $options
     );
 
-    echo "<pre>";
+    echo '<pre>';
     print_r($response);
 } catch (Exception $e) {
-    die($e->getMessage());
+    exit($e->getMessage());
 }

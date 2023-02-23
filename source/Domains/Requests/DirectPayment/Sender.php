@@ -10,7 +10,8 @@ trait Sender
 
     public function setSender()
     {
-        $this->sender =  InitializeObject::initialize($this->sender, '\PagSeguro\Domains\DirectPayment\Sender');
+        $this->sender = InitializeObject::initialize($this->sender, '\PagSeguro\Domains\DirectPayment\Sender');
+
         return new \PagSeguro\Domains\Requests\Adapter\DirectPayment\Sender($this->sender);
     }
 

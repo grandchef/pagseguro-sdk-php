@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class Accession
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class Accession extends Builder
 {

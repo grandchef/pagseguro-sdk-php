@@ -8,6 +8,6 @@ trait ChangePayment
 {
     public function buildDirectPreApprovalChangePaymentRequestUrl($preApprovalCode)
     {
-        return Builder\DirectPreApproval\ChangePayment::getChangePaymentUrl() . '/' . $preApprovalCode . '/payment-method';
+        return Builder\DirectPreApproval\ChangePayment::getChangePaymentUrl().'/'.$preApprovalCode.'/payment-method';
     }
 }

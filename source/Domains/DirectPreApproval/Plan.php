@@ -4,30 +4,22 @@ namespace PagSeguro\Domains\DirectPreApproval;
 
 /** Class Plan
  *
- * @package PagSeguro\Domains\DirectPreApproval
  */
 class Plan
 {
-    /**
-     * @var
-     */
     public $redirectURL;
-    /**
-     * @var
-     */
+
     public $reference;
+
     /**
      * @var PreApproval
      */
     public $preApproval;
-    /**
-     * @var
-     */
+
     public $reviewURL;
-    /**
-     * @var
-     */
+
     public $maxUsers;
+
     /**
      * @var Receiver
      */
@@ -42,18 +34,12 @@ class Plan
         $this->receiver = new Receiver();
     }
 
-    /**
-     * @param $redirectURL
-     */
     public function setRedirectURL($redirectURL)
     {
         $this->redirectURL = $redirectURL;
     }
 
-    /**
-     * @param $reference
-     */
-    function setReference($reference)
+    public function setReference($reference)
     {
         $this->reference = $reference;
     }
@@ -66,17 +52,11 @@ class Plan
         return $this->preApproval;
     }
 
-    /**
-     * @param $reviewURL
-     */
     public function setReviewURL($reviewURL)
     {
         $this->reviewURL = $reviewURL;
     }
 
-    /**
-     * @param $maxUsers
-     */
     public function setMaxUsers($maxUsers)
     {
         $this->maxUsers = $maxUsers;

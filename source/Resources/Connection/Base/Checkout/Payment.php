@@ -5,7 +5,6 @@ namespace PagSeguro\Resources\Connection\Base\Checkout;
 use PagSeguro\Resources\Builder;
 
 /** Class Payment
- * @package PagSeguro\Services\Connection\Base
  */
 trait Payment
 {

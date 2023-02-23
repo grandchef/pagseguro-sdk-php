@@ -4,21 +4,23 @@ namespace PagSeguro\Domains;
 
 class Shipping
 {
-
     /***
      * Shipping address
      * @see Address
      */
     private $address;
+
     /***
      * Shipping type. See the ShippingType class for a list of known shipping types.
      * @see ShippingType
      */
     private $type;
+
     /***
      * Shipping cost.
      */
     private $cost;
+
     /***
      * Shipping address required.
      */
@@ -33,12 +35,13 @@ class Shipping
     }
 
     /**
-     * @param Address $address
+     * @param  Address  $address
      * @return Shipping
      */
     public function setAddress($address)
     {
         $this->address = $address;
+
         return $this;
     }
 
@@ -51,12 +54,13 @@ class Shipping
     }
 
     /**
-     * @param string $cost
+     * @param  string  $cost
      * @return Shipping
      */
     public function setCost($cost)
     {
         $this->cost = $cost;
+
         return $this;
     }
 
@@ -69,12 +73,13 @@ class Shipping
     }
 
     /**
-     * @param ShippingType $type
+     * @param  ShippingType  $type
      * @return Shipping
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 
@@ -87,12 +92,13 @@ class Shipping
     }
 
     /**
-     * @param ShippingAddressRequired $addressRequired
+     * @param  ShippingAddressRequired  $addressRequired
      * @return Shipping
      */
     public function setAddressRequired($addressRequired)
     {
         $this->addressRequired = $addressRequired;
+
         return $this;
     }
 }

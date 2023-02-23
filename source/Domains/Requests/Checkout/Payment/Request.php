@@ -10,16 +10,15 @@ use PagSeguro\Domains\Requests\Parameter;
 use PagSeguro\Domains\Requests\PaymentMethod;
 use PagSeguro\Domains\Requests\PaymentMethod\Accepted;
 use PagSeguro\Domains\Requests\PreApproval\PreApproval;
+use PagSeguro\Domains\Requests\ReceiverEmail;
+use PagSeguro\Domains\Requests\Redirect;
+use PagSeguro\Domains\Requests\Reference;
 use PagSeguro\Domains\Requests\Requests;
 use PagSeguro\Domains\Requests\Review;
 use PagSeguro\Domains\Requests\Sender;
 use PagSeguro\Domains\Requests\Shipping;
-use PagSeguro\Domains\Requests\ReceiverEmail;
-use PagSeguro\Domains\Requests\Reference;
-use PagSeguro\Domains\Requests\Redirect;
 
 /** Class Request
- * @package PagSeguro\Domains\Requests
  */
 class Request implements Requests
 {

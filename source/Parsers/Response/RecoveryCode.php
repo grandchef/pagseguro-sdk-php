@@ -3,13 +3,9 @@
 namespace PagSeguro\Parsers\Response;
 
 /** Trait RecoveryCode
- * @package PagSeguro\Parsers\Response
  */
 trait RecoveryCode
 {
-    /**
-     * @var
-     */
     private $recoveryCode;
 
     public function getRecoveryCode()
@@ -20,6 +16,7 @@ trait RecoveryCode
     public function setRecoveryCode($recoveryCode)
     {
         $this->recoveryCode = $recoveryCode;
+
         return $this;
     }
 }

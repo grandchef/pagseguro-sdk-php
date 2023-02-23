@@ -4,21 +4,12 @@ namespace PagSeguro\Domains;
 
 class Credentials
 {
-    /**
-     * @var
-     */
     private $email;
-    /**
-     * @var
-     */
+
     private $token;
-    /**
-     * @var
-     */
+
     private $appId;
-    /**
-     * @var
-     */
+
     private $appKey;
 
     /**
@@ -30,7 +21,7 @@ class Credentials
     }
 
     /**
-     * @param string $email
+     * @param  string  $email
      */
     public function setEmail($email)
     {
@@ -46,7 +37,7 @@ class Credentials
     }
 
     /**
-     * @param string $token
+     * @param  string  $token
      */
     public function setToken($token)
     {
@@ -62,7 +53,7 @@ class Credentials
     }
 
     /**
-     * @param string $appId
+     * @param  string  $appId
      */
     public function setAppId($appId)
     {
@@ -78,7 +69,7 @@ class Credentials
     }
 
     /**
-     * @param string $appKey
+     * @param  string  $appKey
      */
     public function setAppKey($appKey)
     {

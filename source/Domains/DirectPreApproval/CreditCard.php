@@ -4,14 +4,11 @@ namespace PagSeguro\Domains\DirectPreApproval;
 
 /** Class CreditCard
  *
- * @package PagSeguro\Domains\DirectPreApproval
  */
 class CreditCard
 {
-    /**
-     * @var
-     */
     public $token;
+
     /**
      * @var Holder
      */
@@ -25,9 +22,6 @@ class CreditCard
         $this->holder = new Holder();
     }
 
-    /**
-     * @param $token
-     */
     public function setToken($token)
     {
         $this->token = $token;

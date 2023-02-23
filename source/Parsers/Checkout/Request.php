@@ -19,7 +19,6 @@ use PagSeguro\Parsers\Shipping;
 use PagSeguro\Resources\Http;
 
 /** Class Request
- * @package PagSeguro\Parsers\Checkout
  */
 class Request extends Error implements Parser
 {
@@ -36,13 +35,13 @@ class Request extends Error implements Parser
     use PaymentMethod;
 
     /**
-     * @param \PagSeguro\Domains\Requests\Payment $payment
      * @return array
      */
     public static function getData(\PagSeguro\Domains\Requests\Payment $payment)
     {
         $data = [];
         $properties = new Current;
+
         return array_merge(
             $data,
             Accepted::getData($payment, $properties),
@@ -60,18 +59,17 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed|Response
      */
     public static function success(Http $http)
     {
         $xml = simplexml_load_string($http->getResponse());
+
         return (new Response)->setCode(current($xml->code))
             ->setDate(current($xml->date));
     }
 
     /**
-     * @param Http $http
      * @return mixed|\PagSeguro\Domains\Error
      */
     public static function error(Http $http)

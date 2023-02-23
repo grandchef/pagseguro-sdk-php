@@ -5,11 +5,9 @@ namespace PagSeguro\Resources\Builder;
 use PagSeguro\Resources\Builder;
 
 /** Class Payment
- * @package PagSeguro\Resources\Builder
  */
 class Notification extends Builder
 {
-
     /**
      * @return string
      */

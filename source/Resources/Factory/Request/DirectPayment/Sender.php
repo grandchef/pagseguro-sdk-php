@@ -7,11 +7,9 @@ use PagSeguro\Domains\Phone;
 use PagSeguro\Enum\Properties\Current;
 
 /** Class Sender from Direct Payment
- * @package PagSeguro\Resources\Factory\Request\DirectPayment
  */
 class Sender
 {
-
     /**
      * @var \PagSeguro\Domains\Sender
      */
@@ -26,7 +24,6 @@ class Sender
     }
 
     /**
-     * @param \PagSeguro\Domains\DirectPayment\Sender $sender
      * @return \PagSeguro\Domains\DirectPayment\Sender
      */
     public function instance(\PagSeguro\Domains\DirectPayment\Sender $sender)
@@ -35,25 +32,20 @@ class Sender
     }
 
     /**
-     * @param $array
      * @return \PagSeguro\Domains\Shipping
      */
     public function withArray($array)
     {
         $properties = new Current;
+
         return $this->sender->setName($array[$properties::SENDER_NAME])
             ->setEmail($array[$properties::SENDER_EMAIL])
-            ->setPhone($array["phone"])
-            ->setDocuments($array["document"])
+            ->setPhone($array['phone'])
+            ->setDocuments($array['document'])
             ->setIp($array[$properties::SENDER_IP]);
     }
 
     /**
-     * @param $name
-     * @param $email
-     * @param Phone $phone
-     * @param Document $document
-     * @param $ip
      * @return \PagSeguro\Domains\DirectPayment\Sender
      */
     public function withParameters(
@@ -68,12 +60,14 @@ class Sender
             ->setPhone($phone)
             ->setDocuments($document)
             ->setIp($ip);
+
         return $this->sender;
     }
 
     public function setHash($hash)
     {
         $this->sender->setHash($hash);
+
         return $this->sender;
     }
 }

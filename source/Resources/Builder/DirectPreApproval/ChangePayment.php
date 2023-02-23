@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class ChangePayment
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class ChangePayment extends Builder
 {

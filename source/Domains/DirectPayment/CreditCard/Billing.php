@@ -4,7 +4,6 @@ namespace PagSeguro\Domains\DirectPayment\CreditCard;
 
 class Billing
 {
-
     /***
      * Billing address
      * @see Address
@@ -20,12 +19,12 @@ class Billing
     }
 
     /**
-     * @param $address
      * @return $this
      */
     public function setAddress($address)
     {
         $this->address = $address;
+
         return $this;
     }
 }

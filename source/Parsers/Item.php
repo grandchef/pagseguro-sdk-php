@@ -5,13 +5,10 @@ namespace PagSeguro\Parsers;
 use PagSeguro\Domains\Requests\Requests;
 
 /** Trait Item
- * @package PagSeguro\Parsers
  */
 trait Item
 {
     /**
-     * @param Requests $request
-     * @param $properties
      * @return array
      */
     public static function getData(Requests $request, $properties)
@@ -46,6 +43,7 @@ trait Item
                 }
             }
         }
+
         return $data;
     }
 }

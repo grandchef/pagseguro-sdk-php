@@ -6,39 +6,46 @@ use PagSeguro\Domains\DirectPreApproval\Traits\ParserTrait;
 
 /** Class QueryRequest
  *
- * @package PagSeguro\Domains\Requests\DirectPreApproval
  */
 class QueryRequest
 {
     use ParserTrait;
+
     /**
      * @var int
      */
     public $page;
+
     /**
      * @var int
      */
     public $maxPageResults;
+
     /**
      * @var false|string
      */
     public $initialDate;
+
     /**
      * @var false|string
      */
     public $finalDate;
+
     /**
      * @var null
      */
     public $status;
+
     /**
      * @var null
      */
     public $preApprovalRequest;
+
     /**
      * @var null
      */
     public $senderEmail;
+
     /**
      * @var null
      */
@@ -47,18 +54,13 @@ class QueryRequest
     /**
      * QueryRequest constructor.
      *
-     * @param int  $page
-     * @param int  $maxPageResults
-     * @param      $initialDate
-     * @param      $finalDate
-     * @param      $status
-     * @param      $preApprovalRequest
-     * @param      $senderEmail
-     * @param null $preApprovalCode
+     * @param  int  $page
+     * @param  int  $maxPageResults
+     * @param  null  $preApprovalCode
      */
     public function __construct(
-        $page = 1,
-        $maxPageResults = 50,
+        $page,
+        $maxPageResults,
         $initialDate,
         $finalDate = null,
         $status = null,

@@ -3,7 +3,6 @@
 namespace PagSeguro\Enum;
 
 /** Class Address
- * @package PagSeguro\Enum
  */
 class Address extends Enum
 {

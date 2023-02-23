@@ -8,29 +8,17 @@
 namespace PagSeguro\Parsers\Transaction\Search\Abandoned;
 
 /** Class Response
- * @package PagSeguro\Parsers\Transaction\Search\Abandoned
  */
 class Response
 {
-    /**
-     * @var
-     */
     private $date;
-    /**
-     * @var
-     */
+
     private $resultsInThisPage;
-    /**
-     * @var
-     */
+
     private $transactions;
-    /**
-     * @var
-     */
+
     private $currentPage;
-    /**
-     * @var
-     */
+
     private $totalPages;
 
     /**
@@ -42,12 +30,13 @@ class Response
     }
 
     /**
-     * @param mixed $currentPage
+     * @param  mixed  $currentPage
      * @return Response
      */
     public function setCurrentPage($currentPage)
     {
         $this->currentPage = $currentPage;
+
         return $this;
     }
 
@@ -60,12 +49,13 @@ class Response
     }
 
     /**
-     * @param mixed $date
+     * @param  mixed  $date
      * @return Response
      */
     public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 
@@ -78,12 +68,13 @@ class Response
     }
 
     /**
-     * @param mixed $resultsInThisPage
+     * @param  mixed  $resultsInThisPage
      * @return Response
      */
     public function setResultsInThisPage($resultsInThisPage)
     {
         $this->resultsInThisPage = $resultsInThisPage;
+
         return $this;
     }
 
@@ -96,12 +87,13 @@ class Response
     }
 
     /**
-     * @param mixed $totalPages
+     * @param  mixed  $totalPages
      * @return Response
      */
     public function setTotalPages($totalPages)
     {
         $this->totalPages = $totalPages;
+
         return $this;
     }
 
@@ -114,7 +106,7 @@ class Response
     }
 
     /**
-     * @param mixed $transactions
+     * @param  mixed  $transactions
      * @return Response
      */
     public function setTransactions($transactions)
@@ -128,12 +120,10 @@ class Response
                 }
             }
         }
+
         return $this;
     }
 
-    /**
-     * @param $transaction
-     */
     private function addTransaction($transaction)
     {
         $response = new Transaction();

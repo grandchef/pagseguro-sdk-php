@@ -6,13 +6,10 @@ use PagSeguro\Services\DirectPreApproval\QueryNotificationService;
 
 /** Class QueryNotification
  *
- * @package PagSeguro\Domains\Requests\DirectPreApproval
  */
 class QueryNotification extends QueryNotificationRequest
 {
     /**
-     * @param $credentials
-     *
      * @return mixed
      */
     public function register($credentials)

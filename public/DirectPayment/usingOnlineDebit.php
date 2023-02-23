@@ -1,10 +1,10 @@
 <?php
 
-require_once "../../vendor/autoload.php";
+require_once '../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\PagSeguro\Library::cmsVersion()->setName('Nome')->setRelease('1.0.0');
+\PagSeguro\Library::moduleVersion()->setName('Nome')->setRelease('1.0.0');
 
 //Instantiate a new Boleto Object
 $onlineDebit = new \PagSeguro\Domains\Requests\DirectPayment\OnlineDebit();
@@ -21,10 +21,10 @@ $onlineDebit->setReceiverEmail('vendedor@lojamodelo.com.br');
 
 // Set a reference code for this payment request. It is useful to identify this payment
 // in future notifications.
-$onlineDebit->setReference("LIBPHP000001");
+$onlineDebit->setReference('LIBPHP000001');
 
 // Set the currency
-$onlineDebit->setCurrency("BRL");
+$onlineDebit->setCurrency('BRL');
 
 // Add an item for this payment request
 $onlineDebit->addItems()->withParameters(
@@ -82,9 +82,9 @@ try {
         \PagSeguro\Configuration\Configure::getAccountCredentials()
     );
 
-    echo "<pre>";
+    echo '<pre>';
     print_r($result);
 } catch (Exception $e) {
-    echo "</br> <strong>";
-    die($e->getMessage());
+    echo '</br> <strong>';
+    exit($e->getMessage());
 }

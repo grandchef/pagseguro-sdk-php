@@ -10,18 +10,22 @@ class Authorization
      * @var string
      */
     private $reference;
+
     /**
      * @var string
      */
     private $permissions;
+
     /**
      * @var string
      */
     private $redirectURL;
+
     /**
      * @var string
      */
     private $notificationURL;
+
     /**
      * @var Authorization\Account
      */
@@ -30,11 +34,7 @@ class Authorization
     /**
      * Seller constructor.
      *
-     * @param                       $reference
-     * @param                       $permissions
-     * @param                       $redirectURL
-     * @param                       $notificationURL
-     * @param Account               $account
+     * @param  Account  $account
      */
     public function __construct(
         $reference,

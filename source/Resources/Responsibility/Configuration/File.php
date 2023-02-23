@@ -12,13 +12,15 @@ class File implements Handler
     public function successor($next)
     {
         $this->successor = $next;
+
         return $this;
     }
 
     public function handler($action, $class)
     {
-        if (file_exists(PS_CONFIG_PATH . "Wrapper.php")) {
+        if (file_exists(PS_CONFIG_PATH.'Wrapper.php')) {
             $wrapper = new Wrapper;
+
             return array_merge(
                 \PagSeguro\Helpers\Wrapper::environment($wrapper),
                 \PagSeguro\Helpers\Wrapper::credentials($wrapper),
@@ -26,6 +28,7 @@ class File implements Handler
                 \PagSeguro\Helpers\Wrapper::log($wrapper)
             );
         }
+
         return $this->successor->handler($action, $class);
     }
 }

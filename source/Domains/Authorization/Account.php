@@ -4,7 +4,6 @@ namespace PagSeguro\Domains\Authorization;
 
 /** Class Account
  *
- * @package PagSeguro\Domains\Authorization
  */
 class Account
 {
@@ -12,18 +11,22 @@ class Account
      * @var string
      */
     private $email;
+
     /**
      * @var string
      */
     private $type;
+
     /**
      * @var Seller
      */
     private $seller;
+
     /**
      * @var Company
      */
     private $company;
+
     /**
      * @var Company
      */
@@ -32,8 +35,8 @@ class Account
     /**
      * Account constructor.
      *
-     * @param string $email
-     * @param Seller | Company | Personal $type
+     * @param  string  $email
+     * @param  Seller | Company | Personal  $type
      */
     public function __construct($email, $type)
     {

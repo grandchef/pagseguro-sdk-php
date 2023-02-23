@@ -5,33 +5,27 @@ namespace PagSeguro\Domains;
 use PagSeguro\Domains\Account\Credentials;
 
 /** Class AccountCredentials
- * @package PagSeguro\Domains
  */
 class AccountCredentials implements Credentials
 {
-
-    /**
-     * @var
-     */
     private $email;
-    /**
-     * @var
-     */
+
     private $token;
 
     /**
      * AccountCredentials constructor.
-     * @param null|string $email
-     * @param null|string $token
+     *
+     * @param  null|string  $email
+     * @param  null|string  $token
      */
     public function __construct($email = null, $token = null)
     {
         //Setting e-mail
-        if (!is_null($email)) {
+        if (! is_null($email)) {
             $this->setEmail($email);
         }
         //Setting token
-        if (!is_null($token)) {
+        if (! is_null($token)) {
             $this->setToken($token);
         }
     }
@@ -45,12 +39,13 @@ class AccountCredentials implements Credentials
     }
 
     /**
-     * @param string $email
+     * @param  string  $email
      * @return AccountCredentials
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
         return $this;
     }
 
@@ -63,12 +58,13 @@ class AccountCredentials implements Credentials
     }
 
     /**
-     * @param string $token
+     * @param  string  $token
      * @return AccountCredentials
      */
     public function setToken($token)
     {
         $this->token = $token;
+
         return $this;
     }
 
@@ -79,7 +75,7 @@ class AccountCredentials implements Credentials
     {
         return [
             'email' => $this->getEmail(),
-            'token' => $this->getToken()
+            'token' => $this->getToken(),
         ];
     }
 
@@ -89,7 +85,7 @@ class AccountCredentials implements Credentials
     public function toString()
     {
         return sprintf(
-            "AccountCredentials[ Email : %s , Token: %s ]",
+            'AccountCredentials[ Email : %s , Token: %s ]',
             $this->getEmail(),
             $this->getToken()
         );

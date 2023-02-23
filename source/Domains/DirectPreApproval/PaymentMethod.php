@@ -4,7 +4,6 @@ namespace PagSeguro\Domains\DirectPreApproval;
 
 /** Class PaymentMethod
  *
- * @package PagSeguro\Domains\DirectPreApproval
  */
 class PaymentMethod
 {
@@ -12,6 +11,7 @@ class PaymentMethod
      * @var string
      */
     public $type = 'CREDITCARD';
+
     /**
      * @var CreditCard
      */

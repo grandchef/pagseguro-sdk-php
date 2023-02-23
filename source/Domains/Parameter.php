@@ -37,12 +37,12 @@ class Parameter
     }
 
     /**
-     * @param $key
      * @return $this
      */
     public function setKey($key)
     {
         $this->key = $key;
+
         return $this;
     }
 
@@ -56,12 +56,12 @@ class Parameter
     }
 
     /**
-     * @param $value
      * @return $this
      */
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 
@@ -76,12 +76,12 @@ class Parameter
     }
 
     /**
-     * @param $index
      * @return $this
      */
     public function setIndex($index)
     {
         $this->index = (int) $index;
+
         return $this;
     }
 }

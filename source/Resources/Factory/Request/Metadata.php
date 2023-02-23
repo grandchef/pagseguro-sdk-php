@@ -5,7 +5,6 @@ namespace PagSeguro\Resources\Factory\Request;
 use PagSeguro\Enum\Properties\Current;
 
 /** Class Metadata
- * @package PagSeguro\Resources\Factory\Request
  */
 class Metadata
 {
@@ -31,6 +30,7 @@ class Metadata
             ->setGroup($array[$properties::METADATA_ITEM_GROUP]);
 
         array_push($this->metadata, $metadata);
+
         return $this->metadata;
     }
 
@@ -44,6 +44,7 @@ class Metadata
             ->setValue($value)
             ->setGroup($group);
         array_push($this->metadata, $metadata);
+
         return $this->metadata;
     }
 }

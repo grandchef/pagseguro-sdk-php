@@ -3,7 +3,6 @@
 namespace PagSeguro\Parsers\DirectPayment\OnlineDebit;
 
 /** Request from the Online debit direct payment
- * @package PagSeguro\Parsers\DirectPayment\OnlineDebit
  */
 
 use PagSeguro\Enum\Properties\Current;
@@ -21,7 +20,6 @@ use PagSeguro\Parsers\Transaction\OnlineDebit\Response;
 use PagSeguro\Resources\Http;
 
 /** Class Request
- * @package PagSeguro\Parsers\DirectPayment\OnlineDebit
  */
 class Request extends Error implements Parser
 {
@@ -37,13 +35,13 @@ class Request extends Error implements Parser
     use Shipping;
 
     /**
-     * @param \PagSeguro\Domains\Requests\DirectPayment\OnlineDebit $onlineDebit
      * @return array
      */
     public static function getData(\PagSeguro\Domains\Requests\DirectPayment\OnlineDebit $onlineDebit)
     {
         $data = [];
         $properties = new Current();
+
         return array_merge(
             $data,
             BankName::getData($onlineDebit, $properties),
@@ -60,7 +58,6 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed
      */
     public static function success(Http $http)
@@ -93,7 +90,6 @@ class Request extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed|\PagSeguro\Domains\Error
      */
     public static function error(Http $http)

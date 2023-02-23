@@ -3,13 +3,10 @@
 namespace PagSeguro\Helpers;
 
 /** Class Currency
- * @package PagSeguro\Helpers
  */
 class Currency
 {
-
     /**
-     * @param $value
      * @return float|string
      */
     public static function toDecimal($value)
@@ -21,6 +18,7 @@ class Currency
                 $value = floor($value * 100) / 100;
             }
         }
-        return (string)number_format($value, 2, '.', '');
+
+        return (string) number_format($value, 2, '.', '');
     }
 }

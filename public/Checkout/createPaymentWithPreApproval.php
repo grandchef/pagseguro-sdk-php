@@ -1,10 +1,10 @@
 <?php
 
-require_once "../../vendor/autoload.php";
+require_once '../../vendor/autoload.php';
 
 \PagSeguro\Library::initialize();
-\PagSeguro\Library::cmsVersion()->setName("Nome")->setRelease("1.0.0");
-\PagSeguro\Library::moduleVersion()->setName("Nome")->setRelease("1.0.0");
+\PagSeguro\Library::cmsVersion()->setName('Nome')->setRelease('1.0.0');
+\PagSeguro\Library::moduleVersion()->setName('Nome')->setRelease('1.0.0');
 
 $payment = new \PagSeguro\Domains\Requests\Payment();
 
@@ -22,13 +22,13 @@ $payment->addItems()->withParameters(
     430.00
 );
 
-$payment->setCurrency("BRL");
+$payment->setCurrency('BRL');
 
 $payment->setExtraAmount(11.5);
 
-$payment->setReference("LIBPHP000001");
+$payment->setReference('LIBPHP000001');
 
-$payment->setRedirectUrl("http://www.lojamodelo.com.br");
+$payment->setRedirectUrl('http://www.lojamodelo.com.br');
 
 // Set your customer information.
 $payment->setSender()->setName('João Comprador');
@@ -73,9 +73,9 @@ $payment->addParameter()->withArray(['notificationURL', 'http://www.lojamodelo.c
  * Pre Approval information
  */
 $payment->setPreApproval()->setCharge('manual');
-$payment->setPreApproval()->setName("Seguro contra roubo do Notebook Prata");
-$payment->setPreApproval()->setDetails("Todo dia 30 será cobrado o valor de R100,00 referente ao seguro contra
-            roubo do Notebook Prata.");
+$payment->setPreApproval()->setName('Seguro contra roubo do Notebook Prata');
+$payment->setPreApproval()->setDetails('Todo dia 30 será cobrado o valor de R100,00 referente ao seguro contra
+            roubo do Notebook Prata.');
 $payment->setPreApproval()->setAmountPerPayment('100.00');
 $payment->setPreApproval()->setMaxAmountPerPeriod('200.00');
 $payment->setPreApproval()->setPeriod('Monthly');
@@ -83,12 +83,11 @@ $payment->setPreApproval()->setMaxTotalAmount('2400.00');
 $payment->setPreApproval()->setInitialDate('2016-05-13T00:00:00');
 $payment->setPreApproval()->setFinalDate('2018-05-07T00:00:00');
 
-$payment->setRedirectUrl("http://www.lojamodelo.com.br");
-$payment->setNotificationUrl("http://www.lojamodelo.com.br/nofitication");
-$payment->setReviewUrl("http://www.lojateste.com.br/review");
+$payment->setRedirectUrl('http://www.lojamodelo.com.br');
+$payment->setNotificationUrl('http://www.lojamodelo.com.br/nofitication');
+$payment->setReviewUrl('http://www.lojateste.com.br/review');
 
 try {
-
     /**
      * @todo For checkout with application use:
      * \PagSeguro\Configuration\Configure::getApplicationCredentials()
@@ -98,9 +97,9 @@ try {
         \PagSeguro\Configuration\Configure::getAccountCredentials()
     );
 
-    echo "<h2>Criando requisi&ccedil;&atilde;o de pagamento</h2>"
-        . "<p>URL do pagamento: <strong>$result</strong></p>"
-        . "<p><a title=\"URL do pagamento\" href=\"$result\" target=\_blank\">Ir para URL do pagamento.</a></p>";
+    echo '<h2>Criando requisi&ccedil;&atilde;o de pagamento</h2>'
+        ."<p>URL do pagamento: <strong>$result</strong></p>"
+        ."<p><a title=\"URL do pagamento\" href=\"$result\" target=\_blank\">Ir para URL do pagamento.</a></p>";
 } catch (Exception $e) {
-    die($e->getMessage());
+    exit($e->getMessage());
 }

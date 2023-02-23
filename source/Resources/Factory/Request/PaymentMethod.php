@@ -5,11 +5,10 @@ namespace PagSeguro\Resources\Factory\Request;
 use PagSeguro\Enum\Properties\Current;
 
 /** Class PaymentMethod
- * @package PagSeguro\Resources\Factory\Request
  */
 class PaymentMethod
 {
-    private $paymentMethod = array();
+    private $paymentMethod = [];
 
     public function instance(\PagSeguro\Domains\PaymentMethod $paymentMethod)
     {
@@ -26,6 +25,7 @@ class PaymentMethod
             ->setGroup($array[$properties::PAYMENT_METHOD_GROUP]);
 
         array_push($this->paymentMethod, $paymentMethod);
+
         return $this->paymentMethod;
     }
 
@@ -39,6 +39,7 @@ class PaymentMethod
             ->setValue($value)
             ->setGroup($group);
         array_push($this->paymentMethod, $paymentMethod);
+
         return $this->paymentMethod;
     }
 }

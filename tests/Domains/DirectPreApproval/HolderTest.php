@@ -2,8 +2,8 @@
 
 namespace PagSeguro\Tests;
 
-use PHPUnit\Framework\TestCase;
 use PagSeguro\Domains\DirectPreApproval\Holder;
+use PHPUnit\Framework\TestCase;
 
 class HolderTest extends TestCase
 {

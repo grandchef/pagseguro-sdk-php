@@ -3,19 +3,11 @@
 namespace PagSeguro\Parsers\PreApproval;
 
 /** Class Response
- * @package PagSeguro\Parsers\PreApproval
  */
 class Response
 {
-
-    /**
-     * @var
-     */
     private $code;
-    
-    /**
-     * @var
-     */
+
     private $date;
 
     /**
@@ -27,12 +19,13 @@ class Response
     }
 
     /**
-     * @param string $code
+     * @param  string  $code
      * @return Response
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -45,12 +38,13 @@ class Response
     }
 
     /**
-     * @param \DateTime $date
+     * @param  \DateTime  $date
      * @return Response
      */
     public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 }

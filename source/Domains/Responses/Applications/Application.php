@@ -3,21 +3,13 @@
 namespace PagSeguro\Domains\Responses\Applications;
 
 /** Class Application
- * @package PagSeguro\Domains\Responses\Applications
  */
 class Application
 {
-    /**
-     * @var
-     */
     private $id;
-    /**
-     * @var
-     */
+
     private $name;
-    /**
-     * @var
-     */
+
     private $role;
 
     /**
@@ -29,12 +21,13 @@ class Application
     }
 
     /**
-     * @param mixed $id
+     * @param  mixed  $id
      * @return Application
      */
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -47,12 +40,13 @@ class Application
     }
 
     /**
-     * @param mixed $name
+     * @param  mixed  $name
      * @return Application
      */
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -65,12 +59,13 @@ class Application
     }
 
     /**
-     * @param mixed $role
+     * @param  mixed  $role
      * @return Application
      */
     public function setRole($role)
     {
         $this->role = $role;
+
         return $this;
     }
 }

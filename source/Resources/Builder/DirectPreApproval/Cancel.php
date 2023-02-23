@@ -6,7 +6,6 @@ use PagSeguro\Resources\Builder;
 
 /** Class Cancel
  *
- * @package PagSeguro\Resources\Builder\DirectPreApproval
  */
 class Cancel extends Builder
 {

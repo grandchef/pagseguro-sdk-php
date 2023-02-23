@@ -3,7 +3,6 @@
 namespace PagSeguro\Parsers\Response;
 
 /** Trait GatewaySystem
- * @package PagSeguro\Parsers\Response
  */
 trait GatewaySystem
 {
@@ -18,7 +17,7 @@ trait GatewaySystem
     }
 
     /**
-     * @param xmlObject $gatewaySystem
+     * @param  xmlObject  $gatewaySystem
      * @return \PagSeguro\Parsers\Response\GatewaySystem
      */
     public function setGatewaySystem($gatewaySystem)
@@ -35,6 +34,7 @@ trait GatewaySystem
                 ->setTid(current($gatewaySystem->tid))
                 ->setType(current($gatewaySystem->type));
         }
+
         return $this;
     }
 }

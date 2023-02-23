@@ -5,7 +5,6 @@ namespace PagSeguro\Resources\Factory;
 use PagSeguro\Enum\Properties\Current;
 
 /** Class Phone
- * @package PagSeguro\Resources\Factory
  */
 class Phone
 {
@@ -23,7 +22,6 @@ class Phone
     }
 
     /**
-     * @param \PagSeguro\Domains\Phone $phone
      * @return \PagSeguro\Domains\Phone
      */
     public function instance(\PagSeguro\Domains\Phone $phone)
@@ -31,9 +29,6 @@ class Phone
         return $phone;
     }
 
-    /**
-     * @param $array
-     */
     public function withArray($array)
     {
         $properties = new Current();
@@ -42,14 +37,13 @@ class Phone
     }
 
     /**
-     * @param $areaCode
-     * @param $number
      * @return \PagSeguro\Domains\Phone
      */
     public function withParameters($areaCode, $number)
     {
         $this->phone->setAreaCode($areaCode)
             ->setNumber($number);
+
         return $this->phone;
     }
 }

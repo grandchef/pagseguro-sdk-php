@@ -8,12 +8,10 @@ use PagSeguro\Parsers\Parser;
 use PagSeguro\Resources\Http;
 
 /** Class QueryNotificationParser
- * @package PagSeguro\Parsers\DirectPreApproval
  */
 class QueryNotificationParser extends Error implements Parser
 {
     /**
-     * @param QueryNotification $queryNotification
      * @return mixed
      */
     public static function getNotificationCode(QueryNotification $queryNotification)
@@ -24,7 +22,6 @@ class QueryNotificationParser extends Error implements Parser
     }
 
     /**
-     * @param QueryNotification $directPreApproval
      * @return string
      */
     public static function getData(QueryNotification $directPreApproval)
@@ -36,7 +33,6 @@ class QueryNotificationParser extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed
      */
     public static function success(Http $http)
@@ -47,7 +43,6 @@ class QueryNotificationParser extends Error implements Parser
     }
 
     /**
-     * @param Http $http
      * @return mixed|\PagSeguro\Domains\Error
      */
     public static function error(Http $http)

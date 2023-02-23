@@ -7,7 +7,6 @@ use PagSeguro\Domains\Authorization\Company;
 
 /** Class CompanySeller
  *
- * @package PagSeguro\Services\Authorization
  */
 class DefaultAuthorizationService
 {
@@ -15,6 +14,7 @@ class DefaultAuthorizationService
      * @var Company
      */
     private $authorization;
+
     /**
      * @var \DOMDocument
      */
@@ -22,8 +22,6 @@ class DefaultAuthorizationService
 
     /**
      * Seller constructor.
-     *
-     * @param Authorization $authorization
      */
     public function __construct(Authorization $authorization)
     {

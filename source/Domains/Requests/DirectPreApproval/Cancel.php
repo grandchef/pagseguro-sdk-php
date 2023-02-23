@@ -6,13 +6,10 @@ use PagSeguro\Services\DirectPreApproval\CancelService;
 
 /** Class Cancel
  *
- * @package PagSeguro\Domains\Requests\DirectPreApproval
  */
 class Cancel extends CancelRequest
 {
     /**
-     * @param $credentials
-     *
      * @return mixed
      */
     public function register($credentials)

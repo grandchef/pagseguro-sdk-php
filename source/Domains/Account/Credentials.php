@@ -3,7 +3,6 @@
 namespace PagSeguro\Domains\Account;
 
 /** Interface Credentials
- * @package PagSeguro\Domains\Credentials
  */
 interface Credentials
 {

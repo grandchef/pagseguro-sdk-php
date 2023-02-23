@@ -7,13 +7,9 @@ use PagSeguro\Resources\Factory\Shipping\Cost;
 use PagSeguro\Resources\Factory\Shipping\Type;
 
 /** Trait Shipping
- * @package PagSeguro\Parsers\Response
  */
 trait Shipping
 {
-    /**
-     * @var
-     */
     private $shipping;
 
     /**
@@ -25,7 +21,7 @@ trait Shipping
     }
 
     /**
-     * @param mixed $shipping
+     * @param  mixed  $shipping
      * @return Response
      */
     public function setShipping($shipping)
@@ -53,6 +49,7 @@ trait Shipping
             $shippingCost->withParameters(current($shipping->cost));
             $this->shipping = $shippingClass;
         }
+
         return $this;
     }
 }

@@ -3,18 +3,11 @@
 namespace PagSeguro\Domains;
 
 /** Class Notification
- * @package PagSeguro\Domains
  */
 class Notification
 {
-
-    /**
-     * @var
-     */
     private $code;
-    /**
-     * @var
-     */
+
     private $type;
 
     /**
@@ -25,14 +18,13 @@ class Notification
         return $this->code;
     }
 
-
     /**
-     * @param $code
      * @return $this
      */
     public function setCode($code)
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -45,12 +37,12 @@ class Notification
     }
 
     /**
-     * @param $type
      * @return $this
      */
     public function setType($type)
     {
         $this->type = $type;
+
         return $this;
     }
 }

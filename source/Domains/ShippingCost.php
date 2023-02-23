@@ -3,14 +3,9 @@
 namespace PagSeguro\Domains;
 
 /** Class ShippingCost
- * @package PagSeguro\Domains
  */
 class ShippingCost
 {
-
-    /**
-     * @var
-     */
     private $cost;
 
     /**
@@ -22,12 +17,13 @@ class ShippingCost
     }
 
     /**
-     * @param mixed $cost
+     * @param  mixed  $cost
      * @return ShippingCost
      */
     public function setCost($cost)
     {
         $this->cost = $cost;
+
         return $this;
     }
 }

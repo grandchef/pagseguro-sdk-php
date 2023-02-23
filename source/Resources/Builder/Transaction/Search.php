@@ -5,11 +5,9 @@ namespace PagSeguro\Resources\Builder\Transaction;
 use PagSeguro\Resources\Builder;
 
 /** Class Payment
- * @package PagSeguro\Resources\Builder
  */
 class Search extends Builder
 {
-
     /**
      * @return string
      */

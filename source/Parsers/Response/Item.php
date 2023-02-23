@@ -5,17 +5,11 @@ namespace PagSeguro\Parsers\Response;
 use PagSeguro\Helpers\InitializeObject;
 
 /** Trait Item
- * @package PagSeguro\Parsers\Response
  */
 trait Item
 {
-    /**
-     * @var
-     */
     private $itemCount;
-    /**
-     * @var
-     */
+
     private $items;
 
     /**
@@ -27,12 +21,12 @@ trait Item
     }
 
     /**
-     * @param $itemCount
      * @return $this
      */
     public function setItemCount($itemCount)
     {
         $this->itemCount = $itemCount;
+
         return $this;
     }
 
@@ -44,9 +38,7 @@ trait Item
         return $this->items;
     }
 
-
     /**
-     * @param $items
      * @return $this
      */
     public function setItems($items)
@@ -61,6 +53,7 @@ trait Item
         }
 
         $this->items = current($this->getItems());
+
         return $this;
     }
 
@@ -73,6 +66,7 @@ trait Item
             $this->items,
             new \PagSeguro\Resources\Factory\Item()
         );
+
         return $this->items;
     }
 }

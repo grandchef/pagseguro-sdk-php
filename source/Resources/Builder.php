@@ -5,11 +5,9 @@ namespace PagSeguro\Resources;
 use PagSeguro\Configuration\Configure;
 
 /** Class Builder
- * @package PagSeguro\Resources
  */
 class Builder
 {
-
     /**
      * @return string
      */
@@ -39,7 +37,7 @@ class Builder
      */
     protected static function getResourcesFile()
     {
-        $resources = __DIR__ . '/../Configuration/Properties/Resources.xml';
+        $resources = __DIR__.'/../Configuration/Properties/Resources.xml';
 
         if (defined('PS_RESOURCES')) {
             $resources = PS_RESOURCES;
@@ -49,8 +47,7 @@ class Builder
     }
 
     /**
-     * @param $resource
-     * @param null $protocol
+     * @param  null  $protocol
      * @return string
      */
     protected static function getUrl($resource, $protocol = null)
@@ -61,16 +58,15 @@ class Builder
             $protocol = $xml->path->protocol;
         }
         $environment = Configure::getEnvironment()->getEnvironment();
+
         return sprintf(
-            "%s://%s",
+            '%s://%s',
             $protocol,
             current($xml->path->{$resource}->environment->{$environment})
         );
     }
 
     /**
-     * @param $url
-     * @param $service
      * @return string
      */
     protected static function getRequest($url, $service)
@@ -79,8 +75,6 @@ class Builder
     }
 
     /**
-     * @param $url
-     * @param $service
      * @return string
      */
     protected static function getResponse($url, $service)
@@ -89,9 +83,6 @@ class Builder
     }
 
     /**
-     * @param $url
-     * @param $service
-     * @param $http
      * @return string
      */
     protected static function getService($url, $service, $http)
@@ -99,21 +90,18 @@ class Builder
         $xml = simplexml_load_file(self::getResourcesFile());
 
         return sprintf(
-            "%s/%s",
+            '%s/%s',
             $url,
             current(self::getProperties($xml, $service, $http))
         );
     }
 
     /**
-     * @param $xml
-     * @param $service
-     * @param $http
      * @return mixed
      */
     private static function getProperties($xml, $service, $http)
     {
-        $services = explode("/", $service);
+        $services = explode('/', $service);
         if (isset($services[1])) {
             return $xml->services->{$services[0]}->{$services[1]}->{$http};
         } else {

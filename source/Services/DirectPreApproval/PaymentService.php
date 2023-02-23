@@ -12,27 +12,24 @@ use PagSeguro\Resources\Responsibility;
 
 /** Class PaymentService
  *
- * @package PagSeguro\Services\DirectPreApproval
  */
 class PaymentService
 {
     /**
-     * @param Credentials $credentials
-     * @param Payment $payment
-     *
      * @return mixed
+     *
      * @throws \Exception
      */
     public static function create(Credentials $credentials, Payment $payment)
     {
-        Logger::info("Begin", ['service' => 'DirectPreApproval']);
+        Logger::info('Begin', ['service' => 'DirectPreApproval']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http('Content-Type: application/json;', 'Accept: application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1');
-            Logger::info(sprintf("POST: %s", self::request($connection)), ['service' => 'DirectPreApproval']);
+            Logger::info(sprintf('POST: %s', self::request($connection)), ['service' => 'DirectPreApproval']);
             Logger::info(
                 sprintf(
-                    "Params: %s",
+                    'Params: %s',
                     json_encode(PaymentParser::getData($payment))
                 ),
                 ['service' => 'DirectPreApproval']
@@ -48,7 +45,7 @@ class PaymentService
                 new PaymentParser
             );
             Logger::info(
-                sprintf("DirectPreApproval URL: %s", json_encode(self::response($response))),
+                sprintf('DirectPreApproval URL: %s', json_encode(self::response($response))),
                 ['service' => 'DirectPreApproval']
             );
 
@@ -60,18 +57,14 @@ class PaymentService
     }
 
     /**
-     * @param Connection\Data $connection
-     *
      * @return string
      */
     private static function request(Connection\Data $connection)
     {
-        return $connection->buildDirectPreApprovalPaymentRequestUrl() . "?" . $connection->buildCredentialsQuery();
+        return $connection->buildDirectPreApprovalPaymentRequestUrl().'?'.$connection->buildCredentialsQuery();
     }
 
     /**
-     * @param $response
-     *
      * @return mixed
      */
     private static function response($response)

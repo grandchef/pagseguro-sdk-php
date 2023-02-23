@@ -5,7 +5,6 @@ namespace PagSeguro\Domains\Requests\DirectPayment;
 use PagSeguro\Domains\Requests\DirectPayment\OnlineDebit\Request;
 
 /** Class Payment
- * @package PagSeguro\Domains\Requests\DirectPayment
  */
 class OnlineDebit extends Request
 {
@@ -23,18 +22,18 @@ class OnlineDebit extends Request
     }
 
     /**
-     * @param $bankName
      * @return $this
      */
     public function setBankName($bankName)
     {
         $this->bankName = $bankName;
+
         return $this;
     }
-    
+
     /**
-     * @param $credentials
      * @return string
+     *
      * @throws \Exception
      */
     public function register($credentials)

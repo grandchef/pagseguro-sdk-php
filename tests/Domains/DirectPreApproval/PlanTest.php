@@ -2,8 +2,8 @@
 
 namespace PagSeguro\Tests;
 
-use PHPUnit\Framework\TestCase;
 use PagSeguro\Domains\DirectPreApproval\Plan;
+use PHPUnit\Framework\TestCase;
 
 class PlanTest extends TestCase
 {

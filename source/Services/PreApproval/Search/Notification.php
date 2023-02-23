@@ -10,24 +10,22 @@ use PagSeguro\Resources\Log\Logger;
 use PagSeguro\Resources\Responsibility;
 
 /** Class Payment
- * @package PagSeguro\Services\Checkout
  */
 class Notification
 {
     /**
-     * @param \PagSeguro\Domains\Account\Credentials $credentials
-     * @param $code
      * @return string
+     *
      * @throws \Exception
      */
     public static function search(Credentials $credentials, $code)
     {
-        Logger::info("Begin", ['service' => 'PreApproval.Search.Notification']);
+        Logger::info('Begin', ['service' => 'PreApproval.Search.Notification']);
         try {
             $connection = new Connection\Data($credentials);
             $http = new Http();
             Logger::info(
-                sprintf("GET: %s", self::request($connection, $code)),
+                sprintf('GET: %s', self::request($connection, $code)),
                 ['service' => 'PreApproval.Search.Notification']
             );
             $http->get(
@@ -42,12 +40,13 @@ class Notification
             );
             Logger::info(
                 sprintf(
-                    "Tracker: %s, Date: %s",
+                    'Tracker: %s, Date: %s',
                     $response->getTracker(),
                     $response->getDate()
                 ),
                 ['service' => 'Application.Search.Notification']
             );
+
             return $response;
         } catch (\Exception $exception) {
             Logger::error($exception->getMessage(), ['service' => 'PreApproval.Search.Notification']);
@@ -56,13 +55,12 @@ class Notification
     }
 
     /**
-     * @param Connection\Data $connection
      * @return string
      */
     private static function request(Connection\Data $connection, $code)
     {
         return sprintf(
-            "%s/%s/?%s",
+            '%s/%s/?%s',
             $connection->buildNotificationPreApprovalRequestUrl(),
             $code,
             $connection->buildCredentialsQuery()

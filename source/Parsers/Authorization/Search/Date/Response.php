@@ -8,33 +8,17 @@
 namespace PagSeguro\Parsers\Authorization\Search\Date;
 
 /** Class Response
- * @package PagSeguro\Parsers\Authorization\Search\Date
  */
 class Response
 {
-    /**
-     * @var
-     */
     private $date;
 
-    /**
-     * @var
-     */
     private $resultsInThisPage;
 
-    /**
-     * @var
-     */
     private $authorizations;
 
-    /**
-     * @var
-     */
     private $currentPage;
-    
-    /**
-     * @var
-     */
+
     private $totalPages;
 
     /**
@@ -46,12 +30,13 @@ class Response
     }
 
     /**
-     * @param mixed $currentPage
+     * @param  mixed  $currentPage
      * @return Response
      */
     public function setCurrentPage($currentPage)
     {
         $this->currentPage = $currentPage;
+
         return $this;
     }
 
@@ -64,12 +49,13 @@ class Response
     }
 
     /**
-     * @param mixed $date
+     * @param  mixed  $date
      * @return Response
      */
     public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 
@@ -82,12 +68,13 @@ class Response
     }
 
     /**
-     * @param mixed $resultsInThisPage
+     * @param  mixed  $resultsInThisPage
      * @return Response
      */
     public function setResultsInThisPage($resultsInThisPage)
     {
         $this->resultsInThisPage = $resultsInThisPage;
+
         return $this;
     }
 
@@ -100,12 +87,13 @@ class Response
     }
 
     /**
-     * @param mixed $totalPages
+     * @param  mixed  $totalPages
      * @return Response
      */
     public function setTotalPages($totalPages)
     {
         $this->totalPages = $totalPages;
+
         return $this;
     }
 
@@ -117,9 +105,7 @@ class Response
         return $this->authorizations;
     }
 
-
     /**
-     * @param $authorizations
      * @return $this
      */
     public function setAuthorizations($authorizations)
@@ -133,12 +119,10 @@ class Response
                 }
             }
         }
+
         return $this;
     }
 
-    /**
-     * @param $authorization
-     */
     private function addAuthorization($authorization)
     {
         $response = new \PagSeguro\Parsers\Authorization\Search\Response();

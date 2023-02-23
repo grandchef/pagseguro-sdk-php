@@ -13,12 +13,13 @@ trait Ip
     }
 
     /**
-     * @param mixed $email
+     * @param  mixed  $email
      * @return Customer
      */
     public function setIp($ip)
     {
         $this->sender->setIp($ip);
+
         return $this;
     }
 }

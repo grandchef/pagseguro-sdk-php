@@ -5,13 +5,10 @@ namespace PagSeguro\Parsers;
 use PagSeguro\Domains\Requests\Requests;
 
 /** Trait Basic
- * @package PagSeguro\Parsers
  */
 trait Basic
 {
     /**
-     * @param Requests $request
-     * @param $properties
      * @return array
      */
     public static function getData(Requests $request, $properties)
@@ -19,17 +16,18 @@ trait Basic
         $data = [];
 
         // reference
-        if (!is_null($request->getReference())) {
+        if (! is_null($request->getReference())) {
             $data[$properties::REFERENCE] = $request->getReference();
         }
         // redirectURL
-        if (method_exists($request, 'getRedirectUrl') and !is_null($request->getRedirectUrl())) {
+        if (method_exists($request, 'getRedirectUrl') and ! is_null($request->getRedirectUrl())) {
             $data[$properties::REDIRECT_URL] = $request->getRedirectUrl();
         }
         // notificationURL
-        if (method_exists($request, 'getNotificationUrl') and !is_null($request->getNotificationUrl())) {
+        if (method_exists($request, 'getNotificationUrl') and ! is_null($request->getNotificationUrl())) {
             $data[$properties::NOTIFICATION_URL] = $request->getNotificationUrl();
         }
+
         return $data;
     }
 }
