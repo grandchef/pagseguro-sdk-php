@@ -68,7 +68,7 @@ PAGSEGURO_LOG_LOCATION
 
 ## File
 
-Renomeando o arquivo **source/Configuration/Wrapper-example.php** para **source/Configuration/Wrapper.php** e  atribuindo valor para as constantes da seguinte forma:
+Renomeando o arquivo **source/Configuration/Wrapper.php** para **source/Configuration/Wrapper.php** e  atribuindo valor para as constantes da seguinte forma:
 ```
 class Wrapper
 {
