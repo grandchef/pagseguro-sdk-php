@@ -125,13 +125,13 @@ class Logger implements LoggerInterface
             return false;
         }
 
-        switch ($level) {
-            case Level::CRITICAL:
-            case Level::EMERGENCY:
-            case Level::ERROR:
-            case Level::WARNING:
-                self::write(self::message($level, $message, $context));
-                break;
+        if(in_array($level, [
+            Level::CRITICAL,
+            Level::EMERGENCY,
+            Level::ERROR,
+            Level::WARNING,
+        ])) {
+            self::write(self::message($level, $message, $context));
         }
     }
 
