@@ -125,10 +125,13 @@ class Logger implements LoggerInterface
             return false;
         }
 
-        try {
-            // self::write(self::location(), self::message($level, $message, $context));
-        } catch (\Exception $exception) {
-            throw $exception;
+        if(in_array($level, [
+            Level::CRITICAL,
+            Level::EMERGENCY,
+            Level::ERROR,
+            Level::WARNING,
+        ])) {
+            self::write(self::message($level, $message, $context));
         }
     }
 
@@ -155,9 +158,9 @@ class Logger implements LoggerInterface
     /**
      * Write in file
      */
-    private static function write($file, $message)
+    private static function write($message)
     {
-        file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
+        fwrite(STDOUT, $message);
     }
 
     /**
