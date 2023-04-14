@@ -2,6 +2,7 @@
   "name": "grandchef/pagseguro-php-sdk",
   "description": "Biblioteca de integração com o PagSeguro",
   "license": "MIT",
+  "version": "1.0.1",
   "authors": [
       {
         "name": "GrandChef",
